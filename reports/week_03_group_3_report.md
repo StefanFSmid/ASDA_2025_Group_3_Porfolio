@@ -66,6 +66,13 @@ _*Feel free to change the format of this table or write it in plain text but wel
 ### 4.2 Minor data inconsistencies _(if some issues cannot be reported in the above table)_
 
 ## 5. Recommendations for good practices regarding data collection
+1) Know exactly what data you need and why before you start collecting it.
+2) Check for missing or duplicate values and clean your data regularly.
+3) Rely on official APIs or verified datasets instead of unverified websites.
+4) Anonymize personal information
+5) Keep data in structured formats like CSV, JSON, or databases for easy access and analysis.
+6) Maintain notes about sources, methods, and any issues you encounter
+7) Track data collection processes to catch errors, inconsistencies, or changes over time.
 
 ## 6. AI Disclaimer:
 If you had to use AI code in certain part of your code and where.
