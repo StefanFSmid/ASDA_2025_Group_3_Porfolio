@@ -2,11 +2,11 @@
 
 | Item                              | Description |
 |:----------------------------------|:-----------:|
-| Dataset name                      |             |
-| Authors                           |             |
-| Number of entries                 |             |
-| Number of features/variables      |             |
-| Format file (.csv, .txt, etc)     |             |
+| Dataset name                      |Lego Dataset |
+| Authors                           |Combined dataset of all groups in the class|
+| Number of entries                 |204rows, 10 columns|
+| Number of features/variables      |10           |
+| Format file (.csv, .txt, etc)     |.xlsx        |
 
 ## 2. Dataset Structure (of the clean version)
 
