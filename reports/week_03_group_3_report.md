@@ -10,12 +10,18 @@
 
 ## 2. Dataset Structure (of the clean version)
 
-| Feature/variable | Data type  | Description | Number of Unique values | Example values  |
-|:-----------|:-----------:|:-----------:|:-----------:|:-----------:|
-|  |  |  |   |  |
-|  |  |  |   |  |
-|  |  |  |   |  |
-|  |  |  |   |  |
+| Feature/variable | Data type  | Description | Number of Unique values |      Example values       |
+|:-----------|:-----------:|:-----------:|:-----------------------:|:-------------------------:|
+| base dimensions | object |      The dimensions of the base using number of studs as the unit. Avoid to use length units.       |           12            |         1x1, 1x4          |
+| base shape | object |      The shape of the base       |            5            |     Circle, Trapezium     |
+| color | object |        The color of the piece     |           62            | neonlightyellow, darkblue |
+| has slope? | object |     Whether the piece has a slope or not        |            2            |          No, Yes          |
+| is duplo? | object |      Whether the piece is duplo or not       |            2            |          No, Yes          |
+| number of studs | float64 |       The number of studs on the piece      |           10            |         1.0, 4.0          |
+|            size type     |     object    |         The type of piece: brick or plate    |            2            |       Plate, Brick        |
+|     slope degree            |     float64    |      The degree of the piece with slope       |            4            |         0.0, 45.0         |
+|            in stock     |     int64    |         How many pieces are in the bag.    |            3            |             1             |
+
 
 ## 3. Descriptive statistics (of the clean version)
 
