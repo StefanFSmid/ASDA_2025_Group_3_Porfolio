@@ -69,7 +69,7 @@ The most inconsistent category was color, due to the subjective nature of this a
 ### 4.2 Minor data inconsistencies _(if some issues cannot be reported in the above table)_
 One of the listed shapes, “Wadge” (or “Wedge”), was replaced with “Trapezium” at our discretion, as a wedge represents a 3D shape, while base dimensions should correspond to 2D shapes.
 
-## 5. Recommendations for good practices regarding data collection (Raghavendra)
+## 5. Recommendations for good practices regarding data collection 
 To make data collection easier and more accurate, all groups should agree on one common format for each variable before starting. Having the same structure for things like colors, shapes, and dimensions would keep the data consistent and save a lot of time during cleaning. Using the same color names, for example, would help avoid duplicate entries caused by small spelling or capitalization differences. It would also help to set clear rules for how to enter data, such as always using “X” in base dimensions and using the same yes/no format, so that to make the dataset more reliable and easier to compare.
 
 ## 6. AI Disclaimer:
