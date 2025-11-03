@@ -53,13 +53,9 @@ _Feel free to create some basic plots if they are necessary to understand the da
 ## 4. Data cleaning procedure
 ### 4.1 Major data inconsistencies:
 
-| Issue                                     | Names of Columns affected | Description of the Issue | Action Taken |
-|:------------------------------------------|:-----------------:|:-----------:|:-:|
-| Inconsistent column labeling              |                   |             |   |
-| Wrong data types                          |                   |             |   |
-| Missing values                            |                   |             |   |
-| Duplicates                                |                   |             |   |
-| Inconsistent categories                   |                   |             |   |
+Column Labeling was generally fine except for one unnecessary column (Transparent) which was used by only one of the five groups. This column was therefore removed to maintain consistency. 
+
+Data types used in individual columns varied across groups. A simple yes/no response was filled with responses including 1/0/true/false. Similary, slope degree column was left blank by some groups while it should have a 0. All such variable data types were standardized and unified to one type by benchmarking the convention our group had made during filling of our sheet. 
 
 _*Feel free to change the format of this table or write it in plain text but well structured._
 
