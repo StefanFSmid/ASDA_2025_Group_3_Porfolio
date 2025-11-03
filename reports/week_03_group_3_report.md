@@ -56,6 +56,15 @@
 ## 3. _Exploratory plots (optional)_
 _Feel free to create some basic plots if they are necessary to understand the dataset._
 
+Countplot of different base shapes:
+
+
+![fig_01_countplot.png](../additional_material/fig_01_countplot.png)
+
+Wordcloud of different colors by their respective count:
+
+![fig_02_wordcloud.png](../additional_material/fig_02_wordcloud.png)
+
 ## 4. Data cleaning procedure
 ### 4.1 Major data inconsistencies:
 
