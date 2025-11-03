@@ -25,8 +25,6 @@
 
 ## 3. Descriptive statistics (of the clean version)
 
-**HINT: instead of formatting by hand or AI copy output of respective functions as markdown and copy paste here**
-
 ### Numeric Columns
 |                    | number of studs      | slope degree         | in stock|
 |--------------------|----------------------|----------------------|-------|
@@ -54,14 +52,13 @@
 
 
 ## 3. _Exploratory plots (optional)_
-_Feel free to create some basic plots if they are necessary to understand the dataset._
 
-Countplot of different base shapes:
+(1) Countplot of different base shapes:
 
 
 ![fig_01_countplot.png](../additional_material/fig_01_countplot.png)
 
-Wordcloud of different colors by their respective count:
+(2) Wordcloud of different colors by their respective count:
 
 ![fig_02_wordcloud.png](../additional_material/fig_02_wordcloud.png)
 
