@@ -21,31 +21,31 @@
 
 **HINT: instead of formatting by hand or AI copy output of respective functions as markdown and copy paste here**
 
-_Needed elements:_
-Numeric columns
-Column 1 Column 2 Column 3
-Count
-Mean
-Standard
-deviation
-Min
-25%
-50%
-75%
-Max
-Categorical/object columns
-Column 1 Column 2 Column 3
-Count
-Number of
-unique values
-Most frequent
-value
-Most frequent
-value (frequency)
-Least frequent
-value
-Least frequent
-value (frequency)
+### Numeric Columns
+|                    | number of studs      | slope degree         | in stock|
+|--------------------|----------------------|----------------------|-------|
+| Count              | 204.000000	                | 204.000000                | 204.0 |
+| Mean               | 4.906863 | 5.073529 | 1.0 |
+| Standard deviation | 4.996171    | 14.111431    | 0.0 |
+| Min                | 0.000000	 | 0.000000	 | 1     |
+| 25%                | 2.000000	 | 0.000000 |1.0     |
+| 50%                | 4.000000	 | 0.000000 | 1.0    |
+| 75%                | 6.000000	 | 0.000000 | 1.0    |
+| Max                | 24.000000	 | 45.000000	 | 1.0   |
+
+### Categorical / Object Columns
+
+|                                  | color | is duplo?	 | size type | base shape	 | base dimensions | has slope? | 
+|----------------------------------|-------|----------------|--------|----------------|----------|----------|
+| Count                            | 204 | 204          | 204  | 204          | 204    | 204    |    
+| Number of unique values          | 62     | 2              | 2      | 5            | 14     | 2     |
+| Most frequent value              | yellow  | No         | Plate  | Rectangle          | 2x2  | No  |
+| Most frequent value (frequency)  | 16 | 171          | 108  | 109           | 47       | 180       |
+| Least frequent value             | transparentskyblue | Yes           | Brick    | Triangle           | 3x2      | Yes     |
+| Least frequent value (frequency) | 1  | 33            | 96      | 2           | 2       | 24      |
+
+
+
 
 ## 3. _Exploratory plots (optional)_
 _Feel free to create some basic plots if they are necessary to understand the dataset._
