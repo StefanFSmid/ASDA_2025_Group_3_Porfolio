@@ -8,7 +8,7 @@
 | Number of features/variables      |10           |
 | Format file (.csv, .txt, etc)     |.xlsx        |
 
-## 2. Dataset Structure (of the clean version)
+## 2. Dataset Structure (of the clean version) (STEFAN SMID)
 
 | Feature/variable | Data type  | Description | Number of Unique values |      Example values       |
 |:-----------|:-----------:|:-----------:|:-----------------------:|:-------------------------:|
