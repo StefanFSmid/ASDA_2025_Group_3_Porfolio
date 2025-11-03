@@ -53,13 +53,15 @@ _Feel free to create some basic plots if they are necessary to understand the da
 ## 4. Data cleaning procedure
 ### 4.1 Major data inconsistencies:
 
-Column Labeling was generally fine except for one unnecessary column (Transparent) which was used by only one of the five groups. This column was therefore removed to maintain consistency. 
+Column labeling was generally consistent, except for one unnecessary column, Transparent, which was used by only one of the five groups. To maintain consistency, this column was removed.
 
-Data types used in individual columns varied across groups. A simple yes/no response was filled with responses including 1/0/true/false. Similary, slope degree column was left blank by some groups while it should have a 0. All such variable data types were standardized and unified to one type by benchmarking the convention our group had made during filling of our sheet. 
+Data types varied across groups. For example, yes/no responses were recorded inconsistently as 1/0/True/False, and the slope degree column was sometimes left blank instead of using 0. Additionally, the base dimensions column contained interchangeable values, such as 2x4 and 4x2, which represent the same dimension. All such discrepancies were standardized and unified according to the conventions established by our group during data collection.
 
-_*Feel free to change the format of this table or write it in plain text but well structured._
+The most inconsistent category was color, due to the subjective nature of this attribute. Differences included capitalization, extra spaces, and spelling errors. While some colors were very similar (e.g., dark blue vs. navy blue), only basic cleaning was performed, and all original color values were retained to reflect the true inputs from each group.
+
 
 ### 4.2 Minor data inconsistencies _(if some issues cannot be reported in the above table)_
+One of the listed shapes, “Wadge” (or “Wedge”), was replaced with “Trapezium” at our discretion, as a wedge represents a 3D shape, while base dimensions should correspond to 2D shapes.
 
 ## 5. Recommendations for good practices regarding data collection
 1) Know exactly what data you need and why before you start collecting it.
@@ -71,4 +73,4 @@ _*Feel free to change the format of this table or write it in plain text but wel
 7) Track data collection processes to catch errors, inconsistencies, or changes over time.
 
 ## 6. AI Disclaimer:
-If you had to use AI code in certain part of your code and where.
+Took help from AI in standardizing the base dimension column to get the desired output.
