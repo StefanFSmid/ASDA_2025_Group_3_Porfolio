@@ -10,17 +10,17 @@
 
 ## 2. Dataset Structure (of the clean version) (STEFAN SMID)
 
-| Feature/Variable   | Data type   | Description                                         |   Unique values | Examples                         |
-|:-------------------|:------------|:----------------------------------------------------|----------------:|:---------------------------------|
-| base dimensions    | object      | Dimensions of the piece in studs (e.g., 2x4, 1x2)   |              12 | 0x0, 0x0, 0x0                    |
-| base shape         | object      | Shape of the base (e.g., Rectangle, Square, Circle) |               5 | Circle, Rectangle, Rectangle     |
-| color              | object      | Name of the Lego color                              |              62 | transparent, denimblue, redbrown |
-| has slope?         | object      | Indicates if the piece has a slope (Yes/No)         |               2 | No, No, No                       |
-| is duplo?          | object      | Indicates whether the piece is Duplo or not         |               2 | No, No, No                       |
-| number of studs    | float64     | Total number of studs on the top surface            |              10 | 0.0, 0.0, 0.0                    |
-| size type          | object      | Type of Lego piece (e.g., Brick, Plate)             |               2 | Plate, Plate, Plate              |
-| slope degree       | float64     | Angle of the slope in degrees (0 if none)           |               4 | 0.0, 0.0, 0.0                    |
-| in stock           | int64       | Availability of the part in stock                   |               3 | 1, 1, 1                          |
+| Feature/Variable   | Data type   | Description                                         |   Unique values | Examples                                        |
+|:-------------------|:------------|:----------------------------------------------------|----------------:|:------------------------------------------------|
+| base dimensions    | object      | Dimensions of the piece in studs (e.g., 2x4, 1x2)   |              12 | 2x2, 2x2, 2x2, 1x2, 1x2                         |
+| base shape         | object      | Shape of the base (e.g., Rectangle, Square, Circle) |               5 | Rectangle, Circle, Square, Rectangle, Rectangle |
+| color              | object      | Name of the Lego color                              |              62 | grey, orange, black, brickred, green            |
+| has slope?         | object      | Indicates if the piece has a slope (Yes/No)         |               2 | No, No, No, No, No                              |
+| is duplo?          | object      | Indicates whether the piece is Duplo or not         |               2 | No, No, No, No, No                              |
+| number of studs    | float64     | Total number of studs on the top surface            |              10 | 4.0, 12.0, 2.0, 2.0, 2.0                        |
+| size type          | object      | Type of Lego piece (e.g., Brick, Plate)             |               2 | Brick, Plate, Plate, Brick, Brick               |
+| slope degree       | float64     | Angle of the slope in degrees (0 if none)           |               4 | 0.0, 0.0, 0.0, 0.0, 0.0                         |
+| in stock           | int64       | Availability of the part in stock                   |               3 | 1, 1, 3, 1, 1                                   |
 
 
 ## 3. Descriptive statistics (of the clean version)
