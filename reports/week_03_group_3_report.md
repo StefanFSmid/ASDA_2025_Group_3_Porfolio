@@ -2,51 +2,51 @@
 
 | Item                              | Description |
 |:----------------------------------|:-----------:|
-| Dataset name                      |Lego Dataset |
+| Dataset name                      |combined_LegoDataset |
 | Authors                           |Combined dataset of all groups in the class|
-| Number of entries                 |204rows, 10 columns|
-| Number of features/variables      |10           |
+| Number of entries                 |185rows|
+| Number of features/variables      |9           |
 | Format file (.csv, .txt, etc)     |.xlsx        |
 
 ## 2. Dataset Structure (of the clean version) (STEFAN SMID)
 
-| Feature/variable | Data type  | Description | Number of Unique values |      Example values       |
-|:-----------|:-----------:|:-----------:|:-----------------------:|:-------------------------:|
-| base dimensions | object |      The dimensions of the base using number of studs as the unit. Avoid to use length units.       |           12            |         1x1, 1x4          |
-| base shape | object |      The shape of the base       |            5            |     Circle, Trapezium     |
-| color | object |        The color of the piece     |           62            | neonlightyellow, darkblue |
-| has slope? | object |     Whether the piece has a slope or not        |            2            |          No, Yes          |
-| is duplo? | object |      Whether the piece is duplo or not       |            2            |          No, Yes          |
-| number of studs | float64 |       The number of studs on the piece      |           10            |         1.0, 4.0          |
-|            size type     |     object    |         The type of piece: brick or plate    |            2            |       Plate, Brick        |
-|     slope degree            |     float64    |      The degree of the piece with slope       |            4            |         0.0, 45.0         |
-|            in stock     |     int64    |         How many pieces are in the bag.    |            3            |             1             |
+| Feature/Variable   | Data type   | Description                                         |   Unique values | Examples                         |
+|:-------------------|:------------|:----------------------------------------------------|----------------:|:---------------------------------|
+| base dimensions    | object      | Dimensions of the piece in studs (e.g., 2x4, 1x2)   |              12 | 0x0, 0x0, 0x0                    |
+| base shape         | object      | Shape of the base (e.g., Rectangle, Square, Circle) |               5 | Circle, Rectangle, Rectangle     |
+| color              | object      | Name of the Lego color                              |              62 | transparent, denimblue, redbrown |
+| has slope?         | object      | Indicates if the piece has a slope (Yes/No)         |               2 | No, No, No                       |
+| is duplo?          | object      | Indicates whether the piece is Duplo or not         |               2 | No, No, No                       |
+| number of studs    | float64     | Total number of studs on the top surface            |              10 | 0.0, 0.0, 0.0                    |
+| size type          | object      | Type of Lego piece (e.g., Brick, Plate)             |               2 | Plate, Plate, Plate              |
+| slope degree       | float64     | Angle of the slope in degrees (0 if none)           |               4 | 0.0, 0.0, 0.0                    |
+| in stock           | int64       | Availability of the part in stock                   |               3 | 1, 1, 1                          |
 
 
 ## 3. Descriptive statistics (of the clean version)
 
 ### Numeric Columns
-|                    | number of studs      | slope degree         | in stock|
-|--------------------|----------------------|----------------------|-------|
-| Count              | 204.000000	                | 204.000000                | 204.0 |
-| Mean               | 4.906863 | 5.073529 | 1.0 |
-| Standard deviation | 4.996171    | 14.111431    | 0.0 |
-| Min                | 0.000000	 | 0.000000	 | 1     |
-| 25%                | 2.000000	 | 0.000000 |1.0     |
-| 50%                | 4.000000	 | 0.000000 | 1.0    |
-| 75%                | 6.000000	 | 0.000000 | 1.0    |
-| Max                | 24.000000	 | 45.000000	 | 1.0   |
+|       |   number of studs |   slope degree |   in stock |
+|:------|------------------:|---------------:|-----------:|
+| count |            185    |         185    |     185    |
+| mean  |              4.75 |           5.59 |       1.1  |
+| std   |              5.11 |          14.72 |       0.37 |
+| min   |              0    |           0    |       1    |
+| 25%   |              2    |           0    |       1    |
+| 50%   |              4    |           0    |       1    |
+| 75%   |              6    |           0    |       1    |
+| max   |             24    |          45    |       3    |
 
 ### Categorical / Object Columns
 
-|                                  | color | is duplo?	 | size type | base shape	 | base dimensions | has slope? | 
-|----------------------------------|-------|----------------|--------|----------------|----------|----------|
-| Count                            | 204 | 204          | 204  | 204          | 204    | 204    |    
-| Number of unique values          | 62     | 2              | 2      | 5            | 14     | 2     |
-| Most frequent value              | yellow  | No         | Plate  | Rectangle          | 2x2  | No  |
-| Most frequent value (frequency)  | 16 | 171          | 108  | 109           | 47       | 180       |
-| Least frequent value             | transparentskyblue | Yes           | Brick    | Triangle           | 3x2      | Yes     |
-| Least frequent value (frequency) | 1  | 33            | 96      | 2           | 2       | 24      |
+|                                  | base dimensions   | base shape   | color     | has slope?   | is duplo?   | size type   |
+|:---------------------------------|:------------------|:-------------|:----------|:-------------|:------------|:------------|
+| Count                            | 185               | 185          | 185       | 185          | 185         | 185         |
+| Number of unique values          | 12                | 5            | 62        | 2            | 2           | 2           |
+| Most frequent value              | 2x2               | Rectangle    | white     | No           | No          | Plate       |
+| Most frequent value (frequency)  | 41                | 97           | 12        | 161          | 160         | 103         |
+| Least frequent value             | 4x4               | Triangle     | limegreen | Yes          | Yes         | Brick       |
+| Least frequent value (frequency) | 3                 | 2            | 1         | 24           | 25          | 82          |
 
 
 
