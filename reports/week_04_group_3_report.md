@@ -23,22 +23,26 @@
 | Source (link)                                          |     https://docs.google.com/spreadsheets/d/1ecopK6oyyb4d_7-QLrCr8YlgFrCetHU7-VQfnYej7JY/edit?usp=sharing _(adapted dataset)_     |
 
 
-## 2. Dataset Structure (of the clean version) (STEFAN SMID)
+## 2. Dataset Structure
 
-| Feature/Variable   | Data type   | Description                                         |   Unique values | Examples                                        |
-|:-------------------|:------------|:----------------------------------------------------|----------------:|:------------------------------------------------|
-| base dimensions    | object      | Dimensions of the piece in studs (e.g., 2x4, 1x2)   |              12 | 2x2, 2x2, 2x2, 1x2, 1x2                         |
-| base shape         | object      | Shape of the base (e.g., Rectangle, Square, Circle) |               5 | Rectangle, Circle, Square, Rectangle, Rectangle |
-| color              | object      | Name of the Lego color                              |              62 | grey, orange, black, brickred, green            |
-| has slope?         | object      | Indicates if the piece has a slope (Yes/No)         |               2 | No, No, No, No, No                              |
-| is duplo?          | object      | Indicates whether the piece is Duplo or not         |               2 | No, No, No, No, No                              |
-| number of studs    | float64     | Total number of studs on the top surface            |              10 | 4.0, 12.0, 2.0, 2.0, 2.0                        |
-| size type          | object      | Type of Lego piece (e.g., Brick, Plate)             |               2 | Brick, Plate, Plate, Brick, Brick               |
-| slope degree       | float64     | Angle of the slope in degrees (0 if none)           |               4 | 0.0, 0.0, 0.0, 0.0, 0.0                         |
-| in stock           | int64       | Availability of the part in stock                   |               3 | 1, 1, 3, 1, 1                                   |
+| Feature/Variable | Data type   | Description                                         |   Number of Unique values | Example values                                        |
+|:----------------|:------------|:----------------------------------------------------|----------------:|:------------------------------------------------|
+|                 |       |   |             |                          |
+|                 |       |   |             |                          |
+|                 |       |   |             |                          |
 
+## 3. Data cleaning 
 
-## 3. Descriptive statistics (of the clean version)
+| Issue        | Names of Columns affected   | Description of the Issue                                         |   Action Taken |
+|:--------|:------------|:----------------------------------------------------|----------------:|
+|       Inconsistent column labeling  |       |   |             |
+|    Wrong data types     |       |   |             |
+|     Missing values    |       |   |             |
+|     Duplicates    |       |   |             |
+|         Inconsistent categories          |       |   |             |
+|         Other          |       |   |             |
+
+## 4. Descriptive statistics
 
 ### Numeric Columns
 
@@ -55,4 +59,32 @@
 
 ### Categorical / Object Columns
 
-merged_airbnbdf.select_dtypes(include=['object'])
+|  | sheet\_name | country | city | day\_type | room\_type | room\_category | listings\_by\_host |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Count | 51707 | 51707 | 51707 | 51707 | 51707 | 51707 | 51707 |
+| Number of unique values | 20 | 10 | 10 | 2 | 3 | 3 | 3 |
+| Most frequent value | london\_weekends | United Kingdom | London | Weekends | Entire home/apt | Other | 1 |
+| Most frequent value \(frequency\) | 5379 | 9993 | 9993 | 26207 | 32648 | 32648 | 18534 |
+| Least frequent value | amsterdam\_weekends | Netherlands | Amsterdam | Weekdays | Shared room | Shared | 2-4 |
+| Least frequent value \(frequency\) | 977 | 2080 | 2080 | 25500 | 366 | 366 | 15065 |
+
+## 5. Analysis - Research question
+
+1. How many listings are in each city in total and also per type of day? 
+2. Which city has the biggest proportion of superhosts? 
+3. Which cities have listings with more than four rooms? 
+4. Which city has the most entire home/apt type listings? 
+5. Are ratings typically high across listings, or is there a wide variation? \
+&ensp; a. Plot the distribution of guest_satisfaction_overall ratings. \
+&ensp; b. Examine the distribution of cleanliness_rating. 
+6. How does person_capacity vary across listings? What is the most common capacity of listings?
+7. Plot the distribution of price (former realSum) for both weekday and weekend offers \
+&ensp; a. check normality, skewness, modality \
+&ensp; b. If skewed, consider using transformations (e.g. log); can you normalize it?
+8. Is there a difference in price per night between two cities? Choose at least three pairs of cities during weekdays.
+9. Does the price per night tend to be higher on weekends?
+10. Are listings of superhosts more expensive than those of normal hosts? 
+11. Are superhosts closer to the city center and metro station than normal hosts? 
+12. Are superhosts cleaner than normal hosts? 
+13. Is there a pattern between room types and superhost status? 
+14. Is renting an entire home/apt more expensive than a private room? Does that depend on the city?
