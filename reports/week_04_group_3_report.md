@@ -13,7 +13,7 @@
 ## 1. Dataset Overview (of the clean version)
 
 | Item                                                   |                                                           Description                                                            |
-|:-------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------:|
+|:-------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|
 | Dataset name                                           |                                                Airbnb Europe _(adapted dataset)_                                                 |
 | Number of rows                                         |                                             51707 _(adapted dataset after cleaning)_                                             |
 | Number of columns                                      |                                              21 _(adapted dataset after cleaning)_                                               |
@@ -25,11 +25,29 @@
 
 ## 2. Dataset Structure
 
-| Feature/Variable | Data type   | Description                                         |   Number of Unique values | Example values                                        |
-|:----------------|:------------|:----------------------------------------------------|----------------:|:------------------------------------------------|
-|                 |       |   |             |                          |
-|                 |       |   |             |                          |
-|                 |       |   |             |                          |
+| Feature/Variable           | Data type   | Description                                         |   Number of Unique values | Example values                                          |
+|:---------------------------|:------------|:----------------------------------------------------|--------------------------:|:--------------------------------------------------------|
+| sheet_name                 | object      | Name of the Excel sheet                             |                        20 | amsterdam_weekdays, amsterdam_weekends, athens_weekdays |
+| country                    | object      | Country where the listing is located                |                        10 | Netherlands, Greece, Germany                            |
+| city                       | object      | City where the listing is located                   |                        10 | Amsterdam, Athens, Berlin                               |
+| day_type                   | object      | Type of day                                         |                         2 | Weekdays, Weekends                                      |
+| price                      | float64     | Price per night                                     |                     10497 | 194.033698122934, 344.245776017622, 264.101422445105    |
+| room_type                  | object      | Type of room offered                                |                         3 | Private room, Entire home/apt, Shared room              |
+| room_category              | object      | Category of room                                    |                         3 | Private, Other, Shared                                  |
+| person_capacity            | int64       | Maximum number of guests                            |                         5 | 2, 4, 3                                                 |
+| host_is_superhost          | bool        | Hosts with the superhost status                     |                         2 | False, True                                             |
+| listings_by_host           | object      | Number of listings offered by this host             |                         3 | 2-4, 1, 4+                                              |
+| cleanliness_rating         | int64       | Guest reviews: scale to 10                          |                         9 | 10, 8, 9                                                |
+| guest_satisfaction_overall | int64       | Guest reviews: scale to 100                         |                        53 | 93, 85, 87                                              |
+| bedrooms                   | int64       | Number of bedrooms                                  |                        10 | 1, 2, 3                                                 |
+| citycenter_dist            | float64     | Distance to the city centre in kilometres           |                     51707 | 5.02296379808829, 0.488389288828983, 5.74831191515956   |
+| metro_dist                 | float64     | Distance to the closest metro station in kilometres |                     51707 | 2.53938000259449, 0.239403922834986, 3.65162128879365   |
+| attr_index                 | float64     | Attraction index: scale to 100                      |                     51707 | 78.6903792719031, 631.176378250396, 75.2758769142816    |
+| attr_index_norm            | float64     | Normalized attraction index (0–1 scale)             |                     51688 | 4.16670786849074, 33.4212086152754, 3.985907699879      |
+| rest_index                 | float64     | Restaurant index: scale to 100                      |                     51707 | 98.2538958700993, 837.280756742269, 95.3869549262145    |
+| rest_index_norm            | float64     | Normalized restaurant index (0-1 scale)             |                     51688 | 6.84647282420001, 58.342927743449, 6.64670025450115     |
+| lng                        | float64     | Longitude coordinate of the listing                 |                     23600 | 4.90569, 4.90005, 4.97511999999999                      |
+| lat                        | float64     | Latitude coordinate of the listing                  |                     21484 | 52.41772, 52.37432, 52.36103                            |
 
 ## 3. Data cleaning 
 
