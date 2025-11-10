@@ -1,12 +1,12 @@
 ## 0. Authors of the report
 
-| Name      |               Contribution                         |
-|:----------|:-------------------------------------------------- |
-|Assad      | Data Loading & Merging, Cleaning, Analysis Q1-10   |
-|Sumeet     | Data Cleaning, Analysis Q1-10                      |
-|Stefan     | Data Cleanin, Analysis Q13-14                      |
-|Shiva      | Data Loading & Merging, Analysis Q11-12            |
-|Zeyad      | Data Loading & Merging, Data Inspection            |
+| Name      |               Contribution                                    |
+|:----------|:------------------------------------------------------------- |
+|Assad      | Data Loading & Merging, Cleaning, Analysis Q1-10, Reporting   |
+|Sumeet     | Data Cleaning, Analysis Q1-10, Reporting                      |
+|Stefan     | Data Cleaning, Analysis Q13-14, Reporting                     |
+|Shiva      | Data Loading & Merging, Analysis Q11-12                       |
+|Zeyad      | Data Loading & Merging, Data Inspection                       |
 
 
 
