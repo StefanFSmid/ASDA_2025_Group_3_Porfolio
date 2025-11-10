@@ -185,23 +185,93 @@ The city with the most entire home/apt listings is: **Rome**
 
 &ensp; **a. Plot the distribution of guest_satisfaction_overall ratings.** \
 
+![img.png](../additional_material/img1.png)
 
+![img.png](../additional_material/img2.png)
 
+Analysis: Most Airbnb listings have high guest satisfaction ratings, with the bulk of listings 
+clustered between 90 and 100. The distribution is skewed toward the top, with very few low-rated listings. 
+This shows that guests are generally very satisfied across listings.
 
 &ensp; **b. Examine the distribution of cleanliness_rating.** 
-
-
-
-
+![img.png](../additional_material/img3.png)
+![img.png](../additional_material/img4.png)
+Analysis: The cleanliness ratings are extremely high and consistent across listings. 
+    Most listings score 9 or 10, showing that hosts maintain a very high standard of cleanliness. 
+    Also, there is no major variation, indicating that cleanliness is uniformly excellent across 
+    the dataset. 
 
 **6. How does person_capacity vary across listings? What is the most common capacity of listings?**
+![img.png](../additional_material/img5.png)
+The majority of AirBnb listings in the dataset are designed for 2 to 4 guests, with 2-person listings
+being the most common. Listings for larger groups of 5 or 6 people are relatively rare. This suggests 
+that the market is skewed toward small to medium-sized groups, likely reflecting typical traveler demand.
+
 **7. Plot the distribution of price (former realSum) for both weekday and weekend offers** \
 &ensp; **a. check normality, skewness, modality** \
+![img.png](../additional_material/img6.png)
+![img.png](../additional_material/img7.png)
+Analysis: The distribution of Airbnb prices for both weekdays and weekends is highly right-skewed, 
+with skewness values of 24.1 for weekdays and 16.6 for weekends. Both distributions have 
+extremely high kurtosis (939 for weekdays, 566 for weekends), indicating heavy tails and 
+the presence of extreme outliers. The histograms show a unimodal distribution, with a single 
+peak at lower price ranges. The Shapiro-Wilk test on a sample of 5,000 listings confirms that 
+the price distributions are not normal (p-values << 0.05). Overall, most listings are clustered
+at lower prices, but a few extremely high-priced listings create a long right tail.
+
 &ensp; **b. If skewed, consider using transformations (e.g. log); can you normalize it?**
+![img.png](../additional_material/img8.png)
+![img.png](../additional_material/img9.png)
+Analysis: The log-transformed distribution of Airbnb prices for both weekdays and weekends 
+is much closer to a symmetric shape, with skewness reduced to around 0.76 for weekdays and 0.66 for 
+weekends, and lower kurtosis values (1.52 for weekdays, 1.10 for weekends). Both distributions 
+remain unimodal, with a single peak visible in the histograms. While the Shapiro-Wilk test still 
+indicates non-normality (p-values << 0.05), the log transformation effectively reduces the influence 
+of extreme high-priced listings.
+
 **8. Is there a difference in price per night between two cities? Choose at least three pairs of cities during weekdays.**
+![img.png](../additional_material/img10.png)
+![img.png](../additional_material/img11.png)
+![img.png](../additional_material/img12.png)
+
+Analysis: The t-test results indicate that there are statistically significant differences in weekday 
+prices between all three pairs of cities (Amsterdam vs Berlin, Paris vs London, Rome vs Barcelona), 
+with p-values effectively 0. This suggests that the average nightly price differs between these cities.
+
 **9. Does the price per night tend to be higher on weekends?**
+![img.png](../additional_material/img13.png)
+Analysis: As per analysis, the average price per night is certainly higher on weekends compared to
+weekdays, indicating that Airbnb hosts probably charge a premium during weekends, likely due to higher demand. 
+The boxplot shows that weekday prices have more variation and outliers, meaning there are more very low
+and very high prices on weekdays. Weekend prices, while higher on average, are more consistently clustered.
+
 **10. Are listings of superhosts more expensive than those of normal hosts?** 
+![img.png](../additional_material/img14.png)
+Analysis: The average superhosts listing price is 254.45 €, while normal host 
+listings average 288.63 €. This indicates that, on average, Normal Host listings 
+are slightly more expensive than Superhost listings. Superhosts do not charge systematically 
+higher prices, though Normal Hosts exhibit more extreme high-price outliers.
+
 **11. Are superhosts closer to the city center and metro station than normal hosts?** 
+![img.png](../additional_material/img15.png)
+
 **12. Are superhosts cleaner than normal hosts?** 
+![img.png](../additional_material/img16.png)
+
 **13. Is there a pattern between room types and superhost status?** 
+![img.png](../additional_material/img17.png)
+
+Analysis: There appears to be a pattern between room types and superhost status:
+1. Entire homes/apartments have a higher representation among superhosts
+2. Private rooms show similar proportions between superhosts and normal hosts, with, relatively speaking, slightly more normal hosts
+3. Shared rooms are less common among superhosts
+This suggests that superhosts are more likely to rent out entire properties rather than shared spaces.
+
 **14. Is renting an entire home/apt more expensive than a private room? Does that depend on the city?**
+![img.png](../additional_material/img18.png)
+
+Analysis:
+1. Entire homes/apartments are consistently more expensive than private rooms across all cities
+2. The price premium varies significantly by city
+3. Some cities show a larger gap between room types than others
+4. London and Paris show the highest absolute price differences
