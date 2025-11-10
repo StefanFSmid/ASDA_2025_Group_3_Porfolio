@@ -88,7 +88,7 @@
 
 ## 5. Analysis - Research question
 
-1. How many listings are in each city in total and also per type of day? 
+**1. How many listings are in each city in total and also per type of day?**
 
 a.
 | city      |   Total listings per city |
@@ -130,9 +130,9 @@ b.
 | Vienna    | Weekends   |                                   1799 |
 
 
-2. Which city has the biggest proportion of superhosts? 
+**2. Which city has the biggest proportion of superhosts?** 
 
-The city which has the biggest proportion of superhosts is: Rome
+The city which has the biggest proportion of superhosts is: **Rome**
 
 | city      |   Superhosts_per_city |
 |:----------|----------------------:|
@@ -148,7 +148,7 @@ The city which has the biggest proportion of superhosts is: Rome
 | Barcelona |                   514 |
 
 
-3. Which cities have listings with more than four rooms? 
+**3. Which cities have listings with more than four rooms?** 
 
 Cities with listings having 4 or more bedrooms: Amsterdam, Athens, Berlin, Barcelona, Lisbon, London, Paris, Rome, Vienna
 
@@ -164,9 +164,9 @@ Cities with listings having 4 or more bedrooms: Amsterdam, Athens, Berlin, Barce
 | Rome      |                        16 |
 | Vienna    |                         7 |
 
-4. Which city has the most entire home/apt type listings? 
+**4. Which city has the most entire home/apt type listings?**
 
-The city with the most entire home/apt listings is: Rome
+The city with the most entire home/apt listings is: **Rome**
 
 | city      |   Entire_home_count |
 |:----------|--------------------:|
@@ -181,27 +181,27 @@ The city with the most entire home/apt listings is: Rome
 | Berlin    |                 882 |
 | Barcelona |                 542 |
 
-5. Are ratings typically high across listings, or is there a wide variation? \
+**5. Are ratings typically high across listings, or is there a wide variation?** \
 
-&ensp; a. Plot the distribution of guest_satisfaction_overall ratings. \
-
-
-
-
-&ensp; b. Examine the distribution of cleanliness_rating. 
+&ensp; **a. Plot the distribution of guest_satisfaction_overall ratings.** \
 
 
 
 
+&ensp; **b. Examine the distribution of cleanliness_rating.** 
 
-6. How does person_capacity vary across listings? What is the most common capacity of listings?
-7. Plot the distribution of price (former realSum) for both weekday and weekend offers \
-&ensp; a. check normality, skewness, modality \
-&ensp; b. If skewed, consider using transformations (e.g. log); can you normalize it?
-8. Is there a difference in price per night between two cities? Choose at least three pairs of cities during weekdays.
-9. Does the price per night tend to be higher on weekends?
-10. Are listings of superhosts more expensive than those of normal hosts? 
-11. Are superhosts closer to the city center and metro station than normal hosts? 
-12. Are superhosts cleaner than normal hosts? 
-13. Is there a pattern between room types and superhost status? 
-14. Is renting an entire home/apt more expensive than a private room? Does that depend on the city?
+
+
+
+
+**6. How does person_capacity vary across listings? What is the most common capacity of listings?**
+**7. Plot the distribution of price (former realSum) for both weekday and weekend offers** \
+&ensp; **a. check normality, skewness, modality** \
+&ensp; **b. If skewed, consider using transformations (e.g. log); can you normalize it?**
+**8. Is there a difference in price per night between two cities? Choose at least three pairs of cities during weekdays.**
+**9. Does the price per night tend to be higher on weekends?**
+**10. Are listings of superhosts more expensive than those of normal hosts?** 
+**11. Are superhosts closer to the city center and metro station than normal hosts?** 
+**12. Are superhosts cleaner than normal hosts?** 
+**13. Is there a pattern between room types and superhost status?** 
+**14. Is renting an entire home/apt more expensive than a private room? Does that depend on the city?**
