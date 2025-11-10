@@ -293,6 +293,7 @@ The results show that Superhosts have a higher average cleanliness rating (9.83)
 ![img.png](../additional_material/img17.png)
 
 **Analysis:** 
+
 There appears to be a pattern between room types and superhost status:
 1. Entire homes/apartments have a higher representation among superhosts
 2. Private rooms show similar proportions between superhosts and normal hosts, with, relatively speaking, slightly more normal hosts
