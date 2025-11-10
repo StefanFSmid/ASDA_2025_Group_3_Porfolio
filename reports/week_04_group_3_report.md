@@ -53,12 +53,12 @@
 
 | Issue        | Names of Columns affected   | Description of the Issue                                         |   Action Taken |
 |:--------|:------------|:----------------------------------------------------|----------------:|
-|       Inconsistent column labeling  |       |   |             |
-|    Wrong data types     |       |   |             |
-|     Missing values    |       |   |             |
-|     Duplicates    |       |   |             |
-|         Inconsistent categories          |       |   |             |
-|         Other          |       |   |             |
+|       Inconsistent column labeling  | -      | -  |      -       |
+|    Wrong data types     |   -    | -  |     -        |
+|     Missing values    |    No missing values   |  NA |      No action needed       |
+|     Duplicates    |   No duplicate rows    | NA  |   No action needed          |
+|         Inconsistent categories          |   -    |  - |      -       |
+|         Other          |   -    |  - |     -        |
 
 ## 4. Descriptive statistics
 
@@ -66,7 +66,7 @@
 
 |  | price | person\_capacity | cleanliness\_rating | guest\_satisfaction\_overall | bedrooms | citycenter\_dist | metro\_dist | attr\_index | attr\_index\_norm | rest\_index | rest\_index\_norm | lng | lat |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| count | 51707.0 | 51707.0 | 51707.0 | 51707.0 | 51707.0 | 51707.0 | 51707.0 | 51707.0 | 51707.0 | 51707.0 | 51707.0 | 51707.0 | 51707.0 |
+| count | 51707 | 51707 | 51707 | 51707 | 51707 | 51707 | 51707 | 51707 | 51707 | 51707 | 51707 | 51707 | 51707 |
 | mean | 279.88 | 3.16 | 9.39 | 92.63 | 1.16 | 3.19 | 0.68 | 294.2 | 13.42 | 626.86 | 22.79 | 7.43 | 45.67 |
 | std | 327.95 | 1.3 | 0.95 | 8.95 | 0.63 | 2.39 | 0.86 | 224.75 | 9.81 | 497.92 | 17.8 | 9.8 | 5.25 |
 | min | 34.78 | 2.0 | 2.0 | 20.0 | 0.0 | 0.02 | 0.0 | 15.15 | 0.93 | 19.58 | 0.59 | -9.23 | 37.95 |
@@ -89,8 +89,8 @@
 ## 5. Analysis - Research question
 
 1. How many listings are in each city in total and also per type of day? 
-a.
 
+a.
 | city      |   Total listings per city |
 |:----------|--------------------------:|
 | Amsterdam |                      2080 |
