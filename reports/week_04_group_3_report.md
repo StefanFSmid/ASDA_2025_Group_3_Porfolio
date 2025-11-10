@@ -131,11 +131,69 @@ b.
 
 
 2. Which city has the biggest proportion of superhosts? 
+
+The city which has the biggest proportion of superhosts is: Rome
+
+| city      |   Superhosts_per_city |
+|:----------|----------------------:|
+| Rome      |                  2949 |
+| Athens    |                  2263 |
+| London    |                  1573 |
+| Budapest  |                  1524 |
+| Lisbon    |                  1233 |
+| Vienna    |                  1005 |
+| Paris     |                   941 |
+| Berlin    |                   639 |
+| Amsterdam |                   591 |
+| Barcelona |                   514 |
+
+
 3. Which cities have listings with more than four rooms? 
+
+Cities with listings having 4 or more bedrooms: Amsterdam, Athens, Berlin, Barcelona, Lisbon, London, Paris, Rome, Vienna
+
+| city      |   Listings_4plus_bedrooms |
+|:----------|--------------------------:|
+| Amsterdam |                        20 |
+| Athens    |                         2 |
+| Barcelona |                         4 |
+| Berlin    |                         5 |
+| Lisbon    |                        25 |
+| London    |                        36 |
+| Paris     |                         7 |
+| Rome      |                        16 |
+| Vienna    |                         7 |
+
 4. Which city has the most entire home/apt type listings? 
+
+The city with the most entire home/apt listings is: Rome
+
+| city      |   Entire_home_count |
+|:----------|--------------------:|
+| Rome      |                5561 |
+| Paris     |                5067 |
+| Athens    |                4872 |
+| London    |                4384 |
+| Lisbon    |                3878 |
+| Budapest  |                3589 |
+| Vienna    |                2747 |
+| Amsterdam |                1126 |
+| Berlin    |                 882 |
+| Barcelona |                 542 |
+
 5. Are ratings typically high across listings, or is there a wide variation? \
+
 &ensp; a. Plot the distribution of guest_satisfaction_overall ratings. \
+
+
+
+
 &ensp; b. Examine the distribution of cleanliness_rating. 
+
+
+
+
+
 6. How does person_capacity vary across listings? What is the most common capacity of listings?
 7. Plot the distribution of price (former realSum) for both weekday and weekend offers \
 &ensp; a. check normality, skewness, modality \
