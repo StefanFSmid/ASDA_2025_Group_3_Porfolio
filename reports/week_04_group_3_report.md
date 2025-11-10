@@ -90,6 +90,7 @@
 
 1. How many listings are in each city in total and also per type of day? 
 a.
+
 | city      |   Total listings per city |
 |:----------|--------------------------:|
 | Amsterdam |                      2080 |
@@ -103,7 +104,9 @@ a.
 | Rome      |                      9027 |
 | Vienna    |                      3537 |
 
-b. | city      | day_type   |   Total listings per city and day type |
+
+b. 
+| city      | day_type   |   Total listings per city and day type |
 |:----------|:-----------|---------------------------------------:|
 | Amsterdam | Weekdays   |                                   1103 |
 | Amsterdam | Weekends   |                                    977 |
@@ -125,7 +128,6 @@ b. | city      | day_type   |   Total listings per city and day type |
 | Rome      | Weekends   |                                   4535 |
 | Vienna    | Weekdays   |                                   1738 |
 | Vienna    | Weekends   |                                   1799 |
-
 
 
 2. Which city has the biggest proportion of superhosts? 
