@@ -61,12 +61,6 @@ Our data cleaning activity involved the following:
 7. Column positions were adjusted to improve flow of data.
 8. Duplicate Rows were checked but none were found!
 
-
-
-We created new columns "city", "days", "country", "host_portfolio" for better analysis of the data.
-
-We did some other minor changes, like deleting the first column (which only numbered the listings) and renamed some variables ("realSum" -> "Price")
-
 ## 4. Descriptive statistics
 
 ### Numeric Columns
