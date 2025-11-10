@@ -51,14 +51,21 @@
 
 ## 3. Data cleaning 
 
-| Issue        | Names of Columns affected   | Description of the Issue                                         |   Action Taken |
-|:--------|:------------|:----------------------------------------------------|----------------:|
-|       Inconsistent column labeling  | -      | -  |      -       |
-|    Wrong data types     |   -    | -  |     -        |
-|     Missing values    |    No missing values   |  NA |      No action needed       |
-|     Duplicates    |   No duplicate rows    | NA  |   No action needed          |
-|         Inconsistent categories          |   -    |  - |      -       |
-|         Other          |   -    |  - |     -        |
+Our data cleaning activity involved the following:
+1. Removing the first column that contained the index for listings.
+2. Renaming of column from 'realSum' to 'Price' which was more intuitive.
+3. Renaming of column from 'dist' to 'citycenter_dist' to make it more specific. 
+4. "room_shared", "room_private", "multi", "biz" columns containing dummy variables were deleted and replaced with "room_category" and "listing by host" columns respectively. This helped condense redundant information in fewer columns.
+5. Some new columns such as "sheet_name", "city", "country" and "day_type" were added as relevant features to the data.
+6. All column names were eventually standardized to lowercase and spaces were replaced with underscores.
+7. Column positions were adjusted to improve flow of data.
+8. Duplicate Rows were checked but none were found!
+
+
+
+We created new columns "city", "days", "country", "host_portfolio" for better analysis of the data.
+
+We did some other minor changes, like deleting the first column (which only numbered the listings) and renamed some variables ("realSum" -> "Price")
 
 ## 4. Descriptive statistics
 
