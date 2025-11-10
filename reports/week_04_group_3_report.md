@@ -31,7 +31,7 @@
 | country                    | object      | Country where the listing is located                |                        10 | Netherlands, Greece, Germany                            |
 | city                       | object      | City where the listing is located                   |                        10 | Amsterdam, Athens, Berlin                               |
 | day_type                   | object      | Type of day                                         |                         2 | Weekdays, Weekends                                      |
-| price                      | float64     | Price per night                                     |                     10497 | 194.033698122934, 344.245776017622, 264.101422445105    |
+| price                      | float64     | Price per night                                     |                      9876 | 194.03, 344.25, 264.1                                   |
 | room_type                  | object      | Type of room offered                                |                         3 | Private room, Entire home/apt, Shared room              |
 | room_category              | object      | Category of room                                    |                         3 | Private, Other, Shared                                  |
 | person_capacity            | int64       | Maximum number of guests                            |                         5 | 2, 4, 3                                                 |
@@ -40,14 +40,14 @@
 | cleanliness_rating         | int64       | Guest reviews: scale to 10                          |                         9 | 10, 8, 9                                                |
 | guest_satisfaction_overall | int64       | Guest reviews: scale to 100                         |                        53 | 93, 85, 87                                              |
 | bedrooms                   | int64       | Number of bedrooms                                  |                        10 | 1, 2, 3                                                 |
-| citycenter_dist            | float64     | Distance to the city centre in kilometres           |                     51707 | 5.02296379808829, 0.488389288828983, 5.74831191515956   |
-| metro_dist                 | float64     | Distance to the closest metro station in kilometres |                     51707 | 2.53938000259449, 0.239403922834986, 3.65162128879365   |
-| attr_index                 | float64     | Attraction index: scale to 100                      |                     51707 | 78.6903792719031, 631.176378250396, 75.2758769142816    |
-| attr_index_norm            | float64     | Normalized attraction index (0–1 scale)             |                     51688 | 4.16670786849074, 33.4212086152754, 3.985907699879      |
-| rest_index                 | float64     | Restaurant index: scale to 100                      |                     51707 | 98.2538958700993, 837.280756742269, 95.3869549262145    |
-| rest_index_norm            | float64     | Normalized restaurant index (0-1 scale)             |                     51688 | 6.84647282420001, 58.342927743449, 6.64670025450115     |
-| lng                        | float64     | Longitude coordinate of the listing                 |                     23600 | 4.90569, 4.90005, 4.97511999999999                      |
-| lat                        | float64     | Latitude coordinate of the listing                  |                     21484 | 52.41772, 52.37432, 52.36103                            |
+| citycenter_dist            | float64     | Distance to the city centre in kilometres           |                      1320 | 5.02, 0.49, 5.75                                        |
+| metro_dist                 | float64     | Distance to the closest metro station in kilometres |                       652 | 2.54, 0.24, 3.65                                        |
+| attr_index                 | float64     | Attraction index: scale to 100                      |                     25939 | 78.69, 631.18, 75.28                                    |
+| attr_index_norm            | float64     | Normalized attraction index (0–1 scale)             |                      4277 | 4.17, 33.42, 3.99                                       |
+| rest_index                 | float64     | Restaurant index: scale to 100                      |                     32606 | 98.25, 837.28, 95.39                                    |
+| rest_index_norm            | float64     | Normalized restaurant index (0-1 scale)             |                      7127 | 6.85, 58.34, 6.65                                       |
+| lng                        | float64     | Longitude coordinate of the listing                 |                       256 | 4.91, 4.9, 4.98                                         |
+| lat                        | float64     | Latitude coordinate of the listing                  |                       147 | 52.42, 52.37, 52.36                                     |
 
 ## 3. Data cleaning 
 
@@ -89,6 +89,45 @@
 ## 5. Analysis - Research question
 
 1. How many listings are in each city in total and also per type of day? 
+a.
+| city      |   Total listings per city |
+|:----------|--------------------------:|
+| Amsterdam |                      2080 |
+| Athens    |                      5280 |
+| Barcelona |                      2833 |
+| Berlin    |                      2484 |
+| Budapest  |                      4022 |
+| Lisbon    |                      5763 |
+| London    |                      9993 |
+| Paris     |                      6688 |
+| Rome      |                      9027 |
+| Vienna    |                      3537 |
+
+b. | city      | day_type   |   Total listings per city and day type |
+|:----------|:-----------|---------------------------------------:|
+| Amsterdam | Weekdays   |                                   1103 |
+| Amsterdam | Weekends   |                                    977 |
+| Athens    | Weekdays   |                                   2653 |
+| Athens    | Weekends   |                                   2627 |
+| Barcelona | Weekdays   |                                   1555 |
+| Barcelona | Weekends   |                                   1278 |
+| Berlin    | Weekdays   |                                   1284 |
+| Berlin    | Weekends   |                                   1200 |
+| Budapest  | Weekdays   |                                   2074 |
+| Budapest  | Weekends   |                                   1948 |
+| Lisbon    | Weekdays   |                                   2857 |
+| Lisbon    | Weekends   |                                   2906 |
+| London    | Weekdays   |                                   4614 |
+| London    | Weekends   |                                   5379 |
+| Paris     | Weekdays   |                                   3130 |
+| Paris     | Weekends   |                                   3558 |
+| Rome      | Weekdays   |                                   4492 |
+| Rome      | Weekends   |                                   4535 |
+| Vienna    | Weekdays   |                                   1738 |
+| Vienna    | Weekends   |                                   1799 |
+
+
+
 2. Which city has the biggest proportion of superhosts? 
 3. Which cities have listings with more than four rooms? 
 4. Which city has the most entire home/apt type listings? 
