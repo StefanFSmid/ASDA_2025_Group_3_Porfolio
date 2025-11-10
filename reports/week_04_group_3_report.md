@@ -53,12 +53,12 @@
 
 | Issue        | Names of Columns affected   | Description of the Issue                                         |   Action Taken |
 |:--------|:------------|:----------------------------------------------------|----------------:|
-|       Inconsistent column labeling  |       |   |             |
-|    Wrong data types     |       |   |             |
-|     Missing values    |       |   |             |
-|     Duplicates    |       |   |             |
-|         Inconsistent categories          |       |   |             |
-|         Other          |       |   |             |
+|       Inconsistent column labeling  | -      | -  |      -       |
+|    Wrong data types     |   -    | -  |     -        |
+|     Missing values    |    No missing values   |  NA |      No action needed       |
+|     Duplicates    |   No duplicate rows    | NA  |   No action needed          |
+|         Inconsistent categories          |   -    |  - |      -       |
+|         Other          |   -    |  - |     -        |
 
 ## 4. Descriptive statistics
 
