@@ -270,9 +270,13 @@ higher prices, though Normal Hosts exhibit more extreme high-price outliers.
 
 ![img.png](../additional_material/img15.png)
 
+Analysis: The results show that Superhosts are usually closer to the city center and metro stations than Normal Hosts. This means Superhosts often have listings in better and more convenient locations. Being close to transport and main attractions likely makes it easier for guests to travel and enjoy their stay, which can lead to better reviews and help hosts become or stay Superhosts.
+
 **12. Are superhosts cleaner than normal hosts?** 
 
 ![img.png](../additional_material/img16.png)
+
+Analysis: The results show that Superhosts have a higher average cleanliness rating (9.83) compared to Normal Hosts (9.24). This means that Superhosts generally maintain cleaner and better kept properties. Cleanliness is an important factor for guest satisfaction and maintaining high cleanliness standards likely helps hosts earn and keep their Superhost status.
 
 **13. Is there a pattern between room types and superhost status?** 
 
