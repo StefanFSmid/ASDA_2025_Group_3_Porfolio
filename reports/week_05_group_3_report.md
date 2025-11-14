@@ -90,4 +90,10 @@
 | Least frequent value             | Afghanistan | North America         | Low income     | Blend              |
 | Least frequent value (frequency) | 64          | 192                   | 1664           | 1216               |
 
+
+### GDP per Country
+![GDP](gdp_per_country.png)
+
+
+
 ## 5. Analysis - Research question
