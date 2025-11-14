@@ -92,7 +92,6 @@
 
 
 ### GDP per Country
-![GDP](gdp_per_country.png)
 
 
 
