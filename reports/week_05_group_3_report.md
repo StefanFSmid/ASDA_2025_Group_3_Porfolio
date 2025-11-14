@@ -68,6 +68,26 @@
 
 ### Numeric Columns
 
+|       |   gdp_current_usd_M |    co2_emissions |   gov_effectiveness_estimate |   life_expectancy_at_birth |
+|:------|--------------------:|-----------------:|-----------------------------:|---------------------------:|
+| count |     13056           |  13056           |                     13056    |                   13056    |
+| mean  |    166064           | 143573           |                        -0.02 |                      64.63 |
+| std   |    934961           | 622493           |                         0.99 |                      11.29 |
+| min   |         8.82        |      0           |                        -2.44 |                      12    |
+| 25%   |      1534.1         |   1747.98        |                        -0.75 |                      57.45 |
+| 50%   |      7745.25        |   9563.14        |                        -0.16 |                      67.54 |
+| 75%   |     46537           |  55132.7         |                         0.69 |                      73.06 |
+| max   |         2.54397e+07 |      1.09447e+07 |                         2.47 |                      85.5  |
+
 ### Categorical / Object Columns
+
+|                                  | country     | region                | income_group   | lending_category   |
+|:---------------------------------|:------------|:----------------------|:---------------|:-------------------|
+| Count                            | 13056       | 13056                 | 13056          | 13056              |
+| Number of unique values          | 204         | 7                     | 4              | 4                  |
+| Most frequent value              | Afghanistan | Europe & Central Asia | High income    | IBRD               |
+| Most frequent value (frequency)  | 64          | 3392                  | 4736           | 4416               |
+| Least frequent value             | Afghanistan | North America         | Low income     | Blend              |
+| Least frequent value (frequency) | 64          | 192                   | 1664           | 1216               |
 
 ## 5. Analysis - Research question
