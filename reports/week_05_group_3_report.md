@@ -24,31 +24,32 @@
 
 ## 2. Dataset Structure
 
-| Feature/variable                  | Data type   | Description                             |   # Unique values | Eg. values                                       |
-|:----------------------------------|:------------|:----------------------------------------|------------------:|:-------------------------------------------------|
-| country                           | object      | Country                                 |               204 | ["Cote d'Ivoire", 'Liechtenstein']               |
-| code                              | object      | Country code                            |               204 | ['MMR', 'NPL']                                   |
-| region                            | object      | Geographic region                       |                 7 | ['Europe & Central Asia', 'East Asia & Pacific'] |
-| income_group                      | object      | Income classification                   |                 4 | ['Low income', 'High income']                    |
-| lending_category                  | object      | Lending group class                     |                 4 | ['IDA', 'Not classified']                        |
-| year                              | int32       | Year of measurement                     |                64 | [1964, 1992]                                     |
-| agricultural_land_pct             | float64     | Agri land % of total area               |              4922 | ['0.70', '32.73']                                |
-| forest_land_pct                   | float64     | Forest % of total area                  |              3705 | ['2.33', '36.47']                                |
-| control_of_corruption_estimate    | float64     | Estimate of corruption control          |               427 | ['2.28', '1.16']                                 |
-| access_to_electricity_pct         | float64     | Population with electricity access      |              2353 | ['47.25', '67.42']                               |
-| renewable_energy_consumption_pct  | float64     | Renewable energy % of total consumption |              3986 | ['93.32', '33.22']                               |
-| co2_emissions                     | float64     | CO2 emissions in kt                     |              5784 | ['274,043.70', '3,058.40']                       |
-| pop_density                       | float64     | Population per km²                      |              8678 | ['57.98', '409.75']                              |
-| inflation_yr_pct                  | float64     | Annual inflation rate                   |              2748 | ['12.72', '18.01']                               |
-| tax_revenue_pct                   | float64     | Tax revenue % of GDP                    |              2086 | ['34.45', '12.83']                               |
-| gov_effectiveness_estimate        | float64     | Estimate of government effectiveness    |               457 | ['0.49', '-1.96']                                |
-| gdp_current_usd_M                 | float64     | GDP in current USD (M)                  |             10138 | ['281.08', '675.00']                             |
-| political_stability_estimate      | float64     | Estimate of political stability         |               465 | ['-2.48', '-2.91']                               |
-| rule_of_law_estimate              | float64     | Estimate of rule of law                 |               430 | ['-0.03', '0.81']                                |
-| gov_exp_on_education_pct          | float64     | Gov. education expenditure % of GDP     |               824 | ['3.68', '8.61']                                 |
-| gov_health_exp_pct                | float64     | Gov. health expenditure % of GDP        |               875 | ['10.99', '2.12']                                |
-| life_expectancy_at_birth          | float64     | Life expectancy in years                |              4087 | ['66.42', '82.58']                               |
-| voice_and_accountability_estimate | float64     | Estimate of voice and accountability    |               405 | ['-0.65', '-2.16']                               |
+| Feature/variable                  | Data type   | Description                             |   # Unique values | Eg. values                           |
+|:----------------------------------|:------------|:----------------------------------------|------------------:|:-------------------------------------|
+| country                           | object      | Country                                 |               204 | ['Angola', 'Finland']                |
+| code                              | object      | Country code                            |               204 | ['COG', 'NER']                       |
+| region                            | object      | Geographic region                       |                 7 | ['South Asia', 'Sub-Saharan Africa'] |
+| income_group                      | object      | Income classification                   |                 4 | ['Low income', 'High income']        |
+| lending_category                  | object      | Lending group class                     |                 4 | ['IDA', 'Blend']                     |
+| year                              | int32       | Year of measurement                     |                64 | [1993, 2022]                         |
+| agricultural_land_pct             | float64     | Agri land % of total area               |              4922 | ['57.83', '80.77']                   |
+| forest_land_pct                   | float64     | Forest % of total area                  |              3705 | ['30.75', '94.40']                   |
+| control_of_corruption_estimate    | float64     | Estimate of corruption control          |               427 | ['0.14', '1.67']                     |
+| access_to_electricity_pct         | float64     | Population with electricity access      |              2353 | ['97.33', '98.36']                   |
+| renewable_energy_consumption_pct  | float64     | Renewable energy % of total consumption |              3986 | ['59.51', '10.97']                   |
+| co2_emissions                     | float64     | CO2 emissions in kt                     |              5784 | ['360.70', '652.53']                 |
+| pop_density                       | float64     | Population per km²                      |              8678 | ['285.78', '38.18']                  |
+| inflation_yr_pct                  | float64     | Annual inflation rate                   |              2748 | ['9.27', '3.69']                     |
+| tax_revenue_pct                   | float64     | Tax revenue % of GDP                    |              2086 | ['6.43', '5.20']                     |
+| gov_effectiveness_estimate        | float64     | Estimate of government effectiveness    |               457 | ['2.23', '1.02']                     |
+| gdp_current_usd_M                 | float64     | GDP in current USD (M)                  |             10138 | ['2,780.42', '3,284.27']             |
+| political_stability_estimate      | float64     | Estimate of political stability         |               465 | ['-1.38', '0.57']                    |
+| rule_of_law_estimate              | float64     | Estimate of rule of law                 |               430 | ['-1.12', '0.55']                    |
+| gov_exp_on_education_pct          | float64     | Gov. education expenditure % of GDP     |               824 | ['0.83', '2.08']                     |
+| gov_health_exp_pct                | float64     | Gov. health expenditure % of GDP        |               875 | ['10.21', '4.00']                    |
+| life_expectancy_at_birth          | float64     | Life expectancy in years                |              4087 | ['65.56', '43.79']                   |
+| pop_M                             | float64     | Population (M)                          |              4059 | ['19.08', '14.11']                   |
+| voice_and_accountability_estimate | float64     | Estimate of voice and accountability    |               405 | ['0.53', '-0.07']                    |
 
 ## 3. Data cleaning 
 
