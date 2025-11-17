@@ -1,12 +1,12 @@
 ## 0. Authors of the report
 
-| Name      |               Contribution                                    |
-|:----------|:------------------------------------------------------------- |
-|Assad      |    |
-|Sumeet     |                       |
-|Stefan     |                      |
-|Shiva      |                        |
-|Zeyad      |                        |
+| Name      | Contribution                         |
+|:----------|:-------------------------------------|
+|Assad      | Data Cleaning, Final Report Creation |
+|Sumeet     | "Economic Performance"                |
+|Stefan     | "Governance", Final Report Creation    |
+|Shiva      | "Human Wellbeing"                      |
+|Zeyad      | "Environment"                          |
 
 
 ## 1. Dataset Overview (of the clean version)
@@ -150,6 +150,9 @@ Together, these narratives form a global picture of environmental sustainability
 ![img_11.png](../additional_material/img_11.png)
 ![img_12.png](../additional_material/img_12.png)
 
+#### Economic Story
+Economic performance and fiscal capacity clearly vary across income groups. High-income countries benefit from high GDP, stable inflation, and effective taxation systems, while low-income countries face challenges in all three indicators. Middle-income countries are in transition, balancing growth and stability. These patterns underscore the importance of income-specific policies to reduce poverty, stabilize prices, and strengthen public finances.
+
 ### Human well-being and health indicators:
 
     life_expectancy_at_birth
@@ -157,3 +160,9 @@ Together, these narratives form a global picture of environmental sustainability
     government_health_expenditure%
     access_to_electricity%
     population_density
+
+![img.png](../additional_material/img_13.png)
+![img_1.png](../additional_material/img_14.png)
+![img_2.png](../additional_material/img_15.png)
+![img_3.png](../additional_material/img_16.png)
+![img_4.png](../additional_material/img_17.png)
