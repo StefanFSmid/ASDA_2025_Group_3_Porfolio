@@ -151,6 +151,7 @@ Together, these narratives form a global picture of environmental sustainability
 ![img_12.png](../additional_material/img_12.png)
 
 #### Economic Story
+
 Economic performance and fiscal capacity clearly vary across income groups. High-income countries benefit from high GDP, stable inflation, and effective taxation systems, while low-income countries face challenges in all three indicators. Middle-income countries are in transition, balancing growth and stability. These patterns underscore the importance of income-specific policies to reduce poverty, stabilize prices, and strengthen public finances.
 
 ### Human well-being and health indicators:
@@ -161,8 +162,12 @@ Economic performance and fiscal capacity clearly vary across income groups. High
     access_to_electricity%
     population_density
 
-![img.png](../additional_material/img_13.png)
-![img_1.png](../additional_material/img_14.png)
-![img_2.png](../additional_material/img_15.png)
-![img_3.png](../additional_material/img_16.png)
-![img_4.png](../additional_material/img_17.png)
+![img_13.png](../additional_material/img_13.png)
+![img_14.png](../additional_material/img_14.png)
+![img_15.png](../additional_material/img_15.png)
+![img_16.png](../additional_material/img_16.png)
+![img_17.png](../additional_material/img_17.png)
+
+#### Human Well-being Story
+
+Across all five human well-being indicators, higher-income countries clearly perform better than the rest. They have the highest life expectancy, strong government spending on education and health, and almost universal access to electricity. Low-income countries face the biggest challenges, with much lower life expectancy and limited investment in social services. Middle-income countries fall in between: some are improving quickly, while others still resemble low-income levels. Population density does not follow an income pattern because it depends more on geography and urbanization than on income. Overall, the results show that income plays a major role in shaping people’s living conditions, but each group faces different development priorities. The gap between low- and high-income countries highlights the need for more investment in health, education, and basic infrastructure in poorer nations.
