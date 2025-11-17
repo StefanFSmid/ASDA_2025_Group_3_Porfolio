@@ -93,7 +93,67 @@
 
 
 ### GDP per Country
-
+![img.png](../additional_material/img.png)
 
 
 ## 5. Analysis - Research question
+### Governance and institutional quality indicators:
+
+    goverment_effectiveness_estimate
+    control_of_corruption_estimate
+    rule_of_law_estimate
+    voice_and_accountability_estimate
+    political_stability_estimate
+
+![img_1.png](../additional_material/img_1.png)
+![img_2.png](../additional_material/img_2.png)
+![img_3.png](../additional_material/img_3.png)
+![img_4.png](../additional_material/img_4.png)
+![img_5.png](../additional_material/img_5.png)
+
+#### Governance Story:
+
+The analysis shows that none of the indicators is normally-distributed. Although this hinders the statistical tests applied and their explanation power, it can clearly be seen in the results and the respective boxplots, that there is always the trend in the data that higher income correlates with higher means in political stability, governance effectiveness, rule of law, voice&accountability and corruption control. Interestingly, the standard deviance and, hence, also the variance is lowest in high income countries for each indicator applied.
+
+
+### Environmental sustainability indicators:
+
+    CO2_emisions
+    renewvable_energy_consumption%
+    forest_land%
+    agricultural_land
+
+![img_6.png](../additional_material/img_6.png)
+![img_7.png](../additional_material/img_7.png)
+![img_8.png](../additional_material/img_8.png)
+![img_9.png](../additional_material/img_9.png)
+
+
+#### Environmental Story
+
+High-income countries sit at one end of the global environmental spectrum. Their economies are built on decades of industrialization, technological advancement, and energy-intensive lifestyles. With this prosperity comes a cost: these nations emit far more CO₂ per capita than any other group. Their consumption patterns, transportation systems, and reliance on fossil fuels drive emissions upward. At the same time, they maintain relatively stable shares of forest and agricultural land, protected in many cases by strong regulations and well-funded environmental institutions.
+
+Low-income countries tell a very different story. Their CO₂ emissions are the lowest in the world, not because of cleaner systems, but because industrial activity remains limited and energy use is modest. Instead, their lives and economies are closely tied to the land. High levels of agricultural land reflect dependence on subsistence farming and natural resources for livelihoods. Renewable energy use is also relatively high, often because traditional biomass and non-modern energy sources remain common.
+
+Middle-income nations (both lower-middle and upper-middle) write the chapter of transition. They sit between two worlds: expanding industrial sectors increase emissions, yet renewable energy adoption is still developing. Their land use patterns sit between low- and high-income groups, reflecting gradual shifts from agriculture-dependent economies toward diversified, industrialized ones. These countries face the complex task of growing their economies while attempting to avoid the high-emission path taken historically by wealthy nations.
+
+Together, these narratives form a global picture of environmental sustainability shaped deeply by income. Wealthier nations grapple with the consequences of growth, poorer nations rely heavily on land and natural resources, and middle-income nations navigate the turbulence of development. This story makes one message clear: sustainability is not a one-size-fits-all challenge. Each income group carries its own responsibilities — and its own opportunities — in steering the planet toward a more sustainable future.
+
+
+### Economic performance and poverty reduction indicators
+
+    GDP_current_US
+    inflation_annual%
+    tax_revenue%
+
+![img_10.png](../additional_material/img_10.png)
+![img_11.png](../additional_material/img_11.png)
+![img_12.png](../additional_material/img_12.png)
+
+### Human well-being and health indicators:
+
+    life_expectancy_at_birth
+    government_expenditure_on_education%
+    government_health_expenditure%
+    access_to_electricity%
+    population_density
