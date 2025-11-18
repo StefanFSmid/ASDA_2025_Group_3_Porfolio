@@ -163,3 +163,17 @@ Economic performance and fiscal capacity clearly vary across income groups. High
 #### Human Well-being Story
 
 Across all five human well-being indicators, higher-income countries clearly perform better than the rest. They have the highest life expectancy, strong government spending on education and health, and almost universal access to electricity. Low-income countries face the biggest challenges, with much lower life expectancy and limited investment in social services. Middle-income countries fall in between: some are improving quickly, while others still resemble low-income levels. Population density does not follow an income pattern because it depends more on geography and urbanization than on income. Overall, the results show that income plays a major role in shaping people’s living conditions, but each group faces different development priorities. The gap between low- and high-income countries highlights the need for more investment in health, education, and basic infrastructure in poorer nations.
+
+
+
+
+
+## Overall Analysis
+
+Experimented with some other trends from the data:
+
+![CorrelationHeatmap.png](../additional_material/CorrelationHeatmap.png)
+![GDPvslife.png](../additional_material/GDPvslife.png)
+![Radarmap.png](../additional_material/Radarmap.png)
+
+After analyzing all themes, the data reveal a clear and consistent pattern across governance, environmental, economic, and human well-being indicators: higher-income countries consistently outperform lower-income countries, benefiting from stronger institutions, higher life expectancy, better social services, and advanced industrialized economies. Low-income nations, while emitting less CO₂ and relying heavily on land and natural resources, face structural challenges in governance, economic stability, and human development. Middle-income countries occupy a transitional space, balancing industrial growth, environmental pressures, and gradual improvements in well-being. Overall, income is a key determinant shaping national outcomes, with each group presenting distinct challenges and opportunities, highlighting the need for tailored policies to promote sustainable development and equitable living standards globally.
