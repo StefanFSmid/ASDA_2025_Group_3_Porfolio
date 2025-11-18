@@ -92,9 +92,8 @@
 | Least frequent value (frequency) | 64          | 192                   | 1664           | 1216               |
 
 
-### GDP per Country
-![img.png](../additional_material/img.png)
-
+### Basic Inspection Plots
+![BasicInspectionCat.png] (../additional_material/BasicInspectionCat.png.png)
 
 ## 5. Analysis - Research question
 ### Governance and institutional quality indicators:
