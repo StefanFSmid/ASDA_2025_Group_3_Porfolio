@@ -170,7 +170,7 @@ Across all five human well-being indicators, higher-income countries clearly per
 
 ## Overall Analysis
 
-Experimented with some other trends from the data:
+Experimented with some more visualizations from the data:
 
 ![CorrelationHeatmap.png](../additional_material/CorrelationHeatmap.png)
 ![GDPvslife.png](../additional_material/GDPvslife.png)
