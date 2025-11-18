@@ -2,7 +2,7 @@
 
 | Name      | Contribution                         |
 |:----------|:-------------------------------------|
-|Assad      | Data Cleaning, Final Report Creation |
+|Assad      | Data Cleaning, Final Report Creation, Overall Analysis |
 |Sumeet     | "Economic Performance"                |
 |Stefan     | "Governance", Final Report Creation    |
 |Shiva      | "Human Wellbeing"                      |
