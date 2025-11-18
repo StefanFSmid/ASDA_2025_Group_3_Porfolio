@@ -93,7 +93,7 @@
 
 
 ### Basic Inspection Plots
-![BasicInspectionCat.png] (../additional_material/BasicInspectionCat.png.png)
+![BasicInspectionCat.png] (../additional_material/BasicInspectionCat.png)
 
 ## 5. Analysis - Research question
 ### Governance and institutional quality indicators:
