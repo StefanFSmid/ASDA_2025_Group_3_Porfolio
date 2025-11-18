@@ -175,5 +175,6 @@ Experimented with some other trends from the data:
 ![CorrelationHeatmap.png](../additional_material/CorrelationHeatmap.png)
 ![GDPvslife.png](../additional_material/GDPvslife.png)
 ![Radarmap.png](../additional_material/Radarmap.png)
+![CorrelationHeatmap.png](../additional_material/CorrelationHeatmap.png)
 
 After analyzing all themes, the data reveal a clear and consistent pattern across governance, environmental, economic, and human well-being indicators: higher-income countries consistently outperform lower-income countries, benefiting from stronger institutions, higher life expectancy, better social services, and advanced industrialized economies. Low-income nations, while emitting less CO₂ and relying heavily on land and natural resources, face structural challenges in governance, economic stability, and human development. Middle-income countries occupy a transitional space, balancing industrial growth, environmental pressures, and gradual improvements in well-being. Overall, income is a key determinant shaping national outcomes, with each group presenting distinct challenges and opportunities, highlighting the need for tailored policies to promote sustainable development and equitable living standards globally.
