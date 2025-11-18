@@ -92,8 +92,15 @@
 | Least frequent value (frequency) | 64          | 192                   | 1664           | 1216               |
 
 
-### Basic Inspection Plots
+### Basic Inspection Plots (Categorical)
+
 ![BasicInspectionCat.png](../additional_material/BasicInspectionCat.png)
+
+### Basic Inspection Plots (Numeric)
+
+![BasicInspectionNumeric1.png](../additional_material/BasicInspectionNumeric1.png)
+![BasicInspectionNumeric2.png](../additional_material/BasicInspectionNumeric2.png)
+![BasicInspectionNumeric3.png](../additional_material/BasicInspectionNumeric3.png)
 
 ## 5. Analysis - Research question
 ### Governance and institutional quality indicators:
@@ -104,11 +111,7 @@
     voice_and_accountability_estimate
     political_stability_estimate
 
-![img_1.png](../additional_material/img_1.png)
-![img_2.png](../additional_material/img_2.png)
-![img_3.png](../additional_material/img_3.png)
-![img_4.png](../additional_material/img_4.png)
-![img_5.png](../additional_material/img_5.png)
+![GovernSummary.png](../additional_material/GovernSummary.png)
 
 #### Governance Story:
 
@@ -122,11 +125,7 @@ The analysis shows that none of the indicators is normally-distributed. Although
     forest_land%
     agricultural_land
 
-![img_6.png](../additional_material/img_6.png)
-![img_7.png](../additional_material/img_7.png)
-![img_8.png](../additional_material/img_8.png)
-![img_9.png](../additional_material/img_9.png)
-
+![EnvirSummary.png](../additional_material/EnvirSummary.png)
 
 #### Environmental Story
 
@@ -145,9 +144,7 @@ Together, these narratives form a global picture of environmental sustainability
     inflation_annual%
     tax_revenue%
 
-![img_10.png](../additional_material/img_10.png)
-![img_11.png](../additional_material/img_11.png)
-![img_12.png](../additional_material/img_12.png)
+![EconSummary.png](../additional_material/EconSummary.png)
 
 #### Economic Story
 
@@ -161,11 +158,7 @@ Economic performance and fiscal capacity clearly vary across income groups. High
     access_to_electricity%
     population_density
 
-![img_13.png](../additional_material/img_13.png)
-![img_14.png](../additional_material/img_14.png)
-![img_15.png](../additional_material/img_15.png)
-![img_16.png](../additional_material/img_16.png)
-![img_17.png](../additional_material/img_17.png)
+![SocialSummary.png](../additional_material/SocialSummary.png)
 
 #### Human Well-being Story
 
