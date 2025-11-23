@@ -94,13 +94,15 @@ Given the non-normal data distribution, our analysis examines the relationship b
 ---
 
 ### Data Inspection
-The distributions of GDP and life expectancy were explored using histograms and boxplots. GDP showed a highly right-skewed distribution, with a small number of extremely wealthy countries. Life expectancy showed a more balanced distribution with fewer extreme outliers.
+The distributions of GDP and life expectancy were explored using histograms. GDP showed a highly right-skewed distribution, with a small number of extremely wealthy countries. Life expectancy showed a more balanced distribution with fewer extreme outliers.
 
 Because GDP was highly skewed, a logarithmic transformation was applied to improve interpretability.
 
+Outliers were not removed from the dataset. Instead, a log10 transformation was applied to GDP values to reduce skewness and limit the influence of extreme observations. This allowed the analysis to retain real-world variation while improving the interpretability of the relationship. Boxplots are shown to visualize the presence of extreme values before transformation.
+
 **Figures:**  
  ![s_1.png](../additional_material/s_1.png)
-![s_2.png](../additional_material/s_2.png)
+![s_8.png](../additional_material/s_8.png)
 
 ---
 
@@ -120,9 +122,10 @@ Both Pearson and Spearman correlations were computed:
 - **Pearson r = 0.443 (p < 0.001)**
 - **Spearman ρ = 0.471 (p < 0.001)**
 
-The Spearman correlation for GDP and life expectancy is ρ = 0.471, indicating a moderate positive relationship.
 
-Spearman was preferred because GDP was strongly skewed even after transformation.
+A Shapiro normality test was performed. Log-transformed GDP was approximately normally distributed (p = 0.216), while life expectancy significantly deviated from normality (p < 0.001). Because the normality assumption was violated for at least one variable, Spearman’s rank correlation was chosen as the primary method.
+
+The results indicate a moderate positive relationship between GDP and life expectancy, meaning countries with higher economic output tend to show higher life expectancy.
 
 ---
 
@@ -133,10 +136,8 @@ Correlation by income group:
 - Lower-middle income: ρ = 0.331  
 - Upper-middle income: ρ = 0.295  
 - High income: ρ = 0.474  
-**Figures:**  
-![s_7.png](../additional_material/s_7.png)
 
-This shows the relationship is strongest in lower-income countries.
+The relationship is strongest in high-income countries and weaker in middle-income groups, particularly in upper-middle income countries.
 
 ---
 
@@ -149,7 +150,7 @@ The relationship was tested before and after the 2008 financial crisis:
 The positive relationship remained stable over time.
 
 **Figures:**  
-![s_6.png](../additional_material/s_6.png)
+![s_9.png](../additional_material/s_6.png)
 
 ---
 
