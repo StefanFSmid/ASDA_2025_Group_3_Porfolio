@@ -5,7 +5,7 @@
 |Assad      | Corruption vs Gov Effectiveness, Final Report Creation |
 |Zeyad     | Political Stability vs Inflation                |
 |Shiva     | Life expectancy vs GDP    |
-|Stefan      |CO2 vs Renewable Energies                 |
+|Stefan      |CO₂ vs Renewable Energies                 |
 |Sumeet     |                           |
 
 
@@ -34,7 +34,7 @@ A brief summary of analysis as follows:
 
 ---
 
-**A further analysis is done by the group to independently study the correlation between various indicators from the data set and draw individual inferences.**
+_A further analysis is done by the group to independently study the correlation between various indicators from the data set and draw individual inferences._
 
 <details>
   <summary><b>Control of Corruption vs Government Effectiveness</b></summary>
@@ -112,23 +112,29 @@ The histograms showing the spread were as follows:
 
 
 
-The two world maps show opposing trends: In the Global North high CO2 per capita emissions are observed while renewable energy consumption is, relatively speaking, low. In contrast, in the Global South, and especially in sub-Saharan Africa, low CO2 emissions and moderate to high renewable energy consumption are seen.
+The two world maps show opposing trends: In the Global North high CO₂ per capita emissions are observed while renewable energy consumption is, relatively speaking, low. In contrast, in the Global South, and especially in sub-Saharan Africa, low CO₂ emissions and moderate to high renewable energy consumption are seen.
 
 ![4.Worldmap.png](../additional_material/4.Worldmap.png)
 
 
 
-The scatterplot reflects the spatial distribution and trend that was already visible in the world map. As the data is not normally distributed (Poisson-like), the Spearman's correlation coefficient was used for obtaining the correlation coefficient. The correlation is negative and high (=-0.76), i. e., the higher the CO2-per-capita-emissions, the lower the market share / consumption of renewables.
+The scatterplot reflects the spatial distribution and trend that was already visible in the world map. As the data is not normally distributed (Poisson-like), the Spearman's correlation coefficient was used for obtaining the correlation coefficient. The correlation is negative and high (=-0.76), i. e., the higher the CO₂-per-capita-emissions, the lower the market share / consumption of renewables.
 
 ![4.Scatterplot.png](../additional_material/4.Scatterplot.png)
 
 
 
-As can be seen in the figure, Germany has experienced a steady decrease in CO2 emissions while investing in renewable energy. The correlation is very high (=-0.98). This clear trend seems to reflect the country's ambition regarding energy transition ("Energiewende") in face of climate change and, hence, even a causality might be implied here. However, this cannot be understood from the data alone but needs 
+As can be seen in the figure, Germany has experienced a steady decrease in CO₂ emissions while investing in renewable energy. The correlation is very high (=-0.98). This clear trend seems to reflect the country's ambition regarding energy transition ("Energiewende") in face of climate change and, hence, even a causality might be implied here. However, this cannot be understood from the data alone but needs 
 
 ![4.Linegraph.png](../additional_material/4.Linegraph.png)
 
 </details>
 
 ---
+
+---
+
+<details>
+  <summary><b>AI Disclaimar</b></summary>
+<br>
 
