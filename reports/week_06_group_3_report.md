@@ -5,7 +5,7 @@
 |Assad      | Corruption vs Gov Effectiveness, Final Report Creation |
 |Zeyad     | Political Stability vs Inflation                |
 |Shiva     | Life expectancy vs GDP    |
-|Stefan      |                       |
+|Stefan      |CO2 vs Renewable Energies                 |
 |Sumeet     |                           |
 
 
