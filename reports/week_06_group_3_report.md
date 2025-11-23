@@ -6,7 +6,7 @@
 |Zeyad     | Political Stability vs Inflation                |
 |Shiva     | Life expectancy vs GDP    |
 |Stefan      |CO2 vs Renewable Energies                 |
-|Sumeet     |                           |
+|Sumeet     |            Government effectiveness Vs Government expenditure on education               |
 
 
 
@@ -222,10 +222,92 @@ As can be seen in the figure, Germany has experienced a steady decrease in CO₂
 ![4.Linegraph.png](../additional_material/4.Linegraph.png)
 
 </details>
+<details>
+  <summary><b>Government effectiveness Vs Government expenditure on education</b></summary>
+
+----
+
+**Is there a relationship between government effectiveness and government expenditure on education (% of GDP) across countries?**
+
+---
+
+### Data Inspection
+The distributions of government effectiveness and education expenditure (% of GDP) were explored using histograms. Government effectiveness scores ranged from negative to positive values, reflecting weaker to stronger governance across countries. Education expenditure was highly right-skewed, with some countries allocating much larger shares of GDP to education than others.
+
+Because education expenditure was highly skewed, a logarithmic transformation was applied to improve interpretability.
+
+Outliers were not removed from the dataset. Instead, a log10 transformation was applied to education expenditure values to reduce skewness and limit the influence of extreme observations. This approach allowed the analysis to retain real-world variation while improving the interpretability of the relationship. Boxplots are shown to visualize the presence of extreme values before transformation.
+
+**Figures:**  
+ ![s_1.png](../additional_material/image_1.png)
+![s_8.png](../additional_material/image_2.png)
+
+---
+
+### Visualization
+A scatter plot of government effectiveness against education expenditure (% of GDP) shows a positive but relatively weak association. Most countries cluster at lower education expenditure values (0–10%), while government effectiveness ranges from negative to positive scores. A few countries have unusually high education spending (above 20%), which appear as outliers.
+
+The relationship is not strongly linear—increases in government effectiveness are generally associated with slightly higher education spending, but there is considerable variation, especially among middle and high governance scores. This indicates that while better governance tends to correlate with higher investment in education, other factors also play a role.
+
+**Figures:**  
+![s_5.png](../additional_material/image_4.png)
+
+---
+
+### Statistical Test
+Both Pearson and Spearman correlations were computed:
+
+- **Pearson r = 0.278 (p < 0.001)**
+- **Spearman ρ = 0.272 (p < 0.001)**
+
+
+A moderate positive relationship was found between government effectiveness and education expenditure. The Spearman correlation showed ρ = 0.272 (p < 0.001), and the Pearson correlation showed r = 0.278 (p < 0.001), indicating that countries with higher government effectiveness tend to allocate a larger share of GDP to education. While the association is statistically significant, the strength is moderate, suggesting that government effectiveness is an important, but not the only, factor influencing public investment in education.
+
+---
+
+### Group-Level Analysis (Income Groups)
+Correlation by income group:
+
+- Low income: ρ = 0.416  
+- Lower-middle income: ρ = 0.204  
+- Upper-middle income: ρ = 0.1  
+- High income: ρ = 0.296  
+
+The relationship is strongest in Low-income countries and weaker in higher income groups, particularly in upper-middle income countries.
+
+---
+
+### Temporal Analysis (Pre vs Post 2008)
+The relationship was tested before and after the 2008 financial crisis:
+
+- **Pre-2008: ρ = 0.272**  
+- **Post-2008: ρ = 0.272**
+
+The positive relationship remained stable over time.
+
+**Figures:**  
+![s_10.png](../additional_material/image_8.png)
+
+---
+
+
+
+
+
+### Interpretation
+Although government effectiveness and education expenditure are positively correlated, this does not prove causation. Higher governance scores do not automatically cause higher spending. Other factors, such as GDP, political priorities, population size, and historical policy decisions, may also influence education expenditure.
+
+---
+
+### Main Takeaway
+The analysis shows that governance quality and investment in education are positively connected, especially in lower-income countries. However, improving governance alone is not enough — how resources are allocated and used also matters, particularly in higher-income countries.
+</details>
 
 ---
 
 <details>
   <summary><b>AI Disclaimar</b></summary>
 <br>
+
+
 
