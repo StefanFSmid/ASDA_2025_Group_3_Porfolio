@@ -5,7 +5,7 @@
 |Assad      | Corruption vs Gov Effectiveness, Final Report Creation |
 |Zeyad     | Political Stability vs Inflation                |
 |Shiva     | Life expectancy vs GDP    |
-|Stefan      |CO₂ vs Renewable Energies                 |
+|Stefan      |CO2 vs Renewable Energies                 |
 |Sumeet     |                           |
 
 
@@ -86,7 +86,83 @@ Given the non-normal data distribution, our analysis examines the relationship b
 
 <details>
   <summary><b>GDP vs Life Expectancy</b></summary>
-Text here
+
+----
+
+**Does higher economic output (GDP) relate to higher life expectancy across countries, and does this relationship differ by income group and over time?**
+
+---
+
+### Data Inspection
+The distributions of GDP and life expectancy were explored using histograms and boxplots. GDP showed a highly right-skewed distribution, with a small number of extremely wealthy countries. Life expectancy showed a more balanced distribution with fewer extreme outliers.
+
+Because GDP was highly skewed, a logarithmic transformation was applied to improve interpretability.
+
+**Figures:**  
+ ![s_1.png](../additional_material/s_1.png)
+![s_2.png](../additional_material/s_2.png)
+
+---
+
+### Visualization
+A scatter plot of log(GDP) against life expectancy shows a clear upward trend. Countries with higher GDP tend to have higher life expectancy. However, the pattern flattens at very high income levels, suggesting diminishing returns.
+
+A grouped scatter plot shows high-income countries clustering at high GDP and life expectancy, while low-income countries cluster at lower values.
+
+**Figures:**  
+![s_5.png](../additional_material/s_5.png)
+
+---
+
+### Statistical Test
+Both Pearson and Spearman correlations were computed:
+
+- **Pearson r = 0.443 (p < 0.001)**
+- **Spearman ρ = 0.471 (p < 0.001)**
+
+The Spearman correlation for GDP and life expectancy is ρ = 0.471, indicating a moderate positive relationship.
+
+Spearman was preferred because GDP was strongly skewed even after transformation.
+
+---
+
+### Group-Level Analysis (Income Groups)
+Correlation by income group:
+
+- Low income: ρ = 0.351  
+- Lower-middle income: ρ = 0.331  
+- Upper-middle income: ρ = 0.295  
+- High income: ρ = 0.474  
+**Figures:**  
+![s_7.png](../additional_material/s_7.png)
+This shows the relationship is strongest in lower-income countries.
+
+---
+
+### Temporal Analysis (Pre vs Post 2008)
+The relationship was tested before and after the 2008 financial crisis:
+
+- **Pre-2008: ρ = 0.422**  
+- **Post-2008: ρ = 0.450**
+
+The positive relationship remained stable over time.
+
+**Figures:**  
+![s_6.png](../additional_material/s_6.png)
+
+---
+
+
+
+
+
+### Interpretation
+Countries with higher economic resources tend to have higher life expectancy. This effect is stronger in poorer countries. The results show correlation, not causation as GDP alone does not cause better health. Factors like governance, healthcare systems, and education also play important roles.
+
+---
+
+### Main Takeaway
+Economic growth and human well-being are strongly connected, but wealth alone is not enough. How resources are used becomes more important as countries become richer.
 
 </details>
 
