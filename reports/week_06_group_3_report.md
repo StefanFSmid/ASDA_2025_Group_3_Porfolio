@@ -1,16 +1,17 @@
-## Correlation Analysis
+# World Bank Report Analysis
 
 <details>
-  <summary>📌 Theme 1: Direct Relationship</summary>
+  <summary>Background</summary>
 
-Write your explanation, graphs, interpretation, and code here.
+Text here
 
 </details>
 
 ---
 
 <details>
-  <summary>📌 Theme 2: Group Differences</summary>
+  <summary>Political_Stability vs Inflation</summary>
+
 
 Add all Group Difference analysis details here.
 
@@ -19,17 +20,16 @@ Add all Group Difference analysis details here.
 ---
 
 <details>
-  <summary>📌 Theme 3: Temporal Changes</summary>
-
-Include your before/after 2008 or time-series correlations here.
+  <summary>GDP vs Life Expectancy</summary>
+Text here
 
 </details>
 
 ---
 
 <details>
-  <summary>📌 Theme 4: Unexpected Findings</summary>
+  <summary>Control of Corruption vs Government Effectiveness</summary>
 
-Put your surprising correlations or anomalies here.
+Text here
 
 </details>
