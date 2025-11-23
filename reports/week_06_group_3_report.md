@@ -45,17 +45,17 @@ A further analysis is done by the group to independently study the correlation b
 The data consist of two governance indicators: control_of_corruption_estimate and gov_effectiveness_estimate. Inspection of the distributions shows that neither variable follows a normal distribution, even after attempts at log transformation. Some countries exhibit extreme values due to political crises or exceptionally stable governance systems. Given the non-normality between the two indicators, the Spearman correlation is chosen as the most appropriate statistical test for this analysis.
 
 
-![1.Histogram.png](../additional_material/1. Histogram.png)
+![1.Histogram.png](../additional_material/1.Histogram.png)
 
 A scatter plot grouped by income level shows a clear positive trend, with high-income countries clustering at high values for both indicators, middle-income countries showing moderate values, and low-income countries appearing at lower levels. The spearman correlation is strongest for high-income countries (0.9) and weakest for lower-middle income countries (0.7)
 
-![1.Scatterplot.png](../additional_material/1. Scatterplot.png)
+![1.Scatterplot.png](../additional_material/1.Scatterplot.png)
 
 The Spearman correlation for the overall dataset is **0.918** with a p-value < 1e-10, indicating a very strong and statistically significant positive relationship between control of corruption and government effectiveness.
 
 As expected, a temporal analysis showed similar trends pre and post 2008 as can be seen below:
 
-![1.Temporal.png](../additional_material/1. Temporal.png)
+![1.Temporal.png](../additional_material/1.Temporal.png)
 
 Additional analysis for selected countries highlight the two extreme dynamics: 
 
@@ -63,7 +63,7 @@ Additional analysis for selected countries highlight the two extreme dynamics:
 
 2. Thailand is a relatively stable country and small changes in corruption and government effectiveness don’t always happen together. In some years, government effectiveness may improve slightly due to reforms, while corruption stays nearly the same. In other years, corruption may worsen a bit, but overall government effectiveness does not change much. This uncoordinated movement means that year-to-year fluctuations are not aligned, which is why the correlation between the two indicators is low.
 
-![1.Pattern.png](../additional_material/1. Pattern.png)
+![1.Pattern.png](../additional_material/1.Pattern.png)
 
 </details>
 
