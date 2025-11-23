@@ -34,7 +34,7 @@ A brief summary of analysis as follows:
 
 ---
 
-A further analysis is done by the group to independently study the correlation between various indicators from the data set and draw individual inferences. 
+**A further analysis is done by the group to independently study the correlation between various indicators from the data set and draw individual inferences.**
 
 <details>
   <summary><b>Control of Corruption vs Government Effectiveness</b></summary>
@@ -42,12 +42,12 @@ A further analysis is done by the group to independently study the correlation b
 
 **How does control of corruption relate to government effectiveness across countries from 2000 to 2024, and does this relationship vary across income groups?**
 
-The data consist of two governance indicators: control_of_corruption_estimate and gov_effectiveness_estimate. Inspection of the distributions shows that neither variable follows a normal distribution, even after attempts at log transformation. Some countries exhibit extreme values due to political crises or exceptionally stable governance systems. Given the non-normality between the two indicators, the Spearman correlation is chosen as the most appropriate statistical test for this analysis.
+The data consist of two governance indicators: **control_of_corruption_estimate** and **gov_effectiveness_estimate**. Inspection of the distributions shows that neither variable follows a normal distribution, even after attempts at log transformation. Some countries exhibit extreme values due to political crises or exceptionally stable governance systems. Given the non-normality between the two indicators, the Spearman correlation is chosen as the most appropriate statistical test for this analysis.
 
 
 ![1.Histogram.png](../additional_material/1.Histogram.png)
 
-A scatter plot grouped by income level shows a clear positive trend, with high-income countries clustering at high values for both indicators, middle-income countries showing moderate values, and low-income countries appearing at lower levels. The spearman correlation is strongest for high-income countries (0.9) and weakest for lower-middle income countries (0.7)
+A scatter plot grouped by income level shows a clear positive trend, with high-income countries clustering at high values for both indicators, middle-income countries showing moderate values, and low-income countries appearing at lower levels. The spearman correlation is strongest for high-income countries **(0.9)** and weakest for lower-middle income countries **(0.7)**
 
 ![1.Scatterplot.png](../additional_material/1.Scatterplot.png)
 
@@ -59,9 +59,9 @@ As expected, a temporal analysis showed similar trends pre and post 2008 as can 
 
 Additional analysis for selected countries highlight the two extreme dynamics: 
 
-1. Yemen is a country that has had political instability, civil war, and governance challenges over the past 20+ years. Because of this instability, both corruption control and government effectiveness fluctuate together (mostly both deteroriate together) and hence correlation is one of the highest.
+1. **Yemen** is a country that has had political instability, civil war, and governance challenges over the past 20+ years. Because of this instability, both corruption control and government effectiveness fluctuate together (mostly both deteroriate together) and hence correlation is one of the highest.
 
-2. Thailand is a relatively stable country and small changes in corruption and government effectiveness don’t always happen together. In some years, government effectiveness may improve slightly due to reforms, while corruption stays nearly the same. In other years, corruption may worsen a bit, but overall government effectiveness does not change much. This uncoordinated movement means that year-to-year fluctuations are not aligned, which is why the correlation between the two indicators is low.
+2. **Thailand** is a relatively stable country and small changes in corruption and government effectiveness don’t always happen together. In some years, government effectiveness may improve slightly due to reforms, while corruption stays nearly the same. In other years, corruption may worsen a bit, but overall government effectiveness does not change much. This uncoordinated movement means that year-to-year fluctuations are not aligned, which is why the correlation between the two indicators is low.
 
 ![1.Pattern.png](../additional_material/1.Pattern.png)
 
@@ -72,8 +72,13 @@ Additional analysis for selected countries highlight the two extreme dynamics:
 <details>
   <summary><b>Political_Stability vs Inflation</b></summary>
 
+<br>
 
-Add all Group Difference analysis details here.
+**How does Political Stability relate to Inflation across countries?**
+
+Given the non-normal data distribution, our analysis examines the relationship between political stability and inflation using Spearman correlation
+
+
 
 </details>
 
@@ -88,8 +93,31 @@ Text here
 ---
 
 <details>
-  <summary><b>CO2 emissions vs Renewable Energy Use</b></summary>
-Text here
+  <summary><b>CO₂ emissions vs Renewable Energy Use</b></summary>
+<br>
+
+**Is there a correlation between CO₂ emissions per capita and renewable energy consumption across different countries and times?**
+
+This analysis investigates how CO₂ emissions per capita relate to renewable energy consumption globally. The analysis was performed only for the year 2023 as a subset of the entire data. 
+
+
+
+
+The two world maps show opposing trends: In the Global North high CO2 per capita emissions are observed while renewable energy consumption is, relatively speaking, low. In contrast, in the Global South, and especially in sub-Saharan Africa, low CO2 emissions and moderate to high renewable energy consumption are seen.
+
+![4.Worldmap.png](../additional_material/4.Worldmap.png)
+
+
+
+The scatterplot reflects the spatial distribution and trend that was already visible in the world map. As the data is not normally distributed (Poisson-like), the Spearman's correlation coefficient was used for obtaining the correlation coefficient. The correlation is negative and high (=-0.76), i. e., the higher the CO2-per-capita-emissions, the lower the market share / consumption of renewables.
+
+![4.Scatterplot.png](../additional_material/4.Scatterplot.png)
+
+
+
+As can be seen in the figure, Germany has experienced a steady decrease in CO2 emissions while investing in renewable energy. The correlation is very high (=-0.98). This clear trend seems to reflect the country's ambition regarding energy transition ("Energiewende") in face of climate change and, hence, even a causality might be implied here. However, this cannot be understood from the data alone but needs 
+
+![4.Linegraph.png](../additional_material/4.Linegraph.png)
 
 </details>
 
