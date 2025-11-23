@@ -101,7 +101,7 @@ Text here
 This analysis investigates how CO₂ emissions per capita relate to renewable energy consumption globally. The analysis was performed only for the year 2023 as a subset of the entire data. Initially, outliers were identified and stripped off with a threshold value of 18.45:
 
 
-![4.Boxplots.png](../additional_material/4.Boxplot1.png)
+![4.Boxplots.png](../additional_material/4.Boxplots.png)
 
 The histograms showing the spread were as follows:
 
