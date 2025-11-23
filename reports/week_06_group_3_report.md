@@ -98,7 +98,19 @@ Text here
 
 **Is there a correlation between CO₂ emissions per capita and renewable energy consumption across different countries and times?**
 
-This analysis investigates how CO₂ emissions per capita relate to renewable energy consumption globally. The analysis was performed only for the year 2023 as a subset of the entire data. 
+This analysis investigates how CO₂ emissions per capita relate to renewable energy consumption globally. The analysis was performed only for the year 2023 as a subset of the entire data. Initially, outliers were identified and stripped off with a threshold value of 18.45:
+
+Before:
+![4.Boxplot1.png](../additional_material/4.Boxplot1.png)
+
+After:
+![4.Boxplot2.png](../additional_material/4.Boxplot2.png)
+
+The histograms showing the spread were as follows:
+
+![4.Histogram.png](../additional_material/4.Histogram.png)
+
+
 
 
 
