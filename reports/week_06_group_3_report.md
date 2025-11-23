@@ -34,6 +34,7 @@ A brief summary of analysis as follows:
 
 ---
 
+A further analysis is done by the group to independently study the correlation between various indicators from the data set and draw individual inferences. 
 
 <details>
   <summary><b>Control of Corruption vs Government Effectiveness</b></summary>
