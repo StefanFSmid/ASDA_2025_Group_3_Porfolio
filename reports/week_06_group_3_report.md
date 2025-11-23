@@ -135,6 +135,7 @@ Correlation by income group:
 - High income: ρ = 0.474  
 **Figures:**  
 ![s_7.png](../additional_material/s_7.png)
+
 This shows the relationship is strongest in lower-income countries.
 
 ---
