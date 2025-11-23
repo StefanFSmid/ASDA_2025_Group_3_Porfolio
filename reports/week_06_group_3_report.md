@@ -76,9 +76,24 @@ Additional analysis for selected countries highlight the two extreme dynamics:
 
 **How does Political Stability relate to Inflation across countries?**
 
-Given the non-normal data distribution, our analysis examines the relationship between political stability and inflation using Spearman correlation
+This data consists of Political Stability and Inflation percentage per year, both are non-normal even after applying log transformation for both of them they are still non-normal.
+
+![2.Histogram.png](../additional_material/2.Histogram.png)
 
 
+Given the non_normal data distribution, our analysis examines the relationship between political stability and inflation using Spearman correlation. Overall, there is a weak negative correlation of **−0.325**, suggesting that countries with higher political stability tend to experience slightly lower inflation, though the relationship is not strong. Additionally, examining correlations within income groups reveals that political stability’s link to inflation is generally negative across all income levels, with the effect slightly more pronounced in upper-middle-income nations.
+
+![2.Scatterplot.png](../additional_material/2.Scatterplot.png)
+
+To examine whether the relationship between political stability and inflation changed after the 2008 financial crisis, we split the data into pre-2008 and post-2008 periods. The correlation remained negative in both periods, indicating that more politically stable countries generally experienced lower inflation throughout. However, the strength of the relationship shifted slightly, reflecting how major economic shocks can influence the sensitivity of inflation to political conditions.
+
+![2.Temporal.png](../additional_material/2.Temporal.png)
+
+An extreme unnormal inflation occured in Indonesia in 1965, with a staggering 306.76% annual rate. This extreme value reflects a period of hyperinflation driven by severe political and economic instability, as also indicated by the negative political stability estimate (-0.76). During this time, Indonesia faced economic mismanagement, currency devaluation, and social unrest, which together caused the extraordinary surge in prices. This observation represents an outlier in the dataset.
+
+Another unexpected observation is Mongolia in 1993, which experienced very high inflation of 268.15% despite having a relatively high political stability estimate (0.71). This apparent paradox can be explained by economic transition rather than political turmoil: during the early 1990s, Mongolia was shifting from a centrally planned economy to a market-based system. Such transitions often involve rapid price liberalization, removal of subsidies, and currency reforms, which can trigger hyperinflation even in politically stable contexts.
+
+![2.Unexpected.png](../additional_material/2.Unexpected.png)
 
 </details>
 
