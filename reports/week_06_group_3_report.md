@@ -2,7 +2,7 @@
 
 | Name      | Contribution                         |
 |:----------|:-------------------------------------|
-|Assad      | Corruption vs Gov Effectiveness, Final Report Creation, Overall Analysis |
+|Assad      | Corruption vs Gov Effectiveness, Final Report Creation |
 |Zeyad     | Political Stability vs Inflation                |
 |Shiva     | Life expectancy vs GDP    |
 |Stefan      |                       |
