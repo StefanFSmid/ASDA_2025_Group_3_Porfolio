@@ -150,7 +150,7 @@ The relationship was tested before and after the 2008 financial crisis:
 The positive relationship remained stable over time.
 
 **Figures:**  
-![s_9.png](../additional_material/s_6.png)
+![s_10.png](../additional_material/s_10.png)
 
 ---
 
