@@ -132,8 +132,6 @@ As can be seen in the figure, Germany has experienced a steady decrease in CO₂
 
 ---
 
----
-
 <details>
   <summary><b>AI Disclaimar</b></summary>
 <br>
