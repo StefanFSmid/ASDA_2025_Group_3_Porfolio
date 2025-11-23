@@ -109,7 +109,7 @@ Outliers were not removed from the dataset. Instead, a log10 transformation was 
 ### Visualization
 A scatter plot of log(GDP) against life expectancy shows a clear upward trend. Countries with higher GDP tend to have higher life expectancy. However, the pattern flattens at very high income levels, suggesting diminishing returns.
 
-A grouped scatter plot shows high-income countries clustering at high GDP and life expectancy, while low-income countries cluster at lower values.
+A grouped scatter plot shows high-income countries clustering at high GDP and life expectancy, while low -income countries cluster at lower values.
 
 **Figures:**  
 ![s_5.png](../additional_material/s_5.png)
