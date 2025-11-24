@@ -196,7 +196,7 @@ The histograms showing the spread were as follows:
 
 
 
-
+### Global Perspective
 The two world maps show opposing trends: In the Global North high CO₂ per capita emissions are observed while renewable energy consumption is, relatively speaking, low. In contrast, in the Global South, and especially in sub-Saharan Africa, low CO₂ emissions and moderate to high renewable energy consumption are seen.
 
 ![4.Worldmap.png](../additional_material/4.Worldmap.png)
@@ -208,7 +208,7 @@ The scatterplot reflects the spatial distribution and trend that was already vis
 ![4.Scatterplot.png](../additional_material/4.Scatterplot.png)
 
 
-
+### Case Study: Germany
 As can be seen in the figure, Germany has experienced a steady decrease in CO₂ emissions while investing in renewable energy. The correlation is very high (=-0.98). This clear trend seems to reflect the country's ambition regarding energy transition ("Energiewende") in face of climate change and, hence, even a causality might be implied here. However, this cannot be understood from the data alone but needs 
 
 ![4.Linegraph.png](../additional_material/4.Linegraph.png)
@@ -298,7 +298,7 @@ The analysis shows that governance quality and investment in education are posit
   <summary><b>AI Disclaimar</b></summary>
 <br>
 
-- Use of Visual Studio and Github copilot 
+- Use of Visual Studio / PyCharm with Github copilot (inline code suggestions) 
 - AI was used to find out particular countries with contrasting patterns (Yemen, Thailand)
 - AI was used to compile graphs in single subplots/tightplots for the final report
 
