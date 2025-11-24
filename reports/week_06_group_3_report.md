@@ -2,7 +2,7 @@
 
 | Name      | Contribution                         |
 |:----------|:-------------------------------------|
-|Assad      | Corruption vs Gov Effectiveness, Final Report Creation |
+|Assad      | Corruption vs Gov Effectiveness |
 |Zeyad     | Political Stability vs Inflation                |
 |Shiva     | Life expectancy vs GDP    |
 |Stefan      |CO2 vs Renewable Energies                 |
@@ -212,6 +212,9 @@ As can be seen in the figure, Germany has experienced a steady decrease in CO₂
 ![4.Linegraph.png](../additional_material/4.Linegraph.png)
 
 </details>
+
+---
+
 <details>
   <summary><b>Government effectiveness Vs Government expenditure on education</b></summary>
 
