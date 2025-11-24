@@ -102,11 +102,8 @@ Another unexpected observation is Mongolia in 1993, which experienced very high 
 <details>
   <summary><b>GDP vs Life Expectancy</b></summary>
 
-----
-
 **Does higher economic output (GDP) relate to higher life expectancy across countries, and does this relationship differ by income group and over time?**
 
----
 
 ### Data Inspection
 The distributions of GDP and life expectancy were explored using histograms. GDP showed a highly right-skewed distribution, with a small number of extremely wealthy countries. Life expectancy showed a more balanced distribution with fewer extreme outliers.
@@ -119,7 +116,6 @@ Outliers were not removed from the dataset. Instead, a log10 transformation was 
  ![s_1.png](../additional_material/s_1.png)
 ![s_8.png](../additional_material/s_8.png)
 
----
 
 ### Visualization
 A scatter plot of log(GDP) against life expectancy shows a clear upward trend. Countries with higher GDP tend to have higher life expectancy. However, the pattern flattens at very high income levels, suggesting diminishing returns.
@@ -129,7 +125,7 @@ A grouped scatter plot shows high-income countries clustering at high GDP and li
 **Figures:**  
 ![s_5.png](../additional_material/s_5.png)
 
----
+
 
 ### Statistical Test
 Both Pearson and Spearman correlations were computed:
@@ -142,7 +138,6 @@ A Shapiro normality test was performed. Log-transformed GDP was approximately no
 
 The results indicate a moderate positive relationship between GDP and life expectancy, meaning countries with higher economic output tend to show higher life expectancy.
 
----
 
 ### Group-Level Analysis (Income Groups)
 Correlation by income group:
@@ -154,7 +149,6 @@ Correlation by income group:
 
 The relationship is strongest in high-income countries and weaker in middle-income groups, particularly in upper-middle income countries.
 
----
 
 ### Temporal Analysis (Pre vs Post 2008)
 The relationship was tested before and after the 2008 financial crisis:
@@ -167,16 +161,12 @@ The positive relationship remained stable over time.
 **Figures:**  
 ![s_10.png](../additional_material/s_10.png)
 
----
-
-
-
 
 
 ### Interpretation
 Countries with higher economic resources tend to have higher life expectancy. This effect is stronger in poorer countries. The results show correlation, not causation as GDP alone does not cause better health. Factors like governance, healthcare systems, and education also play important roles.
 
----
+
 
 ### Main Takeaway
 Economic growth and human well-being are strongly connected, but wealth alone is not enough. How resources are used becomes more important as countries become richer.
@@ -225,11 +215,9 @@ As can be seen in the figure, Germany has experienced a steady decrease in CO₂
 <details>
   <summary><b>Government effectiveness Vs Government expenditure on education</b></summary>
 
-----
 
 **Is there a relationship between government effectiveness and government expenditure on education (% of GDP) across countries?**
 
----
 
 ### Data Inspection
 The distributions of government effectiveness and education expenditure (% of GDP) were explored using histograms. Government effectiveness scores ranged from negative to positive values, reflecting weaker to stronger governance across countries. Education expenditure was highly right-skewed, with some countries allocating much larger shares of GDP to education than others.
@@ -242,7 +230,7 @@ Outliers were not removed from the dataset. Instead, a log10 transformation was 
  ![s_1.png](../additional_material/image_1.png)
 ![s_8.png](../additional_material/image_2.png)
 
----
+
 
 ### Visualization
 A scatter plot of government effectiveness against education expenditure (% of GDP) shows a positive but relatively weak association. Most countries cluster at lower education expenditure values (0–10%), while government effectiveness ranges from negative to positive scores. A few countries have unusually high education spending (above 20%), which appear as outliers.
@@ -252,7 +240,6 @@ The relationship is not strongly linear—increases in government effectiveness 
 **Figures:**  
 ![s_5.png](../additional_material/image_4.png)
 
----
 
 ### Statistical Test
 Both Pearson and Spearman correlations were computed:
@@ -263,7 +250,7 @@ Both Pearson and Spearman correlations were computed:
 
 A moderate positive relationship was found between government effectiveness and education expenditure. The Spearman correlation showed ρ = 0.272 (p < 0.001), and the Pearson correlation showed r = 0.278 (p < 0.001), indicating that countries with higher government effectiveness tend to allocate a larger share of GDP to education. While the association is statistically significant, the strength is moderate, suggesting that government effectiveness is an important, but not the only, factor influencing public investment in education.
 
----
+
 
 ### Group-Level Analysis (Income Groups)
 Correlation by income group:
@@ -275,7 +262,7 @@ Correlation by income group:
 
 The relationship is strongest in Low-income countries and weaker in higher income groups, particularly in upper-middle income countries.
 
----
+
 
 ### Temporal Analysis (Pre vs Post 2008)
 The relationship was tested before and after the 2008 financial crisis:
@@ -288,16 +275,12 @@ The positive relationship remained stable over time.
 **Figures:**  
 ![s_10.png](../additional_material/image_8.png)
 
----
-
-
-
 
 
 ### Interpretation
 Although government effectiveness and education expenditure are positively correlated, this does not prove causation. Higher governance scores do not automatically cause higher spending. Other factors, such as GDP, political priorities, population size, and historical policy decisions, may also influence education expenditure.
 
----
+
 
 ### Main Takeaway
 The analysis shows that governance quality and investment in education are positively connected, especially in lower-income countries. However, improving governance alone is not enough — how resources are allocated and used also matters, particularly in higher-income countries.
@@ -309,5 +292,8 @@ The analysis shows that governance quality and investment in education are posit
   <summary><b>AI Disclaimar</b></summary>
 <br>
 
+- Use of Visual Studio and Github copilot 
+- AI was used to find out particular countries with contrasting patterns (Yemen, Thailand)
+- AI was used to compile graphs in single subplots/tightplots for the final report
 
 
