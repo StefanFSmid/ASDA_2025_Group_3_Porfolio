@@ -102,6 +102,8 @@ Another unexpected observation is Mongolia in 1993, which experienced very high 
 <details>
   <summary><b>GDP vs Life Expectancy</b></summary>
 
+<br>
+
 **Does higher economic output (GDP) relate to higher life expectancy across countries, and does this relationship differ by income group and over time?**
 
 
@@ -218,6 +220,7 @@ As can be seen in the figure, Germany has experienced a steady decrease in CO₂
 <details>
   <summary><b>Government effectiveness Vs Government expenditure on education</b></summary>
 
+<br>
 
 **Is there a relationship between government effectiveness and government expenditure on education (% of GDP) across countries?**
 
