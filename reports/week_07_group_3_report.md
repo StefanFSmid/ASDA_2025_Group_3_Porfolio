@@ -65,7 +65,7 @@ The weight of fish can be estimated based on their length, width, and height.
 
 ### Assumption check: Is weight a normally distributed variable?
 
-![20251201_Fig01.png](20251201_Fig01.png)
+![20251201_Fig01.png](../additional_material/figures/20251201_Fig01.png)
 
 **Answer:** 
 The dependent variable is not normally distributed and only the sqrt transformation yields a more symmetric distribution. Thus, we will proceed with the sqrt transformed weight and check the residual distributions later.
@@ -74,7 +74,7 @@ The dependent variable is not normally distributed and only the sqrt transformat
 
 _- based on correlations:_
 
-![20251201_Fig02.png](20251201_Fig02.png)
+![20251201_Fig02.png](../additional_material/figures/20251201_Fig02.png)
 
 _- based on the variance inflation factor_
 
@@ -103,9 +103,9 @@ Due to our research hypothesis, we will use a linear regression model to predict
 | Mean Absolute Percentage Error (MAPE) | 15.19% |
 | R^2 Score                      | 0.9783   |
 
-![20251201_Fig03.png](20251201_Fig03.png)
+![20251201_Fig03.png](../additional_material/figures/20251201_Fig03.png)
 
-![20251201_Fig04.png](20251201_Fig04.png)
+![20251201_Fig04.png](../additional_material/figures/20251201_Fig04.png)
 
 **Answer:**
 The two plots above show the predicted vs actual values and the histogram of the residuals. The predicted vs actual values plot indicates that the model performs well, as the points are closely aligned with the diagonal line. The histogram of the residuals appears to be approximately normally distributed, suggesting that the model assumptions are reasonably met.

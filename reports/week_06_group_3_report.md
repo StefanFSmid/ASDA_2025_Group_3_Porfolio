@@ -45,17 +45,17 @@ _A further analysis is done by the group to independently study the correlation 
 The data consist of two governance indicators: **control_of_corruption_estimate** and **gov_effectiveness_estimate**. Inspection of the distributions shows that neither variable follows a normal distribution, even after attempts at log transformation. Some countries exhibit extreme values due to political crises or exceptionally stable governance systems. Given the non-normality between the two indicators, the Spearman correlation is chosen as the most appropriate statistical test for this analysis.
 
 
-![1.Histogram.png](../additional_material/1.Histogram.png)
+![1.Histogram.png](../additional_material/figures/1.Histogram.png)
 
 A scatter plot grouped by income level shows a clear positive trend, with high-income countries clustering at high values for both indicators, middle-income countries showing moderate values, and low-income countries appearing at lower levels. The spearman correlation is strongest for high-income countries **(0.9)** and weakest for lower-middle income countries **(0.7)**
 
-![1.Scatterplot.png](../additional_material/1.Scatterplot.png)
+![1.Scatterplot.png](../additional_material/figures/1.Scatterplot.png)
 
 The Spearman correlation for the overall dataset is **0.918** with a p-value < 1e-10, indicating a very strong and statistically significant positive relationship between control of corruption and government effectiveness.
 
 As expected, a temporal analysis showed similar trends pre and post 2008 as can be seen below:
 
-![1.Temporal.png](../additional_material/1.Temporal.png)
+![1.Temporal.png](../additional_material/figures/1.Temporal.png)
 
 Additional analysis for selected countries highlight the two extreme dynamics: 
 
@@ -63,7 +63,7 @@ Additional analysis for selected countries highlight the two extreme dynamics:
 
 2. **Thailand** is a relatively stable country and small changes in corruption and government effectiveness don’t always happen together. In some years, government effectiveness may improve slightly due to reforms, while corruption stays nearly the same. In other years, corruption may worsen a bit, but overall government effectiveness does not change much. This uncoordinated movement means that year-to-year fluctuations are not aligned, which is why the correlation between the two indicators is low.
 
-![1.Pattern.png](../additional_material/1.Pattern.png)
+![1.Pattern.png](../additional_material/figures/1.Pattern.png)
 
 </details>
 
@@ -78,22 +78,22 @@ Additional analysis for selected countries highlight the two extreme dynamics:
 
 This data consists of Political Stability and Inflation percentage per year, both are non-normal even after applying log transformation for both of them they are still non-normal.
 
-![2.Histogram.png](../additional_material/2.Histogram.png)
+![2.Histogram.png](../additional_material/figures/2.Histogram.png)
 
 
 Given the non_normal data distribution, our analysis examines the relationship between political stability and inflation using Spearman correlation. Overall, there is a weak negative correlation of **−0.325**, suggesting that countries with higher political stability tend to experience slightly lower inflation, though the relationship is not strong. Additionally, examining correlations within income groups reveals that political stability’s link to inflation is generally negative across all income levels, with the effect slightly more pronounced in upper-middle-income nations.
 
-![2.Scatterplot.png](../additional_material/2.Scatterplot.png)
+![2.Scatterplot.png](../additional_material/figures/2.Scatterplot.png)
 
 To examine whether the relationship between political stability and inflation changed after the 2008 financial crisis, we split the data into pre-2008 and post-2008 periods. The correlation remained negative in both periods, indicating that more politically stable countries generally experienced lower inflation throughout. However, the strength of the relationship shifted slightly, reflecting how major economic shocks can influence the sensitivity of inflation to political conditions.
 
-![2.Temporal.png](../additional_material/2.Temporal.png)
+![2.Temporal.png](../additional_material/figures/2.Temporal.png)
 
 An extreme unnormal inflation occured in Indonesia in 1965, with a staggering 306.76% annual rate. This extreme value reflects a period of hyperinflation driven by severe political and economic instability, as also indicated by the negative political stability estimate (-0.76). During this time, Indonesia faced economic mismanagement, currency devaluation, and social unrest, which together caused the extraordinary surge in prices. This observation represents an outlier in the dataset.
 
 Another unexpected observation is Mongolia in 1993, which experienced very high inflation of 268.15% despite having a relatively high political stability estimate (0.71). This apparent paradox can be explained by economic transition rather than political turmoil: during the early 1990s, Mongolia was shifting from a centrally planned economy to a market-based system. Such transitions often involve rapid price liberalization, removal of subsidies, and currency reforms, which can trigger hyperinflation even in politically stable contexts.
 
-![2.Unexpected.png](../additional_material/2.Unexpected.png)
+![2.Unexpected.png](../additional_material/figures/2.Unexpected.png)
 
 </details>
 
@@ -115,8 +115,8 @@ Because GDP was highly skewed, a logarithmic transformation was applied to impro
 Outliers were not removed from the dataset. Instead, a log10 transformation was applied to GDP values to reduce skewness and limit the influence of extreme observations. This allowed the analysis to retain real-world variation while improving the interpretability of the relationship. Boxplots are shown to visualize the presence of extreme values before transformation.
 
 **Figures:**  
- ![s_1.png](../additional_material/s_1.png)
-![s_8.png](../additional_material/s_8.png)
+ ![s_1.png](../additional_material/figures/s_1.png)
+![s_8.png](../additional_material/figures/s_8.png)
 
 
 ### Visualization
@@ -125,7 +125,7 @@ A scatter plot of log(GDP) against life expectancy shows a clear upward trend. C
 A grouped scatter plot shows high-income countries clustering at high GDP and life expectancy, while low -income countries cluster at lower values.
 
 **Figures:**  
-![s_5.png](../additional_material/s_5.png)
+![s_5.png](../additional_material/figures/s_5.png)
 
 
 
@@ -161,7 +161,7 @@ The relationship was tested before and after the 2008 financial crisis:
 The positive relationship remained stable over time.
 
 **Figures:**  
-![s_10.png](../additional_material/s_10.png)
+![s_10.png](../additional_material/figures/s_10.png)
 
 
 
@@ -186,11 +186,11 @@ Economic growth and human well-being are strongly connected, but wealth alone is
 This analysis investigates how CO₂ emissions per capita relate to renewable energy consumption globally. The analysis was performed only for the year 2023 as a subset of the entire data. Initially, outliers were identified and stripped off with a threshold value of 18.45:
 
 
-![4.Boxplots.png](../additional_material/4.Boxplots.png)
+![4.Boxplots.png](../additional_material/figures/4.Boxplots.png)
 
 The histograms showing the spread were as follows:
 
-![4.Histogram.png](../additional_material/4.Histogram.png)
+![4.Histogram.png](../additional_material/figures/4.Histogram.png)
 
 
 
@@ -199,19 +199,19 @@ The histograms showing the spread were as follows:
 ### Global Perspective
 The two world maps show opposing trends: In the Global North high CO₂ per capita emissions are observed while renewable energy consumption is, relatively speaking, low. In contrast, in the Global South, and especially in sub-Saharan Africa, low CO₂ emissions and moderate to high renewable energy consumption are seen.
 
-![4.Worldmap.png](../additional_material/4.Worldmap.png)
+![4.Worldmap.png](../additional_material/figures/4.Worldmap.png)
 
 
 
 The scatterplot reflects the spatial distribution and trend that was already visible in the world map. As the data is not normally distributed (Poisson-like), the Spearman's correlation coefficient was used for obtaining the correlation coefficient. The correlation is negative and high (=-0.76), i. e., the higher the CO₂-per-capita-emissions, the lower the market share / consumption of renewables.
 
-![4.Scatterplot.png](../additional_material/4.Scatterplot.png)
+![4.Scatterplot.png](../additional_material/figures/4.Scatterplot.png)
 
 
 ### Case Study: Germany
 As can be seen in the figure, Germany has experienced a steady decrease in CO₂ emissions while investing in renewable energy. The correlation is very high (=-0.98). This clear trend seems to reflect the country's ambition regarding energy transition ("Energiewende") in face of climate change and, hence, even a causality might be implied here. However, this cannot be understood from the data alone but needs 
 
-![4.Linegraph.png](../additional_material/4.Linegraph.png)
+![4.Linegraph.png](../additional_material/figures/4.Linegraph.png)
 
 </details>
 
@@ -233,8 +233,8 @@ Because education expenditure was highly skewed, a logarithmic transformation wa
 Outliers were not removed from the dataset. Instead, a log10 transformation was applied to education expenditure values to reduce skewness and limit the influence of extreme observations. This approach allowed the analysis to retain real-world variation while improving the interpretability of the relationship. Boxplots are shown to visualize the presence of extreme values before transformation.
 
 **Figures:**  
- ![s_1.png](../additional_material/image_1.png)
-![s_8.png](../additional_material/image_2.png)
+ ![s_1.png](../additional_material/figures/image_1.png)
+![s_8.png](../additional_material/figures/image_2.png)
 
 
 
@@ -244,7 +244,7 @@ A scatter plot of government effectiveness against education expenditure (% of G
 The relationship is not strongly linear—increases in government effectiveness are generally associated with slightly higher education spending, but there is considerable variation, especially among middle and high governance scores. This indicates that while better governance tends to correlate with higher investment in education, other factors also play a role.
 
 **Figures:**  
-![s_5.png](../additional_material/image_4.png)
+![s_5.png](../additional_material/figures/image_4.png)
 
 
 ### Statistical Test
@@ -279,7 +279,7 @@ The relationship was tested before and after the 2008 financial crisis:
 The positive relationship remained stable over time.
 
 **Figures:**  
-![s_10.png](../additional_material/image_8.png)
+![s_10.png](../additional_material/figures/image_8.png)
 
 
 
