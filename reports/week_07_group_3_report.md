@@ -58,36 +58,62 @@ _already cleaned dataset_
 | Least frequent value             | Whitefish |
 | Least frequent value (frequency) | 6         |
 
-### 5. Analysis - Research question
-#### Question/hypothesis
-Hypothesis: The weight of fish can be estimated based on their length, width, and height.
+## 5. Analysis - Research question
+### Question/hypothesis
+**Hypothesis:** 
+The weight of fish can be estimated based on their length, width, and height.
 
-#### Assumption check: Is weight a normally distributed variable?
+### Assumption check: Is weight a normally distributed variable?
 
 ![20251201_Fig01.png](20251201_Fig01.png)
-Answer: The dependent variable is not normally distributed and only the sqrt transformation yields a more symmetric distribution. Thus, we will proceed with the sqrt transformed weight and check the residual distributions later.
 
-#### Assumption check: Are variables multicollinear, i.e., redundant?
+**Answer:** 
+The dependent variable is not normally distributed and only the sqrt transformation yields a more symmetric distribution. Thus, we will proceed with the sqrt transformed weight and check the residual distributions later.
 
-- Check based on correlations:
+### Assumption check: Are variables multicollinear, i.e., redundant?
 
+_- based on correlations:_
 
-- Check based on the variance inflation factor
+![20251201_Fig02.png](20251201_Fig02.png)
 
+_- based on the variance inflation factor_
 
-- --> throw out redundant variables
+| Variable           | VIF          |
+|:-------------------|:-------------|
+| 0   Weight         | 55.110838    |
+| 1  Length1        | 13607.947089 |
+| 2  Length2        | 16752.282952 |
+| 3  Length3         | 3561.199815  |
+| 4   Height         | 91.380963    |
+| 5    Width         | 93.163705    |
 
-#### Split the data in train and test data
+**Answer:** 
+Due to the high VIF and the similar correlation, Length1 and Length2 are dropped while Length3 is kept as it is the most representative length measure (combination of both).
 
-#### Preprocess the data: 
-scale the numerical predictors - if you include multiple numerical predictors
-one hot encode the categorical predictors - if you include categorical predictors
-Train linear regression on training set
-Predict on test set and evaluate with metrics (e.g. MAE, RMSE, MAPE, R2)
-Plots
-- scatterplot with regression line
-- actual vs. predicted values
-- histogram of residuals: normal distribution? → if not, investigate why not?
+### Modelling
+**Comment:**
+Due to our research hypothesis, we will use a linear regression model to predict the weight of fish based on their Length3 (i.e. cross length), Height, and Width.
+
+#### Evaluation Metrics
+
+| Metric                          | Value    |
+|:-------------------------------|:---------|
+| Mean Absolute Error (MAE)      | 1.1723   |
+| Root Mean Squared Error (RMSE) | 1.4747   |
+| Mean Absolute Percentage Error (MAPE) | 15.19% |
+| R^2 Score                      | 0.9783   |
+
+![20251201_Fig03.png](20251201_Fig03.png)
+
+![20251201_Fig04.png](20251201_Fig04.png)
+
+**Answer:**
+The two plots above show the predicted vs actual values and the histogram of the residuals. The predicted vs actual values plot indicates that the model performs well, as the points are closely aligned with the diagonal line. The histogram of the residuals appears to be approximately normally distributed, suggesting that the model assumptions are reasonably met.
+
+### Final summary
+
+The linear regression model was trained to predict the square root transformed weight of the fish species under consideration based on their cross length, weight, and height. The model resulted in an R² score of approximately 0.98 on the test set, which can be interpreted as a strong fit. Further improvements could involve exploring non-linear models or incorporating additional features (e.g., species as a dummy variable).
+
 
 ### 6. AI Disclaimer
 - Use of PyCharm with Github copilot (inline code suggestions) 
