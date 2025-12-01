@@ -1,32 +1,64 @@
-Fish regression analysis - Instruction Guidelines
-Data: see GitHub 
-Data documentation: [see Kaggle](https://www.kaggle.com/datasets/vipullrathod/fish-market/data)
+## 0. Authors of the report
 
-Weight: (Weight in grams) This column represents the weight of the fish. It is a numerical variable that is typically measured in grams. The weight is the dependent variable we want to predict using polynomial regression.
+| Name      | Contribution |
+|:----------|:-------------|
+|Stefan     | Everything   |
 
-Length1: (Vertical length in CM) This column represents the first measurement of the fish's length. It is a numerical variable, typically measured in centimetres.
+## 1. Dataset Overview (of the clean version)
 
-Length2: (Diagonal length in CM) This column represents the second measurement of the fish's length. It is another numerical variable, typically measured in centimetres.
+| Item                                                   | Description                                                             |
+|:-------------------------------------------------------|:------------------------------------------------------------------------|
+| Dataset name                                           | Fish Market                                                                    |
+| Number of rows                                         | 159                                                                     |
+| Number of columns                                      | 7                                                                       |
+| Format file (.csv, .txt, etc)                          | .csv                                                                    |
+| Authors of the dataset                                 | Vipul L Rathod (CC0: Public Domain)                                                                       |
+| Source (name)                                          | Github                                                                  |
+| Source (link)                                          | [Link](https://www.kaggle.com/datasets/vipullrathod/fish-market/data) |
 
-Length3: (Cross length in CM) This column represents the third measurement of the fish's length. Similar to the previous two columns, it is a numerical variable, usually measured in centimetres.
+## 2. Dataset Structure
 
-Height: (Height in CM) This column represents the height of the fish. It is a numerical variable, typically measured in centimetres.
+| Feature/variable                  | Data type   | Description               |   # Unique values | Eg. values                      |
+|:----------------------------------|:------------|:--------------------------|------------------:|:--------------------------------|
+| Species                           | object      | Species name              |               159 | 'Bream'                         |
+| Weight                              | float64      | Weight of fish in gram    |               159 | 242                             |
+| Length1                            | float64      | Vertical length in CM     |                 159 | 23.2                            |
+| Length2                      | float64      | Diagonal length in CM     |                 159 | 25.4                            |
+| Length3                  | float64      | Cross length in CM       |                 159 | 30                |
+| Height                              | float64       | Height in CM       |                159 | 11.52                    |
+| Width             | float64     | Diagonal width in CM |              159 | 4.02              |
 
-Width: (Width in CM) This column represents the width of the fish. Like the other numerical variables, it is also typically measured in centimetres.
+## 3. Data cleaning 
 
-General instructions
-Create a Report in markdown that predicts Fish Weight and submit it with the respective notebook to GitHub.
+_already cleaned dataset_
 
-Notebook:
-→ Some basic initial inspections
-Import the data
-display the first, the last and a random sample of 7 entries
-check data types
-check duplicates and missing values
-basic summary statistics for both categorical and numerical variables
-basic plots for categorical and numerical variables to check distributions and counts (histogram, barplot)
+## 4. Descriptive statistics
 
-→ Linear regression steps
+### Numeric Columns
+
+|  | Weight | Length1 | Length2 | Length3 | Height | Width |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| count | 159.000000 | 159.000000 | 159.000000 | 159.000000 | 159.000000 | 159.000000 |
+| mean | 398.326415 | 26.247170 | 28.415723 | 31.227044 | 8.970994 | 4.417486 |
+| std | 357.978317 | 9.996441 | 10.716328 | 11.610246 | 4.286208 | 1.685804 |
+| min | 0.000000 | 7.500000 | 8.400000 | 8.800000 | 1.728400 | 1.047600 |
+| 25% | 120.000000 | 19.050000 | 21.000000 | 23.150000 | 5.944800 | 3.385650 |
+| 50% | 273.000000 | 25.200000 | 27.300000 | 29.400000 | 7.786000 | 4.248500 |
+| 75% | 650.000000 | 32.700000 | 35.500000 | 39.650000 | 12.365900 | 5.584500 |
+| max | 1650.000000 | 59.000000 | 63.400000 | 68.000000 | 18.957000 | 8.142000 |
+
+### Categorical / Object Columns
+
+|                                  | Species   |
+|:---------------------------------|:----------|
+| Count                            | 159       |
+| Number of unique values          | 7         |
+| Most frequent value              | Perch     |
+| Most frequent value (frequency)  | 56        |
+| Least frequent value             | Whitefish |
+| Least frequent value (frequency) | 6         |
+
+### 5. Analysis - Research question
 Question/hypothesis
 Check assumptions: normal distribution of dependent variable? --> if not transform
 Check assumptions: multicollinearity (= redundancies among predictors)?
@@ -44,7 +76,4 @@ Plots
 - actual vs. predicted values
 - histogram of residuals: normal distribution? → if not, investigate why not?
 
-
-→ Optional: try a Mixed Effect Model (Wanja can assist)
-
-
+### 6. AI Disclaimer
