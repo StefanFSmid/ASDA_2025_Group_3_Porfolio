@@ -78,14 +78,14 @@ _- based on correlations:_
 
 _- based on the variance inflation factor_
 
-| Variable           | VIF          |
-|:-------------------|:-------------|
-| 0   Weight         | 55.110838    |
-| 1  Length1        | 13607.947089 |
-| 2  Length2        | 16752.282952 |
-| 3  Length3         | 3561.199815  |
-| 4   Height         | 91.380963    |
-| 5    Width         | 93.163705    |
+|    | Variable   |      VIF |
+|---:|:-----------|---------:|
+|  0 | Weight     |    55.11 |
+|  1 | Length1    | 13608    |
+|  2 | Length2    | 16752.3  |
+|  3 | Length3    |  3561.2  |
+|  4 | Height     |    91.38 |
+|  5 | Width      |    93.16 |
 
 **Answer:** 
 Due to the high VIF and the similar correlation, Length1 and Length2 are dropped while Length3 is kept as it is the most representative length measure (combination of both).
@@ -96,12 +96,14 @@ Due to our research hypothesis, we will use a linear regression model to predict
 
 #### Evaluation Metrics
 
-| Metric                          | Value    |
-|:-------------------------------|:---------|
-| Mean Absolute Error (MAE)      | 1.1723   |
-| Root Mean Squared Error (RMSE) | 1.4747   |
-| Mean Absolute Percentage Error (MAPE) | 15.19% |
-| R^2 Score                      | 0.9783   |
+|    | Metric                                |   Value |
+|---:|:--------------------------------------|--------:|
+|  0 | Mean Absolute Error (MAE)             |    1.17 |
+|  1 | Root Mean Squared Error (RMSE)        |    1.47 |
+|  2 | Mean Absolute Percentage Error (MAPE) |   15.19 |
+|  3 | R^2 Score                             |    0.98 |
+
+#### Predicted vs Actual values and Residuals
 
 ![20251201_Fig03.png](../additional_material/figures/20251201_Fig03.png)
 
