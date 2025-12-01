@@ -59,14 +59,27 @@ _already cleaned dataset_
 | Least frequent value (frequency) | 6         |
 
 ### 5. Analysis - Research question
-Question/hypothesis
-Check assumptions: normal distribution of dependent variable? --> if not transform
-Check assumptions: multicollinearity (= redundancies among predictors)?
- 	- with correlations
-	- with the variance inflation factor
---> throw out redundant variables
-Split the data in train and test data
-Preprocess the data: 
+#### Question/hypothesis
+Hypothesis: The weight of fish can be estimated based on their length, width, and height.
+
+#### Assumption check: Is weight a normally distributed variable?
+
+![20251201_Fig01.png](20251201_Fig01.png)
+Answer: The dependent variable is not normally distributed and only the sqrt transformation yields a more symmetric distribution. Thus, we will proceed with the sqrt transformed weight and check the residual distributions later.
+
+#### Assumption check: Are variables multicollinear, i.e., redundant?
+
+- Check based on correlations:
+
+
+- Check based on the variance inflation factor
+
+
+- --> throw out redundant variables
+
+#### Split the data in train and test data
+
+#### Preprocess the data: 
 scale the numerical predictors - if you include multiple numerical predictors
 one hot encode the categorical predictors - if you include categorical predictors
 Train linear regression on training set
@@ -77,3 +90,4 @@ Plots
 - histogram of residuals: normal distribution? → if not, investigate why not?
 
 ### 6. AI Disclaimer
+- Use of PyCharm with Github copilot (inline code suggestions) 
