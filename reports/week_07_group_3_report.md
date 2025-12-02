@@ -47,8 +47,7 @@
 
 <details>
   <summary><b>3. Data Cleaning</b></summary>
-<br>
-
+  
 _No missing/duplicate values were found in the data set. No issues with column names and data types was observed either_
 
 
