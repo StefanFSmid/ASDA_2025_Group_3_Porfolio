@@ -4,7 +4,7 @@
 
 | Name      | Contribution |
 |:----------|:-------------|
-|Stefan     | Data Loading, Analysis and Report    |
+|Stefan     | Everything    |
 |Assad      | Analysis and Report                  |
 
 
