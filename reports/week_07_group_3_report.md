@@ -11,16 +11,16 @@
 <details>
   <summary><b>1. Dataset Overview</b></summary>
 <br>
-| Item                                                   | Description                                                             |
-|:-------------------------------------------------------|:------------------------------------------------------------------------|
-| Dataset name                                           | Fish Market                                                                    |
-| Number of rows                                         | 159                                                                     |
-| Number of columns                                      | 7                                                                       |
-| Format file (.csv, .txt, etc)                          | .csv                                                                    |
-| Authors of the dataset                                 | Vipul L Rathod (CC0: Public Domain)                                                                       |
-| Source (name)                                          | Github                                                                  |
-| Source (link)                                          | [Link](https://www.kaggle.com/datasets/vipullrathod/fish-market/data) |
-| Date of download                                       | 27.11.2025                                                           |
+| Item                     | Description                                                                 |
+|--------------------------|-----------------------------------------------------------------------------|
+| Dataset name             | Fish Market                                                                 |
+| Number of rows           | 159                                                                         |
+| Number of columns        | 7                                                                           |
+| File format              | .csv                                                                        |
+| Authors                  | Vipul L Rathod (CC0: Public Domain)                                        |
+| Source                   | GitHub                                                                      |
+| Source link              | [Kaggle Dataset](https://www.kaggle.com/datasets/vipullrathod/fish-market/data) |
+| Date of download         | 27.11.2025                                                                  |
 
 </details>
 
@@ -28,17 +28,16 @@
 <details>
   <summary><b>2. Dataset Structure</b></summary>
 <br>
+| Feature / Variable | Data Type | Description               | # Unique Values | Example Values |
+|-------------------|-----------|---------------------------|----------------|----------------|
+| Species           | object    | Species name              | 7              | 'Bream'        |
+| Weight            | float64   | Weight of fish in grams   | 159            | 242            |
+| Length1           | float64   | Vertical length in cm     | 159            | 23.2           |
+| Length2           | float64   | Diagonal length in cm     | 159            | 25.4           |
+| Length3           | float64   | Cross length in cm        | 159            | 30             |
+| Height            | float64   | Height in cm              | 159            | 11.52          |
+| Width             | float64   | Diagonal width in cm      | 159            | 4.02           |
 
-
-| Feature/variable                  | Data type   | Description               |   # Unique values | Eg. values                      |
-|:----------------------------------|:------------|:--------------------------|------------------:|:--------------------------------|
-| Species                           | object      | Species name              |               159 | 'Bream'                         |
-| Weight                              | float64      | Weight of fish in gram    |               159 | 242                             |
-| Length1                            | float64      | Vertical length in CM     |                 159 | 23.2                            |
-| Length2                      | float64      | Diagonal length in CM     |                 159 | 25.4                            |
-| Length3                  | float64      | Cross length in CM       |                 159 | 30                |
-| Height                              | float64       | Height in CM       |                159 | 11.52                    |
-| Width             | float64     | Diagonal width in CM |              159 | 4.02              |
 
 
 
@@ -131,15 +130,6 @@ Due to the high VIF and the similar correlation, Length1 and Length2 are dropped
 Due to our research hypothesis, we will use a linear regression model to predict the weight of fish based on their Length3 (i.e. cross length), Height, and Width.
 
 #### Evaluation Metrics
-
-|    | Metric                                |   Value |
-|---:|:--------------------------------------|--------:|
-|  0 | Mean Absolute Error (MAE)             |    1.17 |
-|  1 | Root Mean Squared Error (RMSE)        |    1.47 |
-|  2 | Mean Absolute Percentage Error (MAPE) |   15.19 |
-|  3 | R^2 Score                             |    0.98 |
-
-
 
 |    | Metric                                |   Value |
 |---:|:--------------------------------------|--------:|
