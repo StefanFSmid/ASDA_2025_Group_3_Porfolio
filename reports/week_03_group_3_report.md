@@ -56,11 +56,11 @@
 (1) Countplot of different base shapes:
 
 
-![fig_01_countplot.png](../additional_material/fig_01_countplot.png)
+![fig_01_countplot.png](../additional_material/figures/fig_01_countplot.png)
 
 (2) Wordcloud of different colors by their respective count:
 
-![fig_02_wordcloud.png](../additional_material/fig_02_wordcloud.png)
+![fig_02_wordcloud.png](../additional_material/figures/fig_02_wordcloud.png)
 
 ## 4. Data cleaning procedure
 ### 4.1 Major data inconsistencies:

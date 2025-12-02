@@ -186,9 +186,9 @@ The city with the most entire home/apt listings is: **Rome**
 
 &ensp; **a. Plot the distribution of guest_satisfaction_overall ratings.**
 
-![img.png](../additional_material/img1.png)
+![img.png](../additional_material/figures/img1.png)
 
-![img.png](../additional_material/img2.png)
+![img.png](../additional_material/figures/img2.png)
 
 **Analysis:** 
 
@@ -198,8 +198,8 @@ This shows that guests are generally very satisfied across listings.
 
 &ensp; **b. Examine the distribution of cleanliness_rating.** 
 
-![img.png](../additional_material/img3.png)
-![img.png](../additional_material/img4.png)
+![img.png](../additional_material/figures/img3.png)
+![img.png](../additional_material/figures/img4.png)
 
 **Analysis:** 
 
@@ -210,7 +210,7 @@ The cleanliness ratings are extremely high and consistent across listings.
 
 **6. How does person_capacity vary across listings? What is the most common capacity of listings?**
 
-![img.png](../additional_material/img5.png)
+![img.png](../additional_material/figures/img5.png)
 
 **Analysis:** 
 
@@ -222,8 +222,8 @@ that the market is skewed toward small to medium-sized groups, likely reflecting
 
 &ensp; **a. check normality, skewness, modality** 
 
-![img.png](../additional_material/img6.png)
-![img.png](../additional_material/img7.png)
+![img.png](../additional_material/figures/img6.png)
+![img.png](../additional_material/figures/img7.png)
 
 **Analysis:** 
 
@@ -237,8 +237,8 @@ at lower prices, but a few extremely high-priced listings create a long right ta
 
 &ensp; **b. If skewed, consider using transformations (e.g. log); can you normalize it?**
 
-![img.png](../additional_material/img8.png)
-![img.png](../additional_material/img9.png)
+![img.png](../additional_material/figures/img8.png)
+![img.png](../additional_material/figures/img9.png)
 
 **Analysis:** 
 
@@ -251,9 +251,9 @@ of extreme high-priced listings.
 
 **8. Is there a difference in price per night between two cities? Choose at least three pairs of cities during weekdays.**
 
-![img.png](../additional_material/img10.png)
-![img.png](../additional_material/img11.png)
-![img.png](../additional_material/img12.png)
+![img.png](../additional_material/figures/img10.png)
+![img.png](../additional_material/figures/img11.png)
+![img.png](../additional_material/figures/img12.png)
 
 **Analysis:** 
 
@@ -263,7 +263,7 @@ with p-values effectively 0. This suggests that the average nightly price differ
 
 **9. Does the price per night tend to be higher on weekends?**
 
-![img.png](../additional_material/img13.png)
+![img.png](../additional_material/figures/img13.png)
 
 **Analysis:** 
 
@@ -274,7 +274,7 @@ and very high prices on weekdays. Weekend prices, while higher on average, are m
 
 **10. Are listings of superhosts more expensive than those of normal hosts?** 
 
-![img.png](../additional_material/img14.png)
+![img.png](../additional_material/figures/img14.png)
 
 **Analysis:** 
 
@@ -285,7 +285,7 @@ higher prices, though Normal Hosts exhibit more extreme high-price outliers.
 
 **11. Are superhosts closer to the city center and metro station than normal hosts?** 
 
-![img.png](../additional_material/img15.png)
+![img.png](../additional_material/figures/img15.png)
 
 **Analysis:** 
 
@@ -293,7 +293,7 @@ The results show that Superhosts are usually closer to the city center and metro
 
 **12. Are superhosts cleaner than normal hosts?** 
 
-![img.png](../additional_material/img16.png)
+![img.png](../additional_material/figures/img16.png)
 
 **Analysis:** 
 
@@ -301,7 +301,7 @@ The results show that Superhosts have a higher average cleanliness rating (9.83)
 
 **13. Is there a pattern between room types and superhost status?** 
 
-![img.png](../additional_material/img17.png)
+![img.png](../additional_material/figures/img17.png)
 
 **Analysis:** 
 
@@ -313,7 +313,7 @@ This suggests that superhosts are more likely to rent out entire properties rath
 
 **14. Is renting an entire home/apt more expensive than a private room? Does that depend on the city?**
 
-![img.png](../additional_material/img18.png)
+![img.png](../additional_material/figures/img18.png)
 
 **Analysis:**
 

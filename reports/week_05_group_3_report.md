@@ -94,13 +94,13 @@
 
 ### Basic Inspection Plots (Categorical)
 
-![BasicInspectionCat.png](../additional_material/BasicInspectionCat.png)
+![BasicInspectionCat.png](../additional_material/figures/BasicInspectionCat.png)
 
 ### Basic Inspection Plots (Numeric)
 
-![BasicInspectionNumeric1.png](../additional_material/BasicInspectionNumeric1.png)
-![BasicInspectionNumeric2.png](../additional_material/BasicInspectionNumeric2.png)
-![BasicInspectionNumeric3.png](../additional_material/BasicInspectionNumeric3.png)
+![BasicInspectionNumeric1.png](../additional_material/figures/BasicInspectionNumeric1.png)
+![BasicInspectionNumeric2.png](../additional_material/figures/BasicInspectionNumeric2.png)
+![BasicInspectionNumeric3.png](../additional_material/figures/BasicInspectionNumeric3.png)
 
 ## 5. Analysis - Research question
 ### Governance and institutional quality indicators:
@@ -111,7 +111,7 @@
     voice_and_accountability_estimate
     political_stability_estimate
 
-![GovernSummary.png](../additional_material/GovernSummary.png)
+![GovernSummary.png](../additional_material/figures/GovernSummary.png)
 
 #### Governance Story:
 
@@ -125,7 +125,7 @@ The analysis shows that none of the indicators is normally-distributed. Although
     forest_land%
     agricultural_land
 
-![EnvirSummary.png](../additional_material/EnvirSummary.png)
+![EnvirSummary.png](../additional_material/figures/EnvirSummary.png)
 
 #### Environmental Story
 
@@ -144,7 +144,7 @@ Together, these narratives form a global picture of environmental sustainability
     inflation_annual%
     tax_revenue%
 
-![EconSummary.png](../additional_material/EconSummary.png)
+![EconSummary.png](../additional_material/figures/EconSummary.png)
 
 #### Economic Story
 
@@ -158,7 +158,7 @@ Economic performance and fiscal capacity clearly vary across income groups. High
     access_to_electricity%
     population_density
 
-![SocialSummary.png](../additional_material/SocialSummary.png)
+![SocialSummary.png](../additional_material/figures/SocialSummary.png)
 
 #### Human Well-being Story
 
@@ -172,9 +172,9 @@ Across all five human well-being indicators, higher-income countries clearly per
 
 Experimented with some more visualizations from the data:
 
-![CorrelationHeatmap.png](../additional_material/CorrelationHeatmap.png)
-![GDPvslife.png](../additional_material/GDPvslife.png)
-![Radarmap.png](../additional_material/Radarmap.png)
+![CorrelationHeatmap.png](../additional_material/figures/CorrelationHeatmap.png)
+![GDPvslife.png](../additional_material/figures/GDPvslife.png)
+![Radarmap.png](../additional_material/figures/Radarmap.png)
 
 
 After analyzing all themes, the data reveal a clear and consistent pattern across governance, environmental, economic, and human well-being indicators: higher-income countries consistently outperform lower-income countries, benefiting from stronger institutions, higher life expectancy, better social services, and advanced industrialized economies. Low-income nations, while emitting less CO₂ and relying heavily on land and natural resources, face structural challenges in governance, economic stability, and human development. Middle-income countries occupy a transitional space, balancing industrial growth, environmental pressures, and gradual improvements in well-being. Overall, income is a key determinant shaping national outcomes, with each group presenting distinct challenges and opportunities, highlighting the need for tailored policies to promote sustainable development and equitable living standards globally.
