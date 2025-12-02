@@ -29,6 +29,7 @@
 <details>
   <summary><b>2. Dataset Structure</b></summary>
 <br>
+
 | Feature / Variable | Data Type | Description               | # Unique Values | Example Values |
 |-------------------|-----------|---------------------------|----------------|----------------|
 | Species           | object    | Species name              | 7              | 'Bream'        |
