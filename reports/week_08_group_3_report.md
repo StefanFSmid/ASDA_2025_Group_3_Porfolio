@@ -64,7 +64,7 @@
 
 ![8.Choosing2017.png](../additional_material/figures/8.Choosing2017.png)
 
-Based on the above HeatMap (made with Jannik's help), we selected **2017** simply because it is the only year with consistent, high-quality data. While 2014 is virtually empty and other years are too patchy to trust, 2017 is nearly 100% complete. This ensures our model learns from actual traffic patterns rather than noise or guesses.
+Based on the above HeatMap (made with Jannik's help), we selected **2017** simply because it is the only year with consistent, high-quality data. While 2014 is virtually empty and other years are too sparse to trust, 2017 is nearly 100% complete. This ensures our model learns from actual traffic patterns rather than noise or guesses.
 
 ---
 ## Descriptive Statistics
@@ -102,7 +102,6 @@ While playing with data, we decided to check the day with the highest and lowest
 
 Also, explored the monthly traffic patterns:
 
-
 **February**: Typically the peak of the harsh Minnesota winters, temperature drops to -11. <br>
 **August**: Busiest month because of great weather, Minnesota State Fair (one of the largest in the country), Construction Season.  
 
@@ -129,7 +128,7 @@ The department's prediction of not using OLS seems to be reasonable because Ordi
 
 ### Testing Poisson Regression
 
-To move beyond the limitations of OLS, we started with the standard model for count data: Poisson regression. This model ensures our predictions remain strictly non-negative. We modeled the relationship between our independent variables specifically time, holidays, and weather conditions (clouds, temperature) and the traffic volume. The outputs of Poisson Regression were as follows:
+To move beyond the limitations of OLS, we started with the standard model for count data: Poisson regression. This model ensures our predictions remain strictly non-negative. We modeled the relationship between our predictors specifically time, holidays, and weather conditions (clouds, temperature) and the traffic volume. The outputs of Poisson Regression were as follows:
 
 ![8.PoissonTable.png](../additional_material/figures/8.PoissonTable.png)
 
@@ -140,7 +139,7 @@ The Actual vs Predicted graph shows the model is generally performing well, as t
 
 ![8.Residual+QQPoisson.png](../additional_material/figures/8.Residual+QQPoisson.png)
 
-The residual histogram and Q-Q plots further confirms that there is a huge difference between the mean and variance of our data (Mean: 3,340, Variance: 3,946,208). This breaks the Poisson rule that they should be equal. The Q-Q plot shows this where the blue dots peel away from the red line at both ends because the model can't handle the extreme highs and lows of real-world traffic.
+The residual histogram and Q-Q plots further confirms that there is a huge difference between the mean and variance of our data (Mean: 3,340, Variance: 3,946,208). This breaks the Poisson rule which relies on mean being equal to variance. The Q-Q plot shows this where the blue dots move away from the red line at both ends because the model can't handle the extreme highs and lows of real-world traffic.
 
 
 ### Testing Negative Binomial Regression
@@ -155,7 +154,7 @@ The Actual vs Predicted graph confirms the model captures the general trend, wit
 
 ![8.Residual+QQNB.png](../additional_material/figures/8.Residual+QQNB.png)
 
-The Q-Q Plot shows a massive improvement, with the blue dots now closer to the red line instead of peeling away, confirming the model finally handles extreme traffic highs and lows in a better way. 
+The Q-Q Plot shows a massive improvement, with the blue dots now closer to the red line instead of moving away significantly, confirming the model finally handles extreme traffic highs and lows in a better way. 
 
 
 ### Overall conclusion
