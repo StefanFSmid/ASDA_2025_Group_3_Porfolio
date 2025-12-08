@@ -155,7 +155,7 @@ The Actual vs Predicted graph confirms the model captures the general trend, wit
 
 ![8.Residual+QQNB.png](../additional_material/figures/8.Residual+QQNB.png)
 
-The Q-Q Plot shows a massive improvement, with the blue dots now more close to the red line instead of peeling away, confirming the model finally handles extreme traffic highs and lows in a better way. 
+The Q-Q Plot shows a massive improvement, with the blue dots now closer to the red line instead of peeling away, confirming the model finally handles extreme traffic highs and lows in a better way. 
 
 
 ### Overall conclusion
@@ -179,5 +179,5 @@ Lastly, after trying the Likelihood Ratio Test between Poisson and Negative Bino
 ---
 ## AI Disclaimar
 
-VS Copilot was used as well as other AI tools were used to take help in modelling issues and better graphical outputs. 
+VS Copilot and other AI tools were used to assist with modeling issues and generating better graphical outputs.
 
