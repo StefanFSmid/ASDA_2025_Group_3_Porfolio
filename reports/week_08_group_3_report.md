@@ -30,7 +30,7 @@
 ---
 ## Dataset Structure
 
-| Feature / Variable   | Data Type      | Description                         |   # of Unique Values | Example Values                                                |
+| Feature / Variable   | Data Type      | Description                         |   Unique Values | Example Values                                                |
 |:---------------------|:---------------|:------------------------------------|--------------------------:|:--------------------------------------------------------------|
 | holiday              | object         | Whether the day is a US holiday     |                        11 | Columbus Day, Veterans Day, Thanksgiving Day                  |
 | temp                 | float64        | Average temperature in Kelvin       |                      5843 | 288.28, 289.36, 289.58                                        |
@@ -93,8 +93,7 @@ While playing with data, we decided to check the day with the highest and lowest
 <br>
 
 **May 1st (Highest Traffic)**: Massive May Day Protests on a Monday (already a busy day).
-
-**December 25th (Lowest Traffic)**: Christmas holiday, so people probably stayed home
+**December 25th (Lowest Traffic)**: Christmas holiday, so people probably stayed home.
 
 
 ![8.BasicPlots2.png](../additional_material/figures/8.BasicPlots2.png)
@@ -104,8 +103,6 @@ Also, explored the monthly traffic patterns:
 
 
 **February**: Typically the peak of the harsh Minnesota winters, temperature drops to -11. 
-
-
 **August**: Busiest month because of great weather, Minnesota State Fair (one of the largest in the country), Construction Season.  
 
 ![8.BasicPlots3.png](../additional_material/figures/8.BasicPlots3.png)
