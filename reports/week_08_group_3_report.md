@@ -122,7 +122,7 @@ While traffic flow remains stable across cold and mild weather (roughly -15°C t
 
 ### Why OLS is not feasible?
 
-The department's prediction of not using OLS seems to be reasonable because Ordinary Least Squares regression assumes that the target variable is normally distributed and has constant variance, but traffic volume data is highly skewed ajd count-based. This makes OLS predictions unreliable, and it can even produce negative traffic values, which are impossible in reality. Just to have a glimpse on the traffic distribution:
+The department's prediction of not using OLS seems to be reasonable because Ordinary Least Squares regression assumes that the target variable is normally distributed and has constant variance, but traffic volume data is highly skewed and count-based. This makes OLS predictions unreliable, and it can even produce negative traffic values, which are impossible in reality. Just to have a glimpse on the traffic distribution:
 
 ![8.OLSHistogram.png](../additional_material/figures/8.OLSHistogram.png)
 
