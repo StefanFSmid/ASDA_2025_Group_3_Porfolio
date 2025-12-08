@@ -94,26 +94,23 @@ While playing with data, we decided to check the day with the highest and lowest
 
 **May 1st (Highest Traffic)**: Massive May Day Protests on a Monday (already a busy day).
 
-<br>
-
 **December 25th (Lowest Traffic)**: Christmas holiday, so people probably stayed home
 
 
 ![8.BasicPlots2.png](../additional_material/figures/8.BasicPlots2.png)
-<br>
+
 
 Also, explored the monthly traffic patterns:
-<br>
+
 
 **February**: Typically the peak of the harsh Minnesota winters, temperature drops to -11. 
-<br>
+
 
 **August**: Busiest month because of great weather, Minnesota State Fair (one of the largest in the country), Construction Season.  
 
 ![8.BasicPlots3.png](../additional_material/figures/8.BasicPlots3.png)
 
 The heatmap reveals a stark contrast between workdays and weekends: Monday through Friday show distinct morning and evening commute spikes, while weekends exhibit a much smoother, lower-volume pattern. 
-<br>
 
 Weekday traffic is concentrated between **06:00 and 18:00**, with clear peaks at 07:00 and 17:00 that reflect the standard office timings
 
@@ -183,5 +180,6 @@ Lastly, after trying the Likelihood Ratio Test between Poisson and Negative Bino
 
 ---
 ## AI Disclaimar
+
 VS Copilot was used as well as other AI tools were used to take help in modelling issues and better graphical outputs. 
----
+
