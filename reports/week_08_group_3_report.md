@@ -30,17 +30,17 @@
 ---
 ## Dataset Structure
 
-| Feature / Variable   | Data Type      | Description                          | Unique Values | Example Values                                                |
-|:---------------------|:---------------|:-------------------------------------|:-------------|:--------------------------------------------------------------|
-| holiday              | object         | US holiday indicator                  | 11           | Columbus Day, Veterans Day, Thanksgiving Day                  |
-| temp                 | float64        | Avg. temperature (K)                  | 5843         | 288.28, 289.36, 289.58                                        |
-| rain_1h              | float64        | Rainfall last hour (mm)               | 372          | 0.0, 0.25, 0.57                                               |
-| snow_1h              | float64        | Snow last hour (mm)                   | 12           | 0.0, 0.51, 0.32                                               |
-| clouds_all           | int64          | Cloud cover (%)                       | 60           | 40, 75, 90                                                    |
-| weather_main         | object         | Main weather condition                | 11           | Clouds, Clear, Rain                                           |
-| weather_description  | object         | Detailed weather condition            | 38           | scattered clouds, broken clouds, overcast clouds              |
-| date_time            | datetime64[ns] | Timestamp of observation              | 40575        | 2012-10-02 09:00, 2012-10-02 10:00, 2012-10-02 11:00         |
-| traffic_volume       | int64          | Traffic volume recorded               | 6704         | 5545, 4516, 4767                                              |
+| Feature / Variable   | Data Type      | Description                          | Unique Values    | Example Values                                                |
+|:---------------------|:---------------|:-------------------------------------|:----------------|:--------------------------------------------------------------|
+| holiday              | object         | US holiday indicator                  | 11              | Columbus Day, Veterans Day, Thanksgiving Day                  |
+| temp                 | float64        | Avg. temperature (K)                  | 5843            | 288.28, 289.36, 289.58                                        |
+| rain_1h              | float64        | Rainfall last hour (mm)               | 372             | 0.0, 0.25, 0.57                                               |
+| snow_1h              | float64        | Snow last hour (mm)                   | 12              | 0.0, 0.51, 0.32                                               |
+| clouds_all           | int64          | Cloud cover (%)                       | 60              | 40, 75, 90                                                    |
+| weather_main         | object         | Main weather condition                | 11              | Clouds, Clear, Rain                                           |
+| weather_description  | object         | Detailed weather condition            | 38              | scattered clouds, broken clouds, overcast clouds              |
+| date_time            | datetime64[ns] | Timestamp of observation              | 40575           | 2012-10-02 09:00, 2012-10-02 10:00, 2012-10-02 11:00         |
+| traffic_volume       | int64          | Traffic volume recorded               | 6704            | 5545, 4516, 4767                                              |
 
 
 
