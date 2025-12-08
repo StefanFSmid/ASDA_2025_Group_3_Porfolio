@@ -30,7 +30,7 @@
 ---
 ## Dataset Structure
 
-| Feature / Variable   | Data Type      | Description                         |   Number of Unique Values | Example Values                                                |
+| Feature / Variable   | Data Type      | Description                         |   # of Unique Values | Example Values                                                |
 |:---------------------|:---------------|:------------------------------------|--------------------------:|:--------------------------------------------------------------|
 | holiday              | object         | Whether the day is a US holiday     |                        11 | Columbus Day, Veterans Day, Thanksgiving Day                  |
 | temp                 | float64        | Average temperature in Kelvin       |                      5843 | 288.28, 289.36, 289.58                                        |
@@ -52,15 +52,18 @@
 | Wrong data types          | `date_time`      | date_time column existed as an object      | Converted to datetime format |
 | Time gaps                 | `date_time`               | Irregular timestamps and missing hourly entries                   | Identified missing values through a heat map; selected 2017 as the final column for modeling  |
 | Duplicates                | None               | N/A                                           | N/A             |
-| Inconsistent categories   | `weather_main`, 'holidays'  | Lots of unique entries in weather_main, NaN entries in holidays                         | Grouped weather_main into similar categories and did one-hot encoding                    |
-| Other                     | 'weather_description', 'rain_1h', 'snow_1h'                         | weather_description had even more unique values which would make the model very messy, rain_1h and snow_1h were not captured throughout 2017                            | Dropped these columns    |
+| Inconsistent categories   | `weather_main`, `holidays`  | Lots of unique entries in weather_main, NaN entries in holidays                         | Grouped weather_main into similar categories and did one-hot encoding                    |
+| Other                     | `weather_description`, `rain_1h`, `snow_1h`                         | weather_description had even more unique values which would make the model very messy, rain_1h and snow_1h were not captured throughout 2017                            | Dropped these columns    |
 
 
+<br>
 
+### HeatMap for yearly missing data
+<br>
 
 ![8.Choosing2017.png](../additional_material/figures/8.Choosing2017.png)
 
-Based on the above HeatMap (made with Jannik's help), we selected 2017 simply because it is the only year with consistent, high-quality data. While 2014 is virtually empty and other years are too patchy to trust, 2017 is nearly 100% complete. This ensures our model learns from actual traffic patterns rather than noise or guesses.
+Based on the above HeatMap (made with Jannik's help), we selected **2017** simply because it is the only year with consistent, high-quality data. While 2014 is virtually empty and other years are too patchy to trust, 2017 is nearly 100% complete. This ensures our model learns from actual traffic patterns rather than noise or guesses.
 
 ---
 ## Descriptive Statistics
@@ -79,27 +82,44 @@ Based on the above HeatMap (made with Jannik's help), we selected 2017 simply be
 | Variance           |      3.94621e+06 |   133.306   |    1561.22   |
 | Dispersion Index   |   1181.25        |    16.0352  |      31.2212 |
 
+<br>
+
+## Basic Statistical Plots
+
 
 ![8.BasicPlots1.png](../additional_material/figures/8.BasicPlots1.png)
 <br>
 While playing with data, we decided to check the day with the highest and lowest traffic and found the following results:
-*May 1st (Highest Traffic)*: Massive May Day Protests on a Monday (already a busy day).
-*December 25th (Lowest Traffic)*: Christmas holiday, so people probably stayed home
+<br>
+
+**May 1st (Highest Traffic)**: Massive May Day Protests on a Monday (already a busy day).
+
+<br>
+
+**December 25th (Lowest Traffic)**: Christmas holiday, so people probably stayed home
 
 
 ![8.BasicPlots2.png](../additional_material/figures/8.BasicPlots2.png)
 <br>
+
 Also, explored the monthly traffic patterns:
-February: Typically the peak of the harsh Minnesota winters, temperature drops to -11. 
-August: Busiest month because of great weather, Minnesota State Fair (one of the largest in the country), Construction Season.  
+<br>
+
+**February**: Typically the peak of the harsh Minnesota winters, temperature drops to -11. 
+<br>
+
+**August**: Busiest month because of great weather, Minnesota State Fair (one of the largest in the country), Construction Season.  
 
 ![8.BasicPlots3.png](../additional_material/figures/8.BasicPlots3.png)
 
-The heatmap reveals a stark contrast between workdays and weekends: Monday through Friday show distinct morning and evening commute spikes, while weekends exhibit a much smoother, lower-volume pattern. Weekday traffic is concentrated between 06:00 and 18:00, with clear peaks at 07:00 and 17:00 that reflect the standard office timings
+The heatmap reveals a stark contrast between workdays and weekends: Monday through Friday show distinct morning and evening commute spikes, while weekends exhibit a much smoother, lower-volume pattern. 
+<br>
+
+Weekday traffic is concentrated between **06:00 and 18:00**, with clear peaks at 07:00 and 17:00 that reflect the standard office timings
 
 ![8.BasicPlots4.png](../additional_material/figures/8.BasicPlots4.png)
 
-While traffic flow remains stable across cold and mild weather (roughly -15°C to 15°C), we observe a sharp surge in volume as temperatures exceed 20°C, suggesting a strong increase in road usage during warmer conditions.
+While traffic flow remains stable across cold and mild weather (roughly -15°C to 15°C), we observe a sharp surge in volume as temperatures exceed **20°C**, suggesting a strong increase in road usage during warmer conditions.
 
 
 ---
@@ -114,9 +134,7 @@ The department's prediction of not using OLS seems to be reasonable because Ordi
 
 ### Testing Poisson Regression
 
-To move beyond the limitations of OLS, we started with the standard model for count data: Poisson regression. This model ensures our predictions remain strictly non-negative. We utilized a log-link function to model the relationship between our independent variables specifically time, holidays, and weather conditions (clouds, temperature) and the traffic volume:
-
-The outputs of Poisson Regression were as follows:
+To move beyond the limitations of OLS, we started with the standard model for count data: Poisson regression. This model ensures our predictions remain strictly non-negative. We modeled the relationship between our independent variables specifically time, holidays, and weather conditions (clouds, temperature) and the traffic volume. The outputs of Poisson Regression were as follows:
 
 ![8.PoissonTable.png](../additional_material/figures/8.PoissonTable.png)
 
@@ -161,10 +179,9 @@ The overall metrics comparing the two models are listed below:
 | **Deviance**                  | 4,822,291.17                    | 41.24                               |
 | **Pearson Chi-Square**        | 4,910,488.10                    | 41.27                               |
 
-Lastly, after trying the Likelihood Ratio Test between Poisson and Negative Binomial, we got the LR statistic value of 4,700,549. This further gives the evidence that the Negative Binomial model fits the data far better than the Poisson model due to extreme overdispersion.
+Lastly, after trying the Likelihood Ratio Test between Poisson and Negative Binomial, we got the LR statistic value of **4,700,549**. This further gives the evidence that the Negative Binomial model fits the data far better than the Poisson model due to extreme overdispersion.
 
 ---
 ## AI Disclaimar
-
-
+VS Copilot was used as well as other AI tools were used to take help in modelling issues and better graphical outputs. 
 ---
