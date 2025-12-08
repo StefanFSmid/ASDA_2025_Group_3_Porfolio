@@ -4,7 +4,7 @@
 
 | Name      | Contribution                         |
 |:----------|:-------------------------------------|
-|Assad      | Data loading, cleaning, analysis, report  |
+|Assad      | Data Analysis, Report  |
 |Zeyad     | Data Analysis                |
 |Shiva     |     |
 |Stefan      |                 |
