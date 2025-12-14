@@ -237,6 +237,7 @@ Full Model AIC : -1343.4969162810255
 
 ---
 
+<details>
   <summary><b>Conclusion</b></summary>
 <br>
 
@@ -244,6 +245,15 @@ Full Model AIC : -1343.4969162810255
 </details>
 
 ---
+
+</details>
+
+---
+
+<details>
+  <summary><h2>AI Disclaimar</h2></summary>
+<br>
+
 
 </details>
 
