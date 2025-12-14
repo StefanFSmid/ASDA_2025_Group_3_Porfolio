@@ -142,7 +142,7 @@
 ---
 
 <details>
-  <summary><h2>Pre Modelling Setup and Analysis</h2></summary>
+  <summary><h2>Pre Modelling Setup</h2></summary>
 <br>
 
 
@@ -188,10 +188,12 @@ Cramer’s V was computed to quantify the strength of association between catego
 ---
 
 <details>
-  <summary><h1>Pre Modelling Setup and Analysis</h1></summary>
+  <summary><h2>Analysis</h2></summary>
 <br>
 
 <details>
+
+
   <summary><b>Random Forest Model</b></summary>
 <br>
 
@@ -229,6 +231,14 @@ Gaussian GLM was performed for fitting the data and predict SalePrice_Log using 
 
 Null Model AIC : 1119.6695251050246
 Full Model AIC : -1343.4969162810255
+
+
+</details>
+
+---
+
+  <summary><b>Conclusion</b></summary>
+<br>
 
 
 </details>
