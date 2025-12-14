@@ -277,11 +277,9 @@ In a nutshell, our findings emphasize the importance of **property quality**, **
 
 </details>
 
----
-
 </details>
 
-
+---
 
 <details>
   <summary><h2>AI Disclaimar</h2></summary>
