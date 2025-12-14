@@ -188,7 +188,7 @@ Cramer’s V was computed to quantify the strength of association between catego
 ---
 
 <details>
-  <summary><h2>Pre Modelling Setup and Analysis</h2></summary>
+  <summary><h1>Pre Modelling Setup and Analysis</h1></summary>
 <br>
 
 <details>
