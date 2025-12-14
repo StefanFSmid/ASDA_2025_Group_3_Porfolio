@@ -264,14 +264,14 @@ The analysis revealed that several features significantly contribute to the Sale
 
 **Quality of the House::** As expected, the overall quality of the house plays a central role in determining its sale price. A higher quality rating directly correlates with a higher sale price.
 
-![9.GLM7.png](../additional_material/figures/9.GLM7.png)
+![9.GLM8.png](../additional_material/figures/9.GLM8.png)
 
 **Living Area of the House:** The size of the living area is another key factor. Larger homes with more living space are typically valued higher in the market.
 
-![9.GLM7.png](../additional_material/figures/9.GLM7.png)
+![9.GLM9.png](../additional_material/figures/9.GLM9.png)
 
 **Other Significant Features:** Additional factors, such as the age of the property, number of bathrooms, and size of the garage, also show strong associations with sale price. These features add both functional and aesthetic value, further driving the price.
-![9.GLM7.png](../additional_material/figures/9.GLM7.png)
+![9.GLM10.png](../additional_material/figures/9.GLM10.png)
 
 In a nutshell, our findings emphasize the importance of **property quality**, **space**, and **functional amenities** are most important in determining its market value. 
 
@@ -286,6 +286,9 @@ In a nutshell, our findings emphasize the importance of **property quality**, **
 <details>
   <summary><h2>AI Disclaimar</h2></summary>
 <br>
+VS Copilot and other AI tools were used to assist with setting up categorical column dropping (Cramer’s V) as well as in one-hot encoding. Later, the iterative AIC backward elimination was also set up with the help of AI. Other than this, AI's help was used in other regualar issues and for generating better graphical outputs.
+
+
 
 
 </details>
