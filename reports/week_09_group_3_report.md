@@ -127,6 +127,37 @@
 | Encoding                     | All remaining categorical features                                                                                                | High-cardinality categorical variables would result in a large number of binary features after one-hot encoding                                             | Grouped low-frequency categories into an `Others` category prior to encoding to reduce dimensionality while retaining the most informative distinctions                          |
 
 
+## Pre Modelling Setup and Analysis
+
+### Numerical Features
+
+1. An initial exploratory analysis was conducted to examine the distributions of all numerical features. This step aimed to identify skewness, outliers, and variables with limited information value.
+
+![9.BP0.png](../additional_material/figures/9.BP0.png)
+
+Several numerical variables exhibited extreme right skewness, heavy zero inflation, or near-constant behavior. Features that showed no meaningful variation were removed at this stage to reduce noise and improve model stability.
+
+
+2. The target variable, **SalePrice**, was identified and its distribution was analyzed. The distribution was heavily right-skewed.
+
+To address this, a logarithmic transformation was applied to the target variable
+
+![9.BP1.png](../additional_material/figures/9.BP1.png)
+
+In addition to the target variable, several predictor variables also displayed skewed distributions. These features were log-transformed to improve interpretability and modeling performance.
+
+These columns included  "MasVnrArea", "LotFrontage", "EnclosedPorch", "OpenPorchSF", "SalePrice", "BsmtFinSF1", "WoodDeckSF", "TotalBsmtSF", 
+    "1stFlrSF", "GrLivArea", "LotArea".
+
+
+
+3. To further refine the numerical feature set, **multicollinearity** was assessed using a **correlation matrix** and **Variance Inflation Factor (VIF)**. Features with high multicollinearity or very low correlation with target were dropped.
+
+4. After applying distribution analysis, transformation, correlation analysis, and VIF-based filtering, the numerical feature space was reduced from **38** to **19** variables. 
+
+### Categorical Features
+
+
 
 ### Random Forest Model
 
