@@ -228,7 +228,7 @@ A **Gaussian Generalized Linear Model (GLM)** was fitted to predict **SalePrice_
 
 ![9.GLM1.png](../additional_material/figures/9.GLM1.png)
 
-**Null Model AIC** : 1119.67
+**Null Model AIC** : 1119.67 <br>
 **Full Model AIC** : -1343.50
 
 To improve model efficiency, a **backward elimination based on AIC** was performed. Features that contributed the least to model fit were iteratively removed, reducing complexity while improving predictive performance.
@@ -281,7 +281,7 @@ In a nutshell, our findings emphasize the importance of **property quality**, **
 
 </details>
 
----
+
 
 <details>
   <summary><h2>AI Disclaimar</h2></summary>
