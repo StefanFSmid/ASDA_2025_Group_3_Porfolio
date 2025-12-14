@@ -224,13 +224,32 @@ The residual histogram is roughly bell‑shaped and centered near zero, and the 
   <summary><b>GLM</b></summary>
 <br>
 
-Gaussian GLM was performed for fitting the data and predict SalePrice_Log using the remaining 19 numeric and 16 categorical features. The result obtained was as follows:
+A **Gaussian Generalized Linear Model (GLM)** was fitted to predict **SalePrice_Log** using the remaining 19 numerical and 16 categorical features. The initial model outputs were as follows:
+
+![9.GLM1.png](../additional_material/figures/9.GLM1.png)
+
+**Null Model AIC** : 1119.67
+**Full Model AIC** : -1343.50
+
+To improve model efficiency, a **backward elimination based on AIC** was performed. Features that contributed the least to model fit were iteratively removed, reducing complexity while improving predictive performance.
+
+The resulting reduced model showed a further improvement in AIC, as illustrated below:
+
+![9.GLM4.png](../additional_material/figures/9.GLM4.png)
+
+Model diagnostics were conducted to evaluate predictive performance:
+
+- Actual vs Predicted Plot: Confirmed that predictions closely followed observed values.
+- Residual Analysis: Residuals appeared randomly dispersed, indicating no major violations of model assumptions.
+
+![9.GLM5.png](../additional_material/figures/9.GLM5.png)
+![9.GLM6.png](../additional_material/figures/9.GLM6.png)
 
 
+To further assess the predictive strength of each feature, Mutual Information Regression was applied. This method identifies features with the highest information gain relative to the target variable
 
+![9.GLM7.png](../additional_material/figures/9.GLM7.png)
 
-Null Model AIC : 1119.6695251050246
-Full Model AIC : -1343.4969162810255
 
 
 </details>
@@ -241,6 +260,20 @@ Full Model AIC : -1343.4969162810255
   <summary><b>Conclusion</b></summary>
 <br>
 
+The analysis revealed that several features significantly contribute to the SalePrice of a property:
+
+**Quality of the House::** As expected, the overall quality of the house plays a central role in determining its sale price. A higher quality rating directly correlates with a higher sale price.
+
+![9.GLM7.png](../additional_material/figures/9.GLM7.png)
+
+**Living Area of the House:** The size of the living area is another key factor. Larger homes with more living space are typically valued higher in the market.
+
+![9.GLM7.png](../additional_material/figures/9.GLM7.png)
+
+**Other Significant Features:** Additional factors, such as the age of the property, number of bathrooms, and size of the garage, also show strong associations with sale price. These features add both functional and aesthetic value, further driving the price.
+![9.GLM7.png](../additional_material/figures/9.GLM7.png)
+
+In a nutshell, our findings emphasize the importance of **property quality**, **space**, and **functional amenities** are most important in determining its market value. 
 
 </details>
 
