@@ -26,7 +26,7 @@
 
 
 <details>
-  <summary><b>Dataset Structure</b></summary>
+  <summary><h2>Dataset Structure</h2></summary>
 <br>
 
 ### Numerical Features: 
@@ -126,7 +126,7 @@
 ---
 
 <details>
-  <summary><b>Data Cleaning</b></summary>
+  <summary><h2>Data Cleaning</h2></summary>
 <br>
 
 
@@ -181,12 +181,15 @@ In addition to the target variable, several predictor variables also displayed s
 3. **Cramer’s V**: 
 Cramer’s V was computed to quantify the strength of association between categorical features. Strongly correlated feature pairs (above a  threshold of 0.6) were further filtered to minimize redundancy and reduce dimensionality prior to encoding.
 
-4. After applying the above tests, the number of categorical features were dropped from 43 to 16. Furthermore, the remaining categorical columns were observed for one-hot encoding and ordinal mapping. 
+4. After applying the above tests, the number of categorical features were dropped from **43** to **16**. Furthermore, the remaining categorical columns were observed for one-hot encoding and ordinal mapping. 
 
 </details>
 
 ---
 
+<details>
+  <summary><h2>Pre Modelling Setup and Analysis</h2></summary>
+<br>
 
 <details>
   <summary><b>Random Forest Model</b></summary>
@@ -227,6 +230,10 @@ Gaussian GLM was performed for fitting the data and predict SalePrice_Log using 
 Null Model AIC : 1119.6695251050246
 Full Model AIC : -1343.4969162810255
 
+
+</details>
+
+---
 
 </details>
 
