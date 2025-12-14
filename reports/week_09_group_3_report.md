@@ -1,5 +1,7 @@
 # Housing Analysis
 
+## Authors
+
 | Name      | Contribution                         |
 |:----------|:-------------------------------------|
 |Assad      | Data Cleaning, Analysis, Report      |
@@ -7,6 +9,7 @@
 |Raghavendra| GLM                                  |
 |Sumeet     | Data processing and cleaning         |
 |Stefan     |                                      |
+
 
 
 ## Dataset Overview
@@ -22,7 +25,9 @@
 | **Date Accessed**       | 11 December 2025                                                                   |
 
 
-## Dataset Structure
+<details>
+  <summary><b>Dataset Structure</b></summary>
+<br>
 
 ### Numerical Features: 
 
@@ -116,8 +121,14 @@
 | SaleType             | Type of sale                              |                    9 | WD, New, COD              |
 | SaleCondition        | Condition of sale                         |                    6 | Normal, Abnorml, Partial  |
 
+</details>
 
-## Data Cleaning
+---
+
+<details>
+  <summary><b>Data Cleaning</b></summary>
+<br>
+
 
 | Issue                         | Names of Columns Affected                                                                                                      | Description of the Issue                                                                                                                                     | Action Taken                                                                                                                                                                      |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -126,8 +137,15 @@
 | Ordinal Mapping              | ExterQual, KitchenQual, BsmtQual, FireplaceQu, BsmtCond, GarageQual, BsmtExposure, BsmtFinType1                                  | Quality-related categorical variables have an inherent order and can be meaningfully represented on a numerical scale                                      | Mapped ordinal categories to numerical scores to preserve ordering and help us later in modeling                                                           |
 | Encoding                     | All remaining categorical features                                                                                                | High-cardinality categorical variables would result in a large number of binary features after one-hot encoding                                             | Grouped low-frequency categories into an `Others` category prior to encoding to reduce dimensionality while retaining the most informative distinctions                          |
 
+</details>
 
-## Pre Modelling Setup and Analysis
+---
+
+<details>
+  <summary><b>Pre Modelling Setup and Analysis</b></summary>
+<br>
+
+
 
 ### Numerical Features
 
@@ -146,20 +164,34 @@ To address this, a logarithmic transformation was applied to the target variable
 
 In addition to the target variable, several predictor variables also displayed skewed distributions. These features were log-transformed to improve interpretability and modeling performance.
 
-These columns included  "MasVnrArea", "LotFrontage", "EnclosedPorch", "OpenPorchSF", "SalePrice", "BsmtFinSF1", "WoodDeckSF", "TotalBsmtSF", 
-    "1stFlrSF", "GrLivArea", "LotArea".
-
-
-
 3. To further refine the numerical feature set, **multicollinearity** was assessed using a **correlation matrix** and **Variance Inflation Factor (VIF)**. Features with high multicollinearity or very low correlation with target were dropped.
+
+![9.BP2.png](../additional_material/figures/9.BP2.png)
+
+
 
 4. After applying distribution analysis, transformation, correlation analysis, and VIF-based filtering, the numerical feature space was reduced from **38** to **19** variables. 
 
 ### Categorical Features
 
+1. **ANOVA**: One-way ANOVA was applied to evaluate whether different categories within each categorical feature had statistically significant differences in the target variable (SalePrice_log). Features showing weak or insignificant association with the target were removed.
+
+2. **Chi-Square Test**: Pairwise Chi-Square tests of independence were conducted to identify categorical features that were statistically dependent on each other.
+
+3. **Cramer’s V**: 
+Cramer’s V was computed to quantify the strength of association between categorical features. Strongly correlated feature pairs (above a  threshold of 0.6) were further filtered to minimize redundancy and reduce dimensionality prior to encoding.
+
+4. After applying the above tests, the number of categorical features were dropped from 43 to 16. Furthermore, the remaining categorical columns were observed for one-hot encoding and ordinal mapping. 
+
+</details>
+
+---
 
 
-### Random Forest Model
+<details>
+  <summary><b>Random Forest Model</b></summary>
+<br>
+
 
 Random Forest regression model is trained using the training dataset. Random Forest is a learning method that builds many decision trees on samples of the data and averages their predictions. Unlike linear regression, it does not rely on strict assumptions such as linearity or normality, making it suitable for capturing complex, non-linear relationships between housing characteristics and sale prices, the following shows three decision trees from the Random Forest.
 
@@ -176,3 +208,26 @@ To simplify the model while retaining predictive power, we performed feature sel
 The residual histogram is roughly bell‑shaped and centered near zero, and the residuals‑vs‑fitted plot shows points scattered fairly evenly around zero without a clear pattern, while the QQ‑plot lies close to the reference line except for a few tail points, so together these graphs suggest that the model errors are approximately normal with no strong misspecification.
 
 ![9.Residuals.png](../additional_material/figures/9.RF6.png)
+
+</details>
+
+---
+
+
+
+<details>
+  <summary><b>GLM</b></summary>
+<br>
+
+Gaussian GLM was performed for fitting the data and predict SalePrice_Log using the remaining 19 numeric and 16 categorical features. The result obtained was as follows:
+
+
+
+
+Null Model AIC : 1119.6695251050246
+Full Model AIC : -1343.4969162810255
+
+
+</details>
+
+---
