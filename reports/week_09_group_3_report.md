@@ -1,5 +1,7 @@
 # Housing Analysis
 
+House prices are affected by many property features, not all of which are obvious to buyers. This project uses housing data to predict sale prices and identify the features that most strongly influence home values. The aim is to help prospective buyers better understand what factors typically make a house more or less expensive.
+
 ## Authors
 
 | Name      | Contribution                         |
