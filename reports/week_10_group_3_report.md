@@ -58,7 +58,7 @@ PCA was then applied to the standardized data to identify the main factors drivi
 
 Biplots were generated to visualize both the countries (and later regions) and the contribution of each feature to the principal components. This allows for interpretation of how indicators drive differences in happiness across countries.
 
-![10.PCA1.png](../additional_material/figures/10.PCA1.png)
+![10.PCAplot1.png](../additional_material/figures/10.PCAplot1.png)
 **PCA Biplot of Global Happiness Indicators**
 
 
@@ -76,7 +76,7 @@ Top contributing features for each principal component were identified using the
 
 Additional plots (e.g., model.plot()) were used to summarize variance explained and the relationships between components.
 
-![10.PCA3.png](../additional_material/figures/10.PCA3.png)
+![10.PCAplot3.png](../additional_material/figures/10.PCAplot3.png)
 
 This methodology allowed us to reduce the dimensionality of the dataset, uncover the main underlying factors of global happiness, and compare how countries and regions cluster based on these factors.
 
@@ -87,7 +87,7 @@ This methodology allowed us to reduce the dimensionality of the dataset, uncover
 
 ### Principal Component Analysis Dimensions
 
-![10.PC4.png](../additional_material/figures/10.PCA4.png)
+![10.PCplot4.png](../additional_material/figures/10.PCAplot4.png)
 
 The heatmap of PC1 and PC2 provides a clear interpretation of the two most important dimensions underlying global happiness.
 
@@ -106,7 +106,7 @@ This dimension reflects how fair, trustworthy, and supportive a society feels to
 
 ### Analyzing Regions
 
-![10.PCA2.png](../additional_material/figures/10.PCA2.png)
+![10.PCAplot2.png](../additional_material/figures/10.PCAplot2.png)
 **PCA Biplot Categorized by World Regions**
 
 The PCA reveals a clear global pattern. PC1 captures structural well-being, reflecting material wealth, health, and institutional strength, while PC2 captures social and communal factors, such as generosity and social cohesion.
