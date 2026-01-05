@@ -187,4 +187,6 @@ Low PC1 scores reflect limited material and health resources, while PC2 variatio
 
 
 
-## AI Disclaimar
+## AI Disclaimer
+- Use of Visual Studio / PyCharm with Github copilot (inline code suggestions) 
+- AI was used to compile graphs in single subplots/tightplots for the final report
