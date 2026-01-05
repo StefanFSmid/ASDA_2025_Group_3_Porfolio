@@ -44,7 +44,9 @@ Six key indicators of well-being were selected as features for analysis:
 - Generosity
 - Perceptions of corruption
 
-These variables were extracted from the dataset, while country names and regions were retained as reference labels. The Overall Rank variable was excluded because it is directly derived from the happiness score. The Score variable was also removed, as it is essentially derived from the selected indicators and would therefore be redundant in the analysis.
+These variables were extracted from the dataset, while country names and regions were retained as reference labels. The Overall Rank variable was excluded because it is directly derived from the happiness score. The Score variable was also removed, as it is essentially derived from the selected indicators and would therefore be redundant in the analysis. The happiness score is highest in the Americas, Europe, and Oceania as can be seen in the following figure that plots the score for each country:
+
+![world_map_happiness.png](../additional_material/figures/world_map_happiness.png)
 
 ### 2. Data Scaling
 
