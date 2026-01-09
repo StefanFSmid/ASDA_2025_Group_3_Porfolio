@@ -2,7 +2,7 @@
 
 | Name      | Contribution                         |
 |:----------|:-------------------------------------|
-|Assad      | Analysis & Report |
+|Assad      | Analysis, Report & Spotify Setup |
 |Stefan     | Analysis                |
 |Zeyad     | Analysis with 3 clusters as a comparison     |
 |Shiva      |
@@ -73,12 +73,16 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ## Results
 
-|   cluster | danceability | energy | loudness | speechiness | acousticness | instrumentalness | liveness | valence | tempo |   duration_ms |
-|----------:|---------------:|---------:|-----------:|--------------:|---------------:|-------------------:|-----------:|----------:|--------:|--------------:|
-|         0 |        -0.69 |  -1.44 |    -1.49 |       -0.71 |         1.46 |             0.97 |    -1.32 |   -0.91 | -1.49 |        1.38 |
-|         1 |         0.76 |   0.2  |     0.48 |       -0.6  |        -0.25 |            -0.83 |    -0.22 |    0.94 |  0.33 |       -0.82 |
-|         2 |         0.95 |   0.37 |     0.62 |        1.45 |        -0.4  |            -0.89 |     0.83 |    0.79 |  0.66 |       -0.65 |
-|         3 |        -1.02 |   0.87 |     0.39 |       -0.15 |        -0.81 |             0.75 |     0.71 |   -0.81 |  0.5  |        0.08 |
+<div style="font-size:13px;">
+
+| Cluster | Danceability | Energy | Loudness | Speechiness | Acousticness | Instrumentalness | Liveness | Valence | Tempo | Duration_ms |
+|--------:|-------------:|-------:|---------:|------------:|-------------:|-----------------:|---------:|--------:|------:|------------:|
+| 0 | -0.69 | -1.44 | -1.49 | -0.71 | 1.46 | 0.97 | -1.32 | -0.91 | -1.49 | 1.38 |
+| 1 | 0.76 | 0.20 | 0.48 | -0.60 | -0.25 | -0.83 | -0.22 | 0.94 | 0.33 | -0.82 |
+| 2 | 0.95 | 0.37 | 0.62 | 1.45 | -0.40 | -0.89 | 0.83 | 0.79 | 0.66 | -0.65 |
+| 3 | -1.02 | 0.87 | 0.39 | -0.15 | -0.81 | 0.75 | 0.71 | -0.81 | 0.50 | 0.08 |
+
+</div>
 
 
 
