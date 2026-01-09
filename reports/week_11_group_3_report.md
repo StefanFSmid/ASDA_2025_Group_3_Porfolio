@@ -90,9 +90,9 @@ K-means clustering identified four distinct musical moods, which were explored a
 </p>
 
 
-Playlist Description: *Soft instrumentals and acoustic sounds for slowing down and clearing your head. Ideal for quiet mornings, focused work, or moments when you just want some calm in the background.*<br>
-Playlist Link: [Listen to Quiet Hours on Spotify!](https://open.spotify.com/playlist/46Ql2b9cTdGhhHbzPyGPjN?si=JzH7fujNS5q4_pzwDDgSPg) <br>
-Sample Songs & Artists:
+**Playlist Description**: *Soft instrumentals and acoustic sounds for slowing down and clearing your head. Ideal for quiet mornings, focused work, or moments when you just want some calm in the background.*<br>
+**Playlist Link**: [Listen to Quiet Hours on Spotify!](https://open.spotify.com/playlist/46Ql2b9cTdGhhHbzPyGPjN?si=JzH7fujNS5q4_pzwDDgSPg) <br>
+**Sample Songs & Artists**:
 
 | Song                          | Artist          |
 |:------------------------------|:----------------|
@@ -105,10 +105,15 @@ Sample Songs & Artists:
 
 ### Feel-Good Grooves
 
-![Playlist2.png](../additional_material/figures/Playlist2.png)
-Playlist Description: *Easygoing, upbeat tracks that lift your mood without trying too hard. Press play when you want something light, positive, and effortlessly feel-good.*
-Playlist Link: [text](https://open.spotify.com/playlist/1FMIxKi50vaIdjXXpCJu5p?si=57RF7OAES3-wyFZ0yEAOIw)
-Sample Songs & Artists:
+
+<p align="left">
+  <img src="../additional_material/figures/Playlist2.png" width="320">
+</p>
+
+
+**Playlist Description**: *Easygoing, upbeat tracks that lift your mood without trying too hard. Press play when you want something light, positive, and effortlessly feel-good.*<br>
+**Playlist Link**: [Listen to Feel-Good Grooves on Spotify!](https://open.spotify.com/playlist/1FMIxKi50vaIdjXXpCJu5p?si=57RF7OAES3-wyFZ0yEAOIw)<br>
+**Sample Songs & Artists**:
 
 | Song                                      | Artist               |
 |:------------------------------------------|:---------------------|
@@ -120,10 +125,13 @@ Sample Songs & Artists:
 
 ### Urban Pulse
 
-![Playlist3.png](../additional_material/figures/Playlist3.png)
-Playlist Description:*Rhythmic, voice-driven tracks with a strong sense of movement and flow. A soundtrack for city nights, long walks, or whenever you want a bit of urban energy.*
-Playlist Link: [text](https://open.spotify.com/playlist/37DZ1WoxhFklk6A4KQmpbA?si=3dkB5VibRoWbC6fjCduupg)
-Sample Songs & Artists:
+<p align="left">
+  <img src="../additional_material/figures/Playlist3.png" width="320">
+</p>
+
+**Playlist Description**:*Rhythmic, voice-driven tracks with a strong sense of movement and flow. A soundtrack for city nights, long walks, or whenever you want a bit of urban energy.*<br>
+**Playlist Link**: [Listen to Urban Pulse on Spotify!](https://open.spotify.com/playlist/37DZ1WoxhFklk6A4KQmpbA?si=3dkB5VibRoWbC6fjCduupg)<br>
+**Sample Songs & Artists**:
 
 |Song                    | Artist       |
 |:-----------------------|:-------------|
@@ -135,10 +143,14 @@ Sample Songs & Artists:
 
 ### Heavy After Hours
 
-![Playlist4.png](../additional_material/figures/Playlist4.png)
-Playlist Description:*Dark, loud, and intense tracks made for late nights and turned-up volumes. Perfect when you want something heavy, raw, and unapologetic.*
-Playlist Link: [text](https://open.spotify.com/playlist/04QIYwQGxI3pIbIHyVUofg?si=eorewadPRgySlCmpHYzlcQ)
-Sample Songs & Artists:
+
+<p align="left">
+  <img src="../additional_material/figures/Playlist4.png" width="320">
+</p>
+
+**Playlist Description**:*Dark, loud, and intense tracks made for late nights and turned-up volumes. Perfect when you want something heavy, raw, and unapologetic.*<br>
+**Playlist Link**: [Listen to Heavy After Hours on Spotify!](https://open.spotify.com/playlist/04QIYwQGxI3pIbIHyVUofg?si=eorewadPRgySlCmpHYzlcQ)<br>
+**Sample Songs & Artists**:
 
 | Song                   | Artist      |
 |:------------------------|:------------|
