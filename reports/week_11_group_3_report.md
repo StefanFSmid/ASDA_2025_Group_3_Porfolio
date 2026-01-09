@@ -73,12 +73,12 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ## Results
 
-|   cluster |   danceability |   energy |   loudness |   speechiness |   acousticness |   instrumentalness |   liveness |   valence |   tempo |   duration_ms |
+|   cluster | danceability | energy | loudness | speechiness | acousticness | instrumentalness | liveness | valence | tempo |   duration_ms |
 |----------:|---------------:|---------:|-----------:|--------------:|---------------:|-------------------:|-----------:|----------:|--------:|--------------:|
-|         0 |          -0.69 |    -1.44 |      -1.49 |         -0.71 |           1.46 |               0.97 |      -1.32 |     -0.91 |   -1.49 |          1.38 |
-|         1 |           0.76 |     0.2  |       0.48 |         -0.6  |          -0.25 |              -0.83 |      -0.22 |      0.94 |    0.33 |         -0.82 |
-|         2 |           0.95 |     0.37 |       0.62 |          1.45 |          -0.4  |              -0.89 |       0.83 |      0.79 |    0.66 |         -0.65 |
-|         3 |          -1.02 |     0.87 |       0.39 |         -0.15 |          -0.81 |               0.75 |       0.71 |     -0.81 |    0.5  |          0.08 |
+|         0 |        -0.69 |  -1.44 |    -1.49 |       -0.71 |         1.46 |             0.97 |    -1.32 |   -0.91 | -1.49 |        1.38 |
+|         1 |         0.76 |   0.2  |     0.48 |       -0.6  |        -0.25 |            -0.83 |    -0.22 |    0.94 |  0.33 |       -0.82 |
+|         2 |         0.95 |   0.37 |     0.62 |        1.45 |        -0.4  |            -0.89 |     0.83 |    0.79 |  0.66 |       -0.65 |
+|         3 |        -1.02 |   0.87 |     0.39 |       -0.15 |        -0.81 |             0.75 |     0.71 |   -0.81 |  0.5  |        0.08 |
 
 
 
@@ -129,7 +129,7 @@ K-means clustering identified four distinct musical moods, which were explored a
   <img src="../additional_material/figures/Playlist3.png" width="320">
 </p>
 
-**Playlist Description**:*Rhythmic, voice-driven tracks with a strong sense of movement and flow. A soundtrack for city nights, long walks, or whenever you want a bit of urban energy.*<br>
+**Playlist Description**: *Rhythmic, voice-driven tracks with a strong sense of movement and flow. A soundtrack for city nights, long walks, or whenever you want a bit of urban energy.*<br>
 **Playlist Link**: [Listen to Urban Pulse on Spotify!](https://open.spotify.com/playlist/37DZ1WoxhFklk6A4KQmpbA?si=3dkB5VibRoWbC6fjCduupg)<br>
 **Sample Songs & Artists**:
 
@@ -148,7 +148,7 @@ K-means clustering identified four distinct musical moods, which were explored a
   <img src="../additional_material/figures/Playlist4.png" width="320">
 </p>
 
-**Playlist Description**:*Dark, loud, and intense tracks made for late nights and turned-up volumes. Perfect when you want something heavy, raw, and unapologetic.*<br>
+**Playlist Description**: *Dark, loud, and intense tracks made for late nights and turned-up volumes. Perfect when you want something heavy, raw, and unapologetic.*<br>
 **Playlist Link**: [Listen to Heavy After Hours on Spotify!](https://open.spotify.com/playlist/04QIYwQGxI3pIbIHyVUofg?si=eorewadPRgySlCmpHYzlcQ)<br>
 **Sample Songs & Artists**:
 
