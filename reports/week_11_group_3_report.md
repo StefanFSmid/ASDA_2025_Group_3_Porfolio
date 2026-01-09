@@ -73,7 +73,7 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ## Results
 
-<div style="font-size:13px;">
+<div style="font-size:10px;">
 
 | Cluster | Danceability | Energy | Loudness | Speechiness | Acousticness | Instrumentalness | Liveness | Valence | Tempo | Duration_ms |
 |--------:|-------------:|-------:|---------:|------------:|-------------:|-----------------:|---------:|--------:|------:|------------:|
