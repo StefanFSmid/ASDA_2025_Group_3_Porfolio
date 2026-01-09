@@ -86,7 +86,7 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 
 <p align="center">
-  <img src=![Playlist1.png](../additional_material/figures/Playlist1.png) width="300">
+  <img src="../additional_material/figures/Playlist1.png" width="320">
 </p>
 
 
