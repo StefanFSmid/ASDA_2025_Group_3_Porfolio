@@ -73,17 +73,20 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ## Results
 
-<div style="font-size:10px;">
 
-| Cluster | Danceability | Energy | Loudness | Speechiness | Acousticness | Instrumentalness | Liveness | Valence | Tempo | Duration_ms |
-|--------:|-------------:|-------:|---------:|------------:|-------------:|-----------------:|---------:|--------:|------:|------------:|
-| 0 | -0.69 | -1.44 | -1.49 | -0.71 | 1.46 | 0.97 | -1.32 | -0.91 | -1.49 | 1.38 |
-| 1 | 0.76 | 0.20 | 0.48 | -0.60 | -0.25 | -0.83 | -0.22 | 0.94 | 0.33 | -0.82 |
-| 2 | 0.95 | 0.37 | 0.62 | 1.45 | -0.40 | -0.89 | 0.83 | 0.79 | 0.66 | -0.65 |
-| 3 | -1.02 | 0.87 | 0.39 | -0.15 | -0.81 | 0.75 | 0.71 | -0.81 | 0.50 | 0.08 |
 
-</div>
-
+| Feature | Cluster 0 | Cluster 1 | Cluster 2 | Cluster 3 |
+|--------|-----------|-----------|-----------|-----------|
+| Danceability | -0.69 | 0.76 | 0.95 | -1.02 |
+| Energy | -1.44 | 0.20 | 0.37 | 0.87 |
+| Loudness | -1.49 | 0.48 | 0.62 | 0.39 |
+| Speechiness | -0.71 | -0.60 | 1.45 | -0.15 |
+| Acousticness | 1.46 | -0.25 | -0.40 | -0.81 |
+| Instrumentalness | 0.97 | -0.83 | -0.89 | 0.75 |
+| Liveness | -1.32 | -0.22 | 0.83 | 0.71 |
+| Valence | -0.91 | 0.94 | 0.79 | -0.81 |
+| Tempo | -1.49 | 0.33 | 0.66 | 0.50 |
+| Duration_ms | 1.38 | -0.82 | -0.65 | 0.08 |
 
 
 ### Quiet Hours
