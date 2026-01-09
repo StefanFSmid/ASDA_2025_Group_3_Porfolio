@@ -37,15 +37,34 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ### 1. Feature Selection & Scaling
 
-
+| Audio Feature | Description |
+|--------------|------------|
+| Danceability | How suitable a track is for dancing, based on rhythm and tempo |
+| Energy | Perceived intensity and activity of a track |
+| Loudness | Overall loudness of a track in decibels (dB) |
+| Speechiness | Presence of spoken words (higher values indicate rap or talk-heavy tracks) |
+| Acousticness | Likelihood that a track is acoustic |
+| Instrumentalness | Likelihood that a track contains no vocals |
+| Liveness | Presence of a live audience or performance |
+| Valence | Musical positivity (higher values sound happier) |
+| Tempo | Speed of the track measured in beats per minute (BPM) |
+| Duration (ms) | Length of the track in milliseconds |
 
 ### 2. Determining number of clusters
 
 
+![11.DeterminingK.png](../additional_material/figures/11.DeterminingK.png)
 
 
-### 4. Visualization through PCA and Dendrograms 
 
+### 3. Visualization through PCA and Dendrograms 
+
+
+![11.BiplotKmeans.png](../additional_material/figures/11.BiplotKmeans.png)
+
+![11.Dendrogram.png](../additional_material/figures/11.Dendrogram.png)
+
+![11.HierarchicalClustering.png](../additional_material/figures/11.HierarchicalClustering.png)
 
 
 
