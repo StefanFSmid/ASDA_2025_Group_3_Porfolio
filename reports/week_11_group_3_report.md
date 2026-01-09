@@ -84,8 +84,13 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ### Quiet Hours
 
-![Playlist1.png](../additional_material/figures/Playlist1.png)
-Playlist Description: *Soft instrumentals and acoustic sounds for slowing down and clearing your head. Ideal for quiet mornings, focused work, or moments when you just want some calm in the background.*
+
+<p align="center">
+  <img src=![Playlist1.png](../additional_material/figures/Playlist1.png) width="300">
+</p>
+
+
+Playlist Description: *Soft instrumentals and acoustic sounds for slowing down and clearing your head. Ideal for quiet mornings, focused work, or moments when you just want some calm in the background.*<br>
 Playlist Link: [text](https://open.spotify.com/playlist/46Ql2b9cTdGhhHbzPyGPjN?si=JzH7fujNS5q4_pzwDDgSPg)
 Sample Songs & Artists:
 
