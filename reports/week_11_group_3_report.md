@@ -6,7 +6,7 @@
 |Stefan     | Analysis                |
 |Zeyad     | Analysis with 3 clusters as a comparison     |
 |Shiva      |
-|Sumeet     |                |
+|Sumeet     | Analysis and Report              |
 
 ---
 
@@ -33,6 +33,11 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ## K Means Clustering
 
+### Justification for Using K-Means Clustering
+
+K-means clustering was selected as the primary unsupervised learning method due to its effectiveness with large datasets composed of continuous numerical features, such as Spotify’s audio attributes. The algorithm groups songs by minimizing within-cluster variance, making it well suited for identifying tracks with similar sonic characteristics.
+
+Because the selected audio features were standardized prior to clustering, distance-based methods like K-means are appropriate and interpretable. In addition, K-means produces explicit cluster centroids, which is particularly valuable for playlist curation, as songs closest to each centroid can be considered strong representatives of a given musical mood. This makes the method both analytically sound and practically useful for editorial applications.
 
 
 ### 1. Feature Selection & Scaling
@@ -52,6 +57,12 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ### 2. Determining number of clusters
 
+### Choice of the Number of Clusters
+
+To determine the optimal number of clusters, both the Elbow Method and Silhouette Analysis were applied. The Elbow plot shows a clear reduction in the rate of decrease of within-cluster sum of squares after four clusters, indicating diminishing returns beyond this point.
+
+Silhouette scores further support this choice, as the solution with four clusters provides a strong balance between cluster cohesion and separation when compared to higher values of K. From an editorial perspective, four clusters also represent a manageable and interpretable number of distinct musical moods. Based on both quantitative metrics and practical interpretability, K = 4 was selected as the final clustering solution.
+
 
 ![11.DeterminingK.png](../additional_material/figures/11.DeterminingK.png)
 
@@ -59,6 +70,13 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ### 3. Visualization through PCA and Dendrograms 
 
+### PCA Visualization and Interpretation
+
+Principal Component Analysis (PCA) was used to reduce the high-dimensional feature space into two dimensions for visualization purposes. The first two principal components capture a substantial proportion of the total variance, allowing meaningful inspection of the clustering structure.
+
+In the PCA scatter plot, songs belonging to the same K-means cluster tend to group together, while distinct clusters occupy different regions of the plot. This visual separation suggests that the clustering captures genuine structure in the data rather than random variation.
+
+The PCA biplot further illustrates how original audio features contribute to the principal components. Features such as energy, loudness, and tempo load strongly in one direction, while acousticness and instrumentalness load in the opposite direction. This contrast highlights a clear axis separating high-energy, loud tracks from calmer, more acoustic compositions, providing intuitive insight into the nature of the resulting clusters.
 
 ![11.BiplotKmeans.png](../additional_material/figures/11.BiplotKmeans.png)
 
@@ -66,13 +84,19 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ![11.HierarchicalClustering.png](../additional_material/figures/11.HierarchicalClustering.png)
 
+### Hierarchical Clustering and Dendrogram Analysis
 
+Hierarchical clustering using Ward’s method was performed as a validation technique. Unlike K-means, hierarchical clustering does not require specifying the number of clusters in advance and instead reveals the nested structure of the data.
 
+The dendrogram shows clear separations between major branches, and when cut at an appropriate height, the resulting number of clusters closely aligns with the four-cluster K-means solution. The consistency between the hierarchical clustering results and the K-means clusters strengthens confidence in the stability and robustness of the identified groupings.
 
 
 
 ## Results
 
+### Interpretation of Cluster Profiles
+
+The table below reports standardized (z-score) mean values of audio features for each cluster. Positive values indicate that a feature is above the dataset average for that cluster, while negative values indicate below-average values. This representation allows for direct comparison of how each cluster differs in terms of its dominant sonic characteristics.
 
 
 | Feature | Cluster 0 | Cluster 1 | Cluster 2 | Cluster 3 |
@@ -91,6 +115,9 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ### Quiet Hours
 
+### Cluster Characteristics
+
+The Quiet Hours playlist is characterized by high acousticness and instrumentalness, combined with low energy, loudness, and tempo. Tracks in this cluster tend to be longer in duration and exhibit minimal rhythmic intensity. These features make the playlist well suited for calm, reflective listening environments such as quiet mornings, focused work, or background relaxation.
 
 <p align="left">
   <img src="../additional_material/figures/Playlist1.png" width="320">
@@ -112,6 +139,9 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ### Feel-Good Grooves
 
+### Cluster Characteristics
+
+The Feel-Good Grooves playlist is defined by high valence and above-average danceability, indicating a positive and uplifting mood. Energy and tempo values are moderate, creating an accessible and upbeat listening experience without excessive intensity. This cluster captures tracks that feel cheerful, familiar, and emotionally light.
 
 <p align="left">
   <img src="../additional_material/figures/Playlist2.png" width="320">
@@ -132,6 +162,10 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ### Urban Pulse
 
+### Cluster Characteristics
+
+The Urban Pulse playlist stands out due to high speechiness, strong rhythmic presence, and elevated danceability. These characteristics are commonly associated with hip-hop, rap, and urban electronic music, where vocal delivery and groove play a central role. The cluster reflects a dynamic, movement-driven sound suitable for city environments and active listening.
+
 <p align="left">
   <img src="../additional_material/figures/Playlist3.png" width="320">
 </p>
@@ -150,6 +184,9 @@ K-means clustering identified four distinct musical moods, which were explored a
 
 ### Heavy After Hours
 
+### Cluster Characteristics
+
+The Heavy After Hours playlist is marked by high energy, loudness, and tempo, paired with low valence and low acousticness. These features produce a dark, intense, and aggressive sonic profile. The cluster captures music designed for high-volume listening and late-night settings, emphasizing raw power and emotional intensity.
 
 <p align="left">
   <img src="../additional_material/figures/Playlist4.png" width="320">
@@ -166,6 +203,10 @@ K-means clustering identified four distinct musical moods, which were explored a
 | Ridden with Disease     | Autopsy     |
 | The Secrecies of Horror | Pestilence  |
 | Without Sin             | Morta Skuld |
+
+### Comparative Summary of Playlist Characteristics
+
+Overall, the four playlists differ clearly in terms of intensity, emotional tone, and sonic texture. Quiet Hours represents the calmest profile, characterized by low energy, low loudness, and high acousticness, while Heavy After Hours lies at the opposite extreme with high energy, loudness, and tempo, producing a dark and intense sound. Feel-Good Grooves and Urban Pulse occupy intermediate positions but differ in key ways: Feel-Good Grooves emphasizes high valence and accessibility, creating a positive and uplifting mood, whereas Urban Pulse is distinguished by stronger rhythmic emphasis and higher speechiness, reflecting a more vocal-driven and movement-oriented style. These contrasts confirm that the clusters capture distinct musical moods rather than overlapping categories, supporting their translation into clearly differentiated playlists.
 
 ## AI Disclaimer
 - Use of Visual Studio / PyCharm with Github copilot (inline code suggestions) 
