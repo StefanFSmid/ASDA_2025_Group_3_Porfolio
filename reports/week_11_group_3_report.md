@@ -1,4 +1,4 @@
-## Global Happiness Ordination: Principal Component Analysis
+## Spotify Song Analysis Project Report
 
 | Name      | Contribution                         |
 |:----------|:-------------------------------------|
