@@ -2,8 +2,8 @@
 
 | Name      | Contribution                         |
 |:----------|:-------------------------------------|
-|Assad      |  |
-|Stefan     | |
+|Assad      | SVM Implementation and Analysis   |
+|Stefan     | SVM Implementation and Analysis |
 |Zeyad     |      |
 |Shiva      |
 |Sumeet     |                |
