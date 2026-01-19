@@ -111,6 +111,7 @@ The grid search systematically evaluated different regularization parameters for
 ### Dummy Classifier (Baseline)
 
 **Confusion Matrix:**
+
 ![dummy_conf_mat](../additional_material/figures/image-1.png)
 
 **Metrics:**
@@ -128,6 +129,7 @@ The grid search systematically evaluated different regularization parameters for
 ### Linear SVM
 
 **Confusion Matrix:**
+
 ![alt text](../additional_material/figures/image-2.png)
 
 **Metrics:**
@@ -145,6 +147,7 @@ The grid search systematically evaluated different regularization parameters for
 ### RBF SVM
 
 **Confusion Matrix:**
+
 ![alt text](../additional_material/figures/image-4.png)
 
 **Metrics:**
@@ -199,6 +202,7 @@ This visualization highlights the distinct clustering of wine classes, suggestin
 The holdout set serves as a true test of generalization on completely unseen data, independent of any tuning processes. The model maintains exceptional performance with 0.99 accuracy and 0.99 macro F1-score, closely mirroring the test set results. This consistency between test and holdout validation demonstrates robust generalization without evidence of overfitting, confirming that the linear SVM has learned generalizable patterns rather than memorizing training data.
 
 **Confusion Matrix:**
+
 ![alt text](../additional_material/figures/image-9.png)
 
 **Metrics:**
