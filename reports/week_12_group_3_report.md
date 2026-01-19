@@ -57,7 +57,7 @@ This report documents the application of Support Vector Machines (SVM) for wine 
 
 The wine color dataset contains two classes: red and white wines. Prior to model development, careful examination of class distribution was conducted to understand potential imbalance issues. The stratified train-test split ensured that both training and test sets maintained the same class proportions as the original dataset, preventing bias towards the majority class.
 
-![alt text](image.png)
+![alt text](../additional_material/figures/image.png)
 
 All features were checked for missing values, and no null values were detected across the 11 pysicochemical features. This clean data structure allowed for straightforward preprocessing without additional imputation steps.
 
@@ -111,7 +111,7 @@ The grid search systematically evaluated different regularization parameters for
 ### Dummy Classifier (Baseline)
 
 **Confusion Matrix:**
-![alt text](image-1.png)
+![dummy_conf_mat](../additional_material/figures/image-1.png)
 
 **Metrics:**
 
@@ -128,7 +128,7 @@ The grid search systematically evaluated different regularization parameters for
 ### Linear SVM
 
 **Confusion Matrix:**
-![alt text](image-2.png)
+![alt text](../additional_material/figures/image-2.png)
 
 **Metrics:**
 
@@ -145,7 +145,7 @@ The grid search systematically evaluated different regularization parameters for
 ### RBF SVM
 
 **Confusion Matrix:**
-![alt text](image-4.png)
+![alt text](../additional_material/figures/image-4.png)
 
 **Metrics:**
 
@@ -170,22 +170,22 @@ The linear SVM was selected as the final model despite comparable performance wi
 
 The linear SVM model's coefficients were analyzed to determine the importance of each feature in classifying wine color. Features with positive coefficients indicate a tendency towards predicting white wine:
 
-![alt text](image-6.png)
+![alt text](../additional_material/figures/image-6.png)
 
 Features with negative coefficients suggest a bias towards red wine:
 
-![alt text](image-7.png)
+![alt text](../additional_material/figures/image-7.png)
 
 The magnitude of these coefficients reflects the strength of each feature's influence on the classification decision. The top features identified include:
 
-![alt text](image-5.png)
+![alt text](../additional_material/figures/image-5.png)
 
 
 ### PCA Biplot
 
 To visualize the separation of wine classes in the feature space, Principal Component Analysis (PCA) was applied, reducing the dimensionality to two principal components. The resulting biplot illustrates:
 
-![alt text](image-8.png)
+![alt text](../additional_material/figures/image-8.png)
 
 - **Data Points:** Colored by wine color, showing the distribution of red and white wines.
 - **Feature Loadings:** Arrows indicating the contribution of each feature to the principal components.
@@ -199,7 +199,7 @@ This visualization highlights the distinct clustering of wine classes, suggestin
 The holdout set serves as a true test of generalization on completely unseen data, independent of any tuning processes. The model maintains exceptional performance with 0.99 accuracy and 0.99 macro F1-score, closely mirroring the test set results. This consistency between test and holdout validation demonstrates robust generalization without evidence of overfitting, confirming that the linear SVM has learned generalizable patterns rather than memorizing training data.
 
 **Confusion Matrix:**
-![alt text](image-9.png)
+![alt text](../additional_material/figures/image-9.png)
 
 **Metrics:**
 
@@ -220,6 +220,6 @@ The analysis reveals that both SVM variants substantially outperformed the basel
 ---
 
 ## AI Disclaimer
-- Use of Visual Studio / PyCharm with Github copilot (inline code suggestions & agent)
+- Use of Visual Studio / PyCharm with Github copilot (inline code suggestions & agent) for coding, visualizating, and formulating
 
  
