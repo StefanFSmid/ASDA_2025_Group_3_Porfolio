@@ -1,1 +1,17 @@
-notebooks/.ipynb_checkpoints/ 
+# Jupyter
+notebooks/.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+**/.venv/
+
+# marimo / GitHub Pages build output (generated)
+/dashboards/
+/site/
+
+# OS junk
+.DS_Store
