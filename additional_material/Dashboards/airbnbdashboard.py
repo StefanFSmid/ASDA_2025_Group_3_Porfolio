@@ -1,7 +1,7 @@
 import marimo
 
 __generated_with = "0.19.5"
-app = marimo.App(width="medium")
+app = marimo.App(width="medium", auto_download=["html"])
 
 
 @app.cell
@@ -77,7 +77,6 @@ def _(merged_airbnbdf):
     # Print the updated DataFrame
     print(merged_airbnbdf.head())
     print(merged_airbnbdf.shape)
-
     return
 
 
@@ -845,14 +844,6 @@ def _(df, px, zoom_ui):
     )
 
     fig10
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    hi assad
-    """)
     return
 
 
