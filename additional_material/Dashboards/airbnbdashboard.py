@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.19.4"
+__generated_with = "0.19.5"
 app = marimo.App(width="medium")
 
 
@@ -78,7 +78,6 @@ def _(merged_airbnbdf):
     print(merged_airbnbdf.head())
     print(merged_airbnbdf.shape)
 
-
     return
 
 
@@ -127,7 +126,6 @@ def _(merged_airbnbdf):
 
     # Display results 
     #merged_airbnbdf2.head(), merged_airbnbdf2.shape, merged_airbnbdf2.columns
-
     return (merged_airbnbdf2,)
 
 
@@ -252,7 +250,6 @@ def _(day, df):
         .reset_index(name="listings")
         .sort_values("listings", ascending=False)
     )
-
     return counts, df_view
 
 
@@ -300,7 +297,6 @@ def _(df, mo):
     )
 
     city_sh
-
     return (city_sh,)
 
 
@@ -334,7 +330,6 @@ def _(px, superhost_city):
 
     fig.update_yaxes(tickformat=".0%")
     fig
-
     return
 
 
@@ -372,7 +367,6 @@ def _(df, min_bedrooms):
         .reset_index(name="listings")
         .sort_values("listings", ascending=False)
     )
-
     return (city_counts,)
 
 
@@ -499,7 +493,6 @@ def _(col, df_view, mo):
         mo.stat(value=f"{series.quantile(0.25):.2f}", label="25th percentile"),
         mo.stat(value=f"{series.quantile(0.75):.2f}", label="75th percentile"),
     ])
-
     return
 
 
@@ -568,7 +561,6 @@ def _(mo):
     )
 
     mo.hstack([clean_min, guest_min, mode])
-
     return clean_min, guest_min, mode
 
 
@@ -603,7 +595,6 @@ def _(clean_min, df, guest_min, mode, pd):
     else:
         out["Value"] = (out["Passing"] / out["Total"]) * 100
         y_label = "% of city listings"
-
     return out, y_label
 
 
@@ -628,7 +619,6 @@ def _(clean_min, guest_min, mo, out, px, y_label):
     fig5.update_xaxes(tickangle=45)
 
     mo.ui.plotly(fig5)
-
     return
 
 
@@ -687,7 +677,6 @@ def _(cap_max, city, df, mo, px):
     )
 
     mo.ui.plotly(fig6)
-
     return
 
 
@@ -856,6 +845,19 @@ def _(df, px, zoom_ui):
     )
 
     fig10
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    hi assad
+    """)
+    return
+
+
+@app.cell
+def _():
     return
 
 
