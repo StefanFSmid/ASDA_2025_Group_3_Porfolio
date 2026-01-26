@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <!-- Preload is necessary because we show these images when we disconnect from the server,
+    but at that point we cannot load these images from the server -->
+    <link rel="preload" href="./assets/gradient-yHQUC_QB.png" as="image" />
+    <link rel="preload" href="./assets/noise-60BoTA8O.png" as="image" />
+    <!-- Preload the fonts -->
+    <link rel="preload" href="./assets/Lora-VariableFont_wght-B2ootaw-.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Regular-CxL0S8W7.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Bold-D9fedIX3.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Regular-BTCkDNvf.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Medium-DU3aDxX5.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Bold-CLVRCuM9.ttf" as="font" crossorigin="anonymous" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="a marimo app" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <script data-marimo="true">
+      function __resizeIframe(obj) {
+        const scrollbarHeight = 20; // Max between windows, mac, and linux
+
+        function setHeight() {
+          // Guard against race condition where iframe isn't ready
+          if (!obj.contentWindow?.document?.documentElement) {
+            return;
+          }
+          const element = obj.contentWindow.document.documentElement;
+          // If there is no vertical scrollbar, we don't need to resize the iframe
+          if (element.scrollHeight === element.clientHeight) {
+            return;
+          }
+
+          // Create a new height that includes the scrollbar height if it's visible
+          const hasHorizontalScrollbar = element.scrollWidth > element.clientWidth;
+          const newHeight = element.scrollHeight + (hasHorizontalScrollbar ? scrollbarHeight : 0);
+
+          // Only update the height if it's different from the current height
+          if (obj.style.height !== `${newHeight}px`) {
+            obj.style.height = `${newHeight}px`;
+          }
+        }
+
+        // Resize the iframe to the height of the content and bottom scrollbar height
+        setHeight();
+
+        // Resize the iframe when the content changes
+        const resizeObserver = new ResizeObserver((_entries) => {
+          setHeight();
+        });
+        // Only observe if iframe content is ready
+        if (obj.contentWindow?.document?.body) {
+          resizeObserver.observe(obj.contentWindow.document.body);
+        }
+      }
+    </script>
+    <marimo-filename hidden>notebook.py</marimo-filename>
+    <!-- TODO(Trevor): Legacy, required by VS Code plugin. Remove when plugin is updated (see marimo/server/_templates/template.py) -->
+    <marimo-version data-version="{{ version }}" hidden></marimo-version>
+    <marimo-user-config data-config="{{ user_config }}" hidden></marimo-user-config>
+    <marimo-server-token data-token="{{ server_token }}" hidden></marimo-server-token>
+    <!-- /TODO -->
+    <title>airbnbdashboard</title>
+    <script type="module" crossorigin src="./assets/index-BI2D29sc.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-BW0IMuFq.js">
+    <link rel="modulepreload" crossorigin href="./assets/hotkeys-uKX61F1_.js">
+    <link rel="modulepreload" crossorigin href="./assets/defaultLocale-BLUna9fQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/precisionRound-Cl9k9ZmS.js">
+    <link rel="modulepreload" crossorigin href="./assets/defaultLocale-DzliDDTm.js">
+    <link rel="modulepreload" crossorigin href="./assets/vega-loader.browser-C8wT63Va.js">
+    <link rel="modulepreload" crossorigin href="./assets/_Uint8Array-BGESiCQL.js">
+    <link rel="modulepreload" crossorigin href="./assets/tooltip-CrRUCOBw.js">
+    <link rel="modulepreload" crossorigin href="./assets/clsx-D0MtrJOx.js">
+    <link rel="modulepreload" crossorigin href="./assets/cn-C1rgT0yh.js">
+    <link rel="modulepreload" crossorigin href="./assets/chunk-LvLJmgfZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-BGmjiNul.js">
+    <link rel="modulepreload" crossorigin href="./assets/compiler-runtime-DeeZ7FnK.js">
+    <link rel="modulepreload" crossorigin href="./assets/jsx-runtime-DN_bIXfG.js">
+    <link rel="modulepreload" crossorigin href="./assets/badge-DAnNhy3O.js">
+    <link rel="modulepreload" crossorigin href="./assets/useEventListener-COkmyg1v.js">
+    <link rel="modulepreload" crossorigin href="./assets/button-B8cGZzP5.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-dom-C9fstfnp.js">
+    <link rel="modulepreload" crossorigin href="./assets/Combination-D1TsGrBC.js">
+    <link rel="modulepreload" crossorigin href="./assets/menu-items-9PZrU2e0.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CBrDuocE.js">
+    <link rel="modulepreload" crossorigin href="./assets/createLucideIcon-CW2xpJ57.js">
+    <link rel="modulepreload" crossorigin href="./assets/check-CrAQug3q.js">
+    <link rel="modulepreload" crossorigin href="./assets/select-D9lTzMzP.js">
+    <link rel="modulepreload" crossorigin href="./assets/tooltip-CvjcEpZC.js">
+    <link rel="modulepreload" crossorigin href="./assets/use-toast-Bzf3rpev.js">
+    <link rel="modulepreload" crossorigin href="./assets/_getTag-BWqNuuwU.js">
+    <link rel="modulepreload" crossorigin href="./assets/_baseIsEqual-Cz9Tt_-E.js">
+    <link rel="modulepreload" crossorigin href="./assets/useEvent-DlWF5OMa.js">
+    <link rel="modulepreload" crossorigin href="./assets/invariant-C6yE60hi.js">
+    <link rel="modulepreload" crossorigin href="./assets/_baseFor-Duhs3RiJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/merge-BBX6ug-N.js">
+    <link rel="modulepreload" crossorigin href="./assets/zod-Cg4WLWh2.js">
+    <link rel="modulepreload" crossorigin href="./assets/utils-Czt8B2GX.js">
+    <link rel="modulepreload" crossorigin href="./assets/constants-Bkp4R3bQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/Deferred-DzyBMRsy.js">
+    <link rel="modulepreload" crossorigin href="./assets/config-CENq_7Pd.js">
+    <link rel="modulepreload" crossorigin href="./assets/uuid-ClFZlR7U.js">
+    <link rel="modulepreload" crossorigin href="./assets/DeferredRequestRegistry-B3BENoUa.js">
+    <link rel="modulepreload" crossorigin href="./assets/requests-C0HaHO6a.js">
+    <link rel="modulepreload" crossorigin href="./assets/isSymbol-BGkTcW3U.js">
+    <link rel="modulepreload" crossorigin href="./assets/toString-DlRqgfqz.js">
+    <link rel="modulepreload" crossorigin href="./assets/_hasUnicode-zBEpxwYe.js">
+    <link rel="modulepreload" crossorigin href="./assets/useLifecycle-CmDXEyIC.js">
+    <link rel="modulepreload" crossorigin href="./assets/useNonce-EAuSVK-5.js">
+    <link rel="modulepreload" crossorigin href="./assets/useTheme-BSVRc0kJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/once-CTiSlR1m.js">
+    <link rel="modulepreload" crossorigin href="./assets/capabilities-BmAOeMOK.js">
+    <link rel="modulepreload" crossorigin href="./assets/createReducer-DDa-hVe3.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CAcX026F.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-DKNOF5xd.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CI6_zMIl.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BVf1IY4_.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-Cq_4nPfh.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CVj-_Iiz.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-HGZzCB0y.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-RKnr9SNh.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BuhT82Xx.js">
+    <link rel="modulepreload" crossorigin href="./assets/stex-0ac7Aukl.js">
+    <link rel="modulepreload" crossorigin href="./assets/toDate-5JckKRQn.js">
+    <link rel="modulepreload" crossorigin href="./assets/cjs-Bj40p_Np.js">
+    <link rel="modulepreload" crossorigin href="./assets/_arrayReduce-bZBYsK-u.js">
+    <link rel="modulepreload" crossorigin href="./assets/type-BdyvjzTI.js">
+    <link rel="modulepreload" crossorigin href="./assets/_baseProperty-DuoFhI7N.js">
+    <link rel="modulepreload" crossorigin href="./assets/now-6sUe0ZdD.js">
+    <link rel="modulepreload" crossorigin href="./assets/debounce-BbFlGgjv.js">
+    <link rel="modulepreload" crossorigin href="./assets/toInteger-CDcO32Gx.js">
+    <link rel="modulepreload" crossorigin href="./assets/database-zap-CaVvnK_o.js">
+    <link rel="modulepreload" crossorigin href="./assets/main-CwSdzVhm.js">
+    <link rel="modulepreload" crossorigin href="./assets/cells-CmJW_FeD.js">
+    <link rel="modulepreload" crossorigin href="./assets/ErrorBoundary-C7JBxSzd.js">
+    <link rel="modulepreload" crossorigin href="./assets/kbd-Czc5z_04.js">
+    <link rel="modulepreload" crossorigin href="./assets/useInstallPackage-RldLPyJs.js">
+    <link rel="modulepreload" crossorigin href="./assets/alert-dialog-jcHA5geR.js">
+    <link rel="modulepreload" crossorigin href="./assets/dialog-CF5DtF1E.js">
+    <link rel="modulepreload" crossorigin href="./assets/useDebounce-em3gna-v.js">
+    <link rel="modulepreload" crossorigin href="./assets/numbers-C9_R_vlY.js">
+    <link rel="modulepreload" crossorigin href="./assets/SSRProvider-DD7JA3RM.js">
+    <link rel="modulepreload" crossorigin href="./assets/context-BAYdLMF_.js">
+    <link rel="modulepreload" crossorigin href="./assets/useNumberFormatter-D8ks3oPN.js">
+    <link rel="modulepreload" crossorigin href="./assets/usePress-C2LPFxyv.js">
+    <link rel="modulepreload" crossorigin href="./assets/input-Bkl2Yfmh.js">
+    <link rel="modulepreload" crossorigin href="./assets/ImperativeModal-BZvZlZQZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/cell-link-D7bPw7Fz.js">
+    <link rel="modulepreload" crossorigin href="./assets/multi-map-CQd4MZr5.js">
+    <link rel="modulepreload" crossorigin href="./assets/alert-BEdExd6A.js">
+    <link rel="modulepreload" crossorigin href="./assets/chevron-right-CqEd11Di.js">
+    <link rel="modulepreload" crossorigin href="./assets/dropdown-menu-BP4_BZLr.js">
+    <link rel="modulepreload" crossorigin href="./assets/links-DNmjkr65.js">
+    <link rel="modulepreload" crossorigin href="./assets/datasource-CCq9qyVG.js">
+    <link rel="modulepreload" crossorigin href="./assets/state-B8vBQnkH.js">
+    <link rel="modulepreload" crossorigin href="./assets/MarimoErrorOutput-DAK6volb.js">
+    <link rel="modulepreload" crossorigin href="./assets/copy-DRhpWiOq.js">
+    <link rel="modulepreload" crossorigin href="./assets/copy-gBVL4NN-.js">
+    <link rel="modulepreload" crossorigin href="./assets/copy-icon-jWsqdLn1.js">
+    <link rel="modulepreload" crossorigin href="./assets/spinner-C1czjtp7.js">
+    <link rel="modulepreload" crossorigin href="./assets/es-BJsT6vfZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/focus-KGgBDCvb.js">
+    <link rel="modulepreload" crossorigin href="./assets/LazyAnyLanguageCodeMirror-Dr2G5gxJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/katex-dFZM4X_7.js">
+    <link rel="modulepreload" crossorigin href="./assets/marked.esm-BZNXs5FA.js">
+    <link rel="modulepreload" crossorigin href="./assets/chunk-OGVTOU66-DQphfHw1.js">
+    <link rel="modulepreload" crossorigin href="./assets/markdown-renderer-DjqhqmES.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-D0NgYwYf.js">
+    <link rel="modulepreload" crossorigin href="./assets/command-B1zRJT1a.js">
+    <link rel="modulepreload" crossorigin href="./assets/popover-DtnzNVk-.js">
+    <link rel="modulepreload" crossorigin href="./assets/useRunCells-DNnhJ0Gs.js">
+    <link rel="modulepreload" crossorigin href="./assets/mode-CXc0VeQq.js">
+    <link rel="modulepreload" crossorigin href="./assets/purify.es-N-2faAGj.js">
+    <link rel="modulepreload" crossorigin href="./assets/RenderHTML-B4Nb8r0D.js">
+    <link rel="modulepreload" crossorigin href="./assets/table-BatLo2vd.js">
+    <link rel="modulepreload" crossorigin href="./assets/tabs-CHiEPtZV.js">
+    <link rel="modulepreload" crossorigin href="./assets/useAsyncData-Dj1oqsrZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/useIframeCapabilities-CU-WWxnz.js">
+    <link rel="modulepreload" crossorigin href="./assets/errors-z7WpYca5.js">
+    <link rel="modulepreload" crossorigin href="./assets/error-banner-Cq4Yn1WZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/formats-DtJ_484s.js">
+    <link rel="modulepreload" crossorigin href="./assets/en-US-DhMN8sxe.js">
+    <link rel="modulepreload" crossorigin href="./assets/isValid-DhzaK-Y1.js">
+    <link rel="modulepreload" crossorigin href="./assets/dates-CdsE1R40.js">
+    <link rel="modulepreload" crossorigin href="./assets/download-C_slsU-7.js">
+    <link rel="modulepreload" crossorigin href="./assets/maps-s2pQkyf5.js">
+    <link rel="modulepreload" crossorigin href="./assets/extends-B9D0JO9U.js">
+    <link rel="modulepreload" crossorigin href="./assets/emotion-is-prop-valid.esm-lG8j6oqk.js">
+    <link rel="modulepreload" crossorigin href="./assets/useDateFormatter-CV0QXb5P.js">
+    <link rel="modulepreload" crossorigin href="./assets/range-sshwVRcP.js">
+    <link rel="modulepreload" crossorigin href="./assets/capitalize-DQeWKRGx.js">
+    <link rel="modulepreload" crossorigin href="./assets/table-BLx7B_us.js">
+    <link rel="modulepreload" crossorigin href="./assets/JsonOutput-DlwRx3jE.js">
+    <link rel="modulepreload" crossorigin href="./assets/file-BnFXtaZZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/play-BJDBXApx.js">
+    <link rel="modulepreload" crossorigin href="./assets/chat-components-BQ_d4LQG.js">
+    <link rel="modulepreload" crossorigin href="./assets/isEmpty-DIxUV1UR.js">
+    <link rel="modulepreload" crossorigin href="./assets/circle-check-big-OIMTUpe6.js">
+    <link rel="modulepreload" crossorigin href="./assets/chat-display-ZS_L6G-P.js">
+    <link rel="modulepreload" crossorigin href="./assets/ai-model-dropdown-C-5PlP5A.js">
+    <link rel="modulepreload" crossorigin href="./assets/renderShortcut-BzTDKVab.js">
+    <link rel="modulepreload" crossorigin href="./assets/useDeleteCell-D-55qWAK.js">
+    <link rel="modulepreload" crossorigin href="./assets/icons-9QU2Dup7.js">
+    <link rel="modulepreload" crossorigin href="./assets/process-output-DN66BQYe.js">
+    <link rel="modulepreload" crossorigin href="./assets/blob-DtJQFQyD.js">
+    <link rel="modulepreload" crossorigin href="./assets/objectWithoutPropertiesLoose-CboCOq4o.js">
+    <link rel="modulepreload" crossorigin href="./assets/esm-D2_Kx6xF.js">
+    <link rel="modulepreload" crossorigin href="./assets/add-cell-with-ai-DEdol3w0.js">
+    <link rel="modulepreload" crossorigin href="./assets/chart-no-axes-column-D42sFB6d.js">
+    <link rel="modulepreload" crossorigin href="./assets/square-function-DxXFdbn8.js">
+    <link rel="modulepreload" crossorigin href="./assets/spec-qp_XZeSS.js">
+    <link rel="modulepreload" crossorigin href="./assets/column-preview-DZ--KOk1.js">
+    <link rel="modulepreload" crossorigin href="./assets/switch-C5jvDmuG.js">
+    <link rel="modulepreload" crossorigin href="./assets/toggle-D-5M3JI_.js">
+    <link rel="modulepreload" crossorigin href="./assets/globals-DPW2B3A9.js">
+    <link rel="modulepreload" crossorigin href="./assets/share-CXQVxivL.js">
+    <link rel="modulepreload" crossorigin href="./assets/memoize-DN0TMY36.js">
+    <link rel="modulepreload" crossorigin href="./assets/get-CyLJYAfP.js">
+    <link rel="modulepreload" crossorigin href="./assets/_baseSet-6FYvpjrm.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-resizable-panels.browser.esm-B7ZqbY8M.js">
+    <link rel="modulepreload" crossorigin href="./assets/utilities.esm-CqQATX3k.js">
+    <link rel="modulepreload" crossorigin href="./assets/floating-outline-DqdzWKrn.js">
+    <link rel="modulepreload" crossorigin href="./assets/useAddCell-DveVmvs9.js">
+    <link rel="modulepreload" crossorigin href="./assets/eye-off-D9zAYqG9.js">
+    <link rel="modulepreload" crossorigin href="./assets/plus-CHesBJpY.js">
+    <link rel="modulepreload" crossorigin href="./assets/readonly-python-code-Dr5fAkba.js">
+    <link rel="modulepreload" crossorigin href="./assets/file-video-camera-CZUg-nFA.js">
+    <link rel="modulepreload" crossorigin href="./assets/types-D5CL190S.js">
+    <link rel="modulepreload" crossorigin href="./assets/label-CqyOmxjL.js">
+    <link rel="modulepreload" crossorigin href="./assets/textarea-DzIuH-E_.js">
+    <link rel="modulepreload" crossorigin href="./assets/refresh-ccw-DbW1_PHb.js">
+    <link rel="modulepreload" crossorigin href="./assets/trash-2-C-lF7BNB.js">
+    <link rel="modulepreload" crossorigin href="./assets/form-DyJ8-Zz6.js">
+    <link rel="modulepreload" crossorigin href="./assets/field-86WoveRM.js">
+    <link rel="modulepreload" crossorigin href="./assets/useBoolean-GvygmcM1.js">
+    <link rel="modulepreload" crossorigin href="./assets/useDeepCompareMemoize-81gQouTn.js">
+    <link rel="modulepreload" crossorigin href="./assets/types-B42u_5hF.js">
+    <link rel="modulepreload" crossorigin href="./assets/prop-types-C638SUfx.js">
+    <link rel="modulepreload" crossorigin href="./assets/es-FiXEquL2.js">
+    <link rel="modulepreload" crossorigin href="./assets/VisuallyHidden-B0mBEsSm.js">
+    <link rel="modulepreload" crossorigin href="./assets/hasIn-DydgU7lx.js">
+    <link rel="modulepreload" crossorigin href="./assets/_baseFlatten-CLPh0yMf.js">
+    <link rel="modulepreload" crossorigin href="./assets/flatten-Buk63LQO.js">
+    <link rel="modulepreload" crossorigin href="./assets/pick-DeQioq0G.js">
+    <link rel="modulepreload" crossorigin href="./assets/code-xml-MBUyxNtK.js">
+    <link rel="modulepreload" crossorigin href="./assets/download-DobaYJPt.js">
+    <link rel="modulepreload" crossorigin href="./assets/house-CncUa_LL.js">
+    <link rel="modulepreload" crossorigin href="./assets/refresh-cw-Din9uFKE.js">
+    <link rel="modulepreload" crossorigin href="./assets/settings-MTlHVxz3.js">
+    <link rel="modulepreload" crossorigin href="./assets/square-leQTJTJJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/triangle-alert-CbD0f2J6.js">
+    <link rel="modulepreload" crossorigin href="./assets/bundle.esm-dxSncdJD.js">
+    <link rel="stylesheet" crossorigin href="./assets/cells-jmgGt1lS.css">
+    <link rel="stylesheet" crossorigin href="./assets/markdown-renderer-DdDKmWlR.css">
+    <link rel="stylesheet" crossorigin href="./assets/JsonOutput-B7vuddcd.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-BI9O54ok.css">
+  <marimo-wasm hidden=""></marimo-wasm>
+    <script>
+        if (window.location.protocol === 'file:') {
+            alert('Warning: This file must be served by an HTTP server to function correctly.');
+        }
+    </script>
+    
+    <style>
+        #save-button {
+            display: none !important;
+        }
+        #filename-input {
+            display: none !important;
+        }
+    </style>
+    <marimo-code hidden="">import%20marimo%0A%0A__generated_with%20%3D%20%220.19.6%22%0Aapp%20%3D%20marimo.App(width%3D%22medium%22%2C%20auto_download%3D%5B%22html%22%5D)%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20import%20marimo%20as%20mo%0A%20%20%20%20import%20pandas%20as%20pd%0A%20%20%20%20import%20numpy%20as%20np%0A%20%20%20%20import%20matplotlib.pyplot%20as%20plt%0A%20%20%20%20import%20seaborn%20as%20sns%0A%20%20%20%20import%20scipy%0A%20%20%20%20import%20plotly%0A%20%20%20%20import%20plotly.express%20as%20px%0A%20%20%20%20return%20mo%2C%20np%2C%20pd%2C%20px%0A%0A%0A%40app.cell%0Adef%20_(pd)%3A%0A%20%20%20%20url%20%3D%20'https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1ecopK6oyyb4d_7-QLrCr8YlgFrCetHU7-VQfnYej7JY%2Fexport%3Fformat%3Dxlsx'%0A%20%20%20%20airbnb%20%3D%20pd.ExcelFile(url)%0A%0A%20%20%20%20%23airbnb.sheet_names%0A%20%20%20%20return%20(airbnb%2C)%0A%0A%0A%40app.cell%0Adef%20_(airbnb%2C%20pd)%3A%0A%20%20%20%20airbnbdf%3D%20pd.read_excel(airbnb%2C%20sheet_name%3D'amsterdam_weekdays')%0A%20%20%20%20print(airbnbdf.head())%0A%20%20%20%20print(airbnbdf.shape)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(airbnb%2C%20pd)%3A%0A%20%20%20%20%23%20Merge%20all%20sheets%20into%20one%20df%0A%20%20%20%20merged_airbnbdf%20%3D%20pd.concat(%0A%20%20%20%20%20%20%20%20%5Bairbnb.parse(sheet).assign(sheet_name%3Dsheet)%20for%20sheet%20in%20airbnb.sheet_names%5D%2C%0A%20%20%20%20%20%20%20%20ignore_index%3DTrue%0A%20%20%20%20)%0A%0A%20%20%20%20merged_airbnbdf.reset_index(drop%3DTrue%2C%20inplace%3DTrue)%0A%0A%20%20%20%20%23merged_airbnbdf.head()%2C%20merged_airbnbdf.shape%0A%20%20%20%20return%20(merged_airbnbdf%2C)%0A%0A%0A%40app.cell%0Adef%20_(merged_airbnbdf)%3A%0A%20%20%20%20%23%20Split%20the%20sheet_name%20column%20into%20city%20name%0A%20%20%20%20merged_airbnbdf%5B'city'%5D%20%3D%20merged_airbnbdf%5B'sheet_name'%5D.str.split('_').str%5B0%5D.str.capitalize()%0A%0A%20%20%20%20%23%20Define%20a%20mapping%20of%20city%20to%20country%0A%20%20%20%20city_to_country%20%3D%20%7B%0A%20%20%20%20%20%20%20%20'Amsterdam'%3A%20'Netherlands'%2C%0A%20%20%20%20%20%20%20%20'Athens'%3A%20'Greece'%2C%0A%20%20%20%20%20%20%20%20'Berlin'%3A%20'Germany'%2C%0A%20%20%20%20%20%20%20%20'Barcelona'%3A%20'Spain'%2C%0A%20%20%20%20%20%20%20%20'Budapest'%3A%20'Hungary'%2C%0A%20%20%20%20%20%20%20%20'Lisbon'%3A%20'Portugal'%2C%0A%20%20%20%20%20%20%20%20'London'%3A%20'United%20Kingdom'%2C%0A%20%20%20%20%20%20%20%20'Paris'%3A%20'France'%2C%0A%20%20%20%20%20%20%20%20'Rome'%3A%20'Italy'%2C%0A%20%20%20%20%20%20%20%20'Vienna'%3A%20'Austria'%0A%20%20%20%20%7D%0A%0A%20%20%20%20%23%20Map%20city%20to%20country%0A%20%20%20%20merged_airbnbdf%5B'country'%5D%20%3D%20merged_airbnbdf%5B'city'%5D.map(city_to_country)%0A%0A%20%20%20%20%23%20Extract%20day%20type%20from%20sheet_name%0A%20%20%20%20merged_airbnbdf%5B'day_type'%5D%20%3D%20merged_airbnbdf%5B'sheet_name'%5D.str.split('_').str%5B1%5D.str.capitalize()%0A%0A%0A%20%20%20%20%23%20Print%20the%20updated%20DataFrame%0A%20%20%20%20print(merged_airbnbdf.head())%0A%20%20%20%20print(merged_airbnbdf.shape)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(merged_airbnbdf)%3A%0A%20%20%20%20%23%20Change%20column%20name%20'realSum'%20to%20'Price'%20and%20print%20columns%0A%20%20%20%20merged_airbnbdf.rename(columns%3D%7B'realSum'%3A%20'Price'%7D%2C%20inplace%3DTrue)%0A%20%20%20%20print(merged_airbnbdf.columns)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(merged_airbnbdf)%3A%0A%20%20%20%20%23%20Drop%20the%20'Unnamed%3A%200'%20column%0A%20%20%20%20merged_airbnbdf.drop('Unnamed%3A%200'%2C%20axis%3D1%2C%20inplace%3DTrue)%0A%20%20%20%20print(merged_airbnbdf.columns)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(merged_airbnbdf)%3A%0A%20%20%20%20%23%20Create%20a%20NEW%20dataframe%20(do%20not%20modify%20merged_airbnbdf%20in-place)%0A%20%20%20%20merged_airbnbdf2%20%3D%20merged_airbnbdf.copy()%0A%0A%20%20%20%20%23%20Initialize%20the%20new%20column%0A%20%20%20%20merged_airbnbdf2%5B%22room_category%22%5D%20%3D%20%22Other%22%0A%0A%20%20%20%20%23%20Fill%20conditionally%0A%20%20%20%20merged_airbnbdf2.loc%5B%0A%20%20%20%20%20%20%20%20merged_airbnbdf2%5B%22room_private%22%5D%20%3D%3D%20True%2C%20%22room_category%22%0A%20%20%20%20%5D%20%3D%20%22Private%22%0A%0A%20%20%20%20merged_airbnbdf2.loc%5B%0A%20%20%20%20%20%20%20%20merged_airbnbdf2%5B%22room_shared%22%5D%20%3D%3D%20True%2C%20%22room_category%22%0A%20%20%20%20%5D%20%3D%20%22Shared%22%0A%0A%20%20%20%20%23%20Drop%20the%203rd%20and%204th%20columns%20(index%202%20and%203)%0A%20%20%20%20merged_airbnbdf2%20%3D%20merged_airbnbdf2.drop(%0A%20%20%20%20%20%20%20%20merged_airbnbdf2.columns%5B%5B2%2C%203%5D%5D%2C%20axis%3D1%0A%20%20%20%20)%0A%0A%20%20%20%20%23%20Move%20'room_category'%20to%203rd%20position%0A%20%20%20%20cols%20%3D%20list(merged_airbnbdf2.columns)%0A%20%20%20%20cols.insert(2%2C%20cols.pop(cols.index(%22room_category%22)))%0A%20%20%20%20merged_airbnbdf2%20%3D%20merged_airbnbdf2%5Bcols%5D%0A%0A%20%20%20%20%23%20Display%20results%20%0A%20%20%20%20%23merged_airbnbdf2.head()%2C%20merged_airbnbdf2.shape%2C%20merged_airbnbdf2.columns%0A%20%20%20%20return%20(merged_airbnbdf2%2C)%0A%0A%0A%40app.cell%0Adef%20_(merged_airbnbdf2%2C%20np)%3A%0A%20%20%20%20merged_airbnbdf3%20%3D%20merged_airbnbdf2.copy()%0A%0A%20%20%20%20%23%20Create%20'listings%20by%20host'%20based%20on%20'multi'%20and%20'biz'%0A%20%20%20%20merged_airbnbdf3%5B%22listings%20by%20host%22%5D%20%3D%20np.select(%0A%20%20%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20(merged_airbnbdf3%5B%22multi%22%5D%20%3D%3D%200)%20%26%20(merged_airbnbdf3%5B%22biz%22%5D%20%3D%3D%200)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20merged_airbnbdf3%5B%22multi%22%5D%20%3D%3D%201%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20merged_airbnbdf3%5B%22biz%22%5D%20%3D%3D%201%2C%0A%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%20%20%5B%221%22%2C%20%222-4%22%2C%20%224%2B%22%5D%2C%0A%20%20%20%20%20%20%20%20default%3D%22Unknown%22%2C%0A%20%20%20%20)%0A%0A%20%20%20%20%23%20Drop%20the%205th%20and%206th%20columns%20(index%205%20and%206)%0A%20%20%20%20merged_airbnbdf3%20%3D%20merged_airbnbdf3.drop(%0A%20%20%20%20%20%20%20%20merged_airbnbdf3.columns%5B%5B5%2C%206%5D%5D%2C%20axis%3D1%0A%20%20%20%20)%0A%0A%20%20%20%20%23%20Move%20'listings%20by%20host'%20to%205th%20position%20(use%20a%20NEW%20helper%20variable%20name)%0A%20%20%20%20cols3%20%3D%20list(merged_airbnbdf3.columns)%0A%20%20%20%20cols3.insert(5%2C%20cols3.pop(cols3.index(%22listings%20by%20host%22)))%0A%20%20%20%20merged_airbnbdf3%20%3D%20merged_airbnbdf3%5Bcols3%5D%0A%0A%20%20%20%20%23%20Display%20results%0A%20%20%20%20%23merged_airbnbdf3.head()%2C%20merged_airbnbdf3.shape%2C%20merged_airbnbdf3.columns%0A%20%20%20%20return%20(merged_airbnbdf3%2C)%0A%0A%0A%40app.cell%0Adef%20_(merged_airbnbdf3)%3A%0A%20%20%20%20merged_airbnbdf4%20%3D%20merged_airbnbdf3.copy()%0A%0A%20%20%20%20%23%20Reorder%20key%20columns%20(use%20a%20NEW%20helper%20variable%20name)%0A%20%20%20%20cols4%20%3D%20list(merged_airbnbdf4.columns)%0A%0A%20%20%20%20cols4.insert(0%2C%20cols4.pop(cols4.index(%22sheet_name%22)))%0A%20%20%20%20cols4.insert(1%2C%20cols4.pop(cols4.index(%22country%22)))%0A%20%20%20%20cols4.insert(2%2C%20cols4.pop(cols4.index(%22city%22)))%0A%20%20%20%20cols4.insert(3%2C%20cols4.pop(cols4.index(%22day_type%22)))%0A%0A%20%20%20%20merged_airbnbdf4%20%3D%20merged_airbnbdf4%5Bcols4%5D%0A%0A%20%20%20%20%23%20Rename%20a%20single%20column%20(do%20NOT%20use%20inplace%20in%20marimo)%0A%20%20%20%20merged_airbnbdf4%20%3D%20merged_airbnbdf4.rename(%0A%20%20%20%20%20%20%20%20columns%3D%7B%22dist%22%3A%20%22citycenter_dist%22%7D%0A%20%20%20%20)%0A%0A%20%20%20%20%23%20Standardize%20all%20column%20names%0A%20%20%20%20merged_airbnbdf4.columns%20%3D%20(%0A%20%20%20%20%20%20%20%20merged_airbnbdf4.columns%0A%20%20%20%20%20%20%20%20.str.lower()%0A%20%20%20%20%20%20%20%20.str.replace(%22%20%22%2C%20%22_%22)%0A%20%20%20%20)%0A%0A%20%20%20%20%23%20Display%20results%0A%20%20%20%20%23merged_airbnbdf4.head()%2C%20merged_airbnbdf4.shape%2C%20merged_airbnbdf4.columns%0A%20%20%20%20return%20(merged_airbnbdf4%2C)%0A%0A%0A%40app.cell%0Adef%20_(merged_airbnbdf4)%3A%0A%20%20%20%20df%3Dmerged_airbnbdf4%0A%20%20%20%20return%20(df%2C)%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20%23df%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(df)%3A%0A%20%20%20%20%23Q1.%20How%20many%20listings%20are%20in%20each%20city%20in%20total%20and%20also%20per%20type%20of%20day%3F%0A%20%20%20%20%23listing%20per%20city%0A%20%20%20%20listing_per_city%3Ddf.groupby(%5B'city'%5D).size()%0A%20%20%20%20%23listing_per_city.to_frame(name%3D'Total%20listings%20per%20city')%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20%23%20**AirBnb%20Dashboard**%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20%23%23%20**Listings%20per%20city%20by%20day%20type**%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(df%2C%20mo)%3A%0A%20%20%20%20day%20%3D%20mo.ui.dropdown(%0A%20%20%20%20%20%20%20%20options%3D%5B%22All%22%5D%20%2B%20sorted(df%5B%22day_type%22%5D.dropna().unique())%2C%0A%20%20%20%20%20%20%20%20value%3D%22All%22%2C%0A%20%20%20%20%20%20%20%20label%3D%22Day%20type%22%2C%0A%20%20%20%20)%0A%0A%20%20%20%20day%0A%20%20%20%20return%20(day%2C)%0A%0A%0A%40app.cell%0Adef%20_(day%2C%20df)%3A%0A%20%20%20%20df_view%20%3D%20df%20if%20day.value%20%3D%3D%20%22All%22%20else%20df%5Bdf%5B%22day_type%22%5D%20%3D%3D%20day.value%5D%0A%0A%20%20%20%20counts%20%3D%20(%0A%20%20%20%20%20%20%20%20df_view%0A%20%20%20%20%20%20%20%20.groupby(%22city%22)%0A%20%20%20%20%20%20%20%20.size()%0A%20%20%20%20%20%20%20%20.reset_index(name%3D%22listings%22)%0A%20%20%20%20%20%20%20%20.sort_values(%22listings%22%2C%20ascending%3DFalse)%0A%20%20%20%20)%0A%20%20%20%20return%20counts%2C%20df_view%0A%0A%0A%40app.cell%0Adef%20_(counts%2C%20day%2C%20px)%3A%0A%20%20%20%20px.bar(%0A%20%20%20%20%20%20%20%20counts%2C%0A%20%20%20%20%20%20%20%20x%3D%22city%22%2C%0A%20%20%20%20%20%20%20%20y%3D%22listings%22%2C%0A%20%20%20%20%20%20%20%20title%3Df%22Listings%20per%20city%20(%7Bday.value%7D)%22%2C%0A%20%20%20%20%20%20%20%20text%3D%22listings%22%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20%23%23%20**Superhost%20%25%20by%20city**%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(df)%3A%0A%20%20%20%20superhost_city%20%3D%20(%0A%20%20%20%20%20%20%20%20df.groupby(%22city%22)%0A%20%20%20%20%20%20%20%20.agg(%0A%20%20%20%20%20%20%20%20%20%20%20%20total_listings%3D(%22city%22%2C%20%22size%22)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20superhosts%3D(%22host_is_superhost%22%2C%20%22sum%22)%2C%0A%20%20%20%20%20%20%20%20)%0A%20%20%20%20%20%20%20%20.assign(superhost_share%3Dlambda%20t%3A%20t%5B%22superhosts%22%5D%20%2F%20t%5B%22total_listings%22%5D)%0A%20%20%20%20%20%20%20%20.sort_values(%22superhost_share%22%2C%20ascending%3DFalse)%0A%20%20%20%20%20%20%20%20.reset_index()%0A%20%20%20%20)%0A%20%20%20%20return%20(superhost_city%2C)%0A%0A%0A%40app.cell%0Adef%20_(df%2C%20mo)%3A%0A%20%20%20%20city_sh%20%3D%20mo.ui.dropdown(%0A%20%20%20%20%20%20%20%20options%3Dsorted(df%5B%22city%22%5D.dropna().unique().tolist())%2C%0A%20%20%20%20%20%20%20%20value%3Dsorted(df%5B%22city%22%5D.dropna().unique().tolist())%5B0%5D%2C%0A%20%20%20%20%20%20%20%20label%3D%22Select%20city%22%0A%20%20%20%20)%0A%0A%20%20%20%20city_sh%0A%20%20%20%20return%20(city_sh%2C)%0A%0A%0A%40app.cell%0Adef%20_(city_sh%2C%20df%2C%20mo)%3A%0A%20%20%20%20city_df%20%3D%20df%5Bdf%5B%22city%22%5D%20%3D%3D%20city_sh.value%5D%0A%0A%20%20%20%20total_listings_city%20%3D%20len(city_df)%0A%20%20%20%20superhosts_city%20%3D%20int(city_df%5B%22host_is_superhost%22%5D.sum())%0A%20%20%20%20share_city%20%3D%20(superhosts_city%20%2F%20total_listings_city)%20if%20total_listings_city%20else%200.0%0A%0A%20%20%20%20mo.hstack(%5B%0A%20%20%20%20%20%20%20%20mo.stat(value%3Dcity_sh.value%2C%20label%3D%22City%22)%2C%0A%20%20%20%20%20%20%20%20mo.stat(value%3Dsuperhosts_city%2C%20label%3D%22Superhost%20listings%22)%2C%0A%20%20%20%20%20%20%20%20mo.stat(value%3Dtotal_listings_city%2C%20label%3D%22Total%20listings%22)%2C%0A%20%20%20%20%20%20%20%20mo.stat(value%3Df%22%7Bshare_city%3A.1%25%7D%22%2C%20label%3D%22Superhost%20proportion%22)%2C%0A%20%20%20%20%5D)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(px%2C%20superhost_city)%3A%0A%20%20%20%20fig%20%3D%20px.bar(%0A%20%20%20%20%20%20%20%20superhost_city%2C%0A%20%20%20%20%20%20%20%20x%3D%22city%22%2C%0A%20%20%20%20%20%20%20%20y%3D%22superhost_share%22%2C%0A%20%20%20%20%20%20%20%20title%3D%22Superhost%20proportion%20by%20city%22%2C%0A%20%20%20%20%20%20%20%20hover_data%3D%5B%22superhosts%22%2C%20%22total_listings%22%5D%2C%0A%20%20%20%20%20%20%20%20text%3Dsuperhost_city%5B%22superhost_share%22%5D.mul(100).round(1).astype(str)%20%2B%20%22%25%22%2C%0A%20%20%20%20)%0A%0A%20%20%20%20fig.update_yaxes(tickformat%3D%22.0%25%22)%0A%20%20%20%20fig%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20%23%23%20**Listings%20per%20city%20by%20number%20of%20bedrooms**%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(df%2C%20mo)%3A%0A%20%20%20%20max_bed%20%3D%20int(df%5B%22bedrooms%22%5D.max())%0A%0A%20%20%20%20min_bedrooms%20%3D%20mo.ui.slider(%0A%20%20%20%20%20%20%20%20start%3D0%2C%0A%20%20%20%20%20%20%20%20stop%3Dmax_bed%2C%0A%20%20%20%20%20%20%20%20step%3D1%2C%0A%20%20%20%20%20%20%20%20value%3D4%2C%0A%20%20%20%20%20%20%20%20label%3D%22Minimum%20bedrooms%20(%3E%3D)%22%0A%20%20%20%20)%0A%0A%20%20%20%20min_bedrooms%0A%20%20%20%20return%20(min_bedrooms%2C)%0A%0A%0A%40app.cell%0Adef%20_(df%2C%20min_bedrooms)%3A%0A%20%20%20%20df_bed%20%3D%20df%5Bdf%5B%22bedrooms%22%5D%20%3E%3D%20min_bedrooms.value%5D%0A%0A%20%20%20%20city_counts%20%3D%20(%0A%20%20%20%20%20%20%20%20df_bed.groupby(%22city%22)%0A%20%20%20%20%20%20%20%20.size()%0A%20%20%20%20%20%20%20%20.reset_index(name%3D%22listings%22)%0A%20%20%20%20%20%20%20%20.sort_values(%22listings%22%2C%20ascending%3DFalse)%0A%20%20%20%20)%0A%20%20%20%20return%20(city_counts%2C)%0A%0A%0A%40app.cell%0Adef%20_(city_counts%2C%20min_bedrooms%2C%20px)%3A%0A%20%20%20%20px.bar(%0A%20%20%20%20%20%20%20%20city_counts%2C%0A%20%20%20%20%20%20%20%20x%3D%22city%22%2C%0A%20%20%20%20%20%20%20%20y%3D%22listings%22%2C%0A%20%20%20%20%20%20%20%20title%3Df%22Listings%20per%20city%20with%20bedrooms%20%E2%89%A5%20%7Bmin_bedrooms.value%7D%22%2C%0A%20%20%20%20%20%20%20%20text%3D%22listings%22%2C%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20%23%23%20**Listings%20by%20Room%20Type**%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(df%2C%20mo)%3A%0A%20%20%20%20room_ui%20%3D%20mo.ui.dropdown(%0A%20%20%20%20%20%20%20%20options%3Dsorted(df%5B%22room_type%22%5D.unique().tolist())%2C%0A%20%20%20%20%20%20%20%20value%3D%22Entire%20home%2Fapt%22%2C%0A%20%20%20%20%20%20%20%20label%3D%22Room%20type%22%0A%20%20%20%20)%0A%0A%20%20%20%20topn_ui%20%3D%20mo.ui.slider(%0A%20%20%20%20%20%20%20%20start%3D3%2C%0A%20%20%20%20%20%20%20%20stop%3Dlen(df%5B%22city%22%5D.unique())%2C%0A%20%20%20%20%20%20%20%20step%3D1%2C%0A%20%20%20%20%20%20%20%20value%3D10%2C%0A%20%20%20%20%20%20%20%20label%3D%22Top%20N%20cities%22%0A%20%20%20%20)%0A%0A%20%20%20%20mo.hstack(%5Broom_ui%2C%20topn_ui%5D)%0A%20%20%20%20return%20room_ui%2C%20topn_ui%0A%0A%0A%40app.cell%0Adef%20_(df%2C%20mo%2C%20room_ui)%3A%0A%20%20%20%20room_df%20%3D%20df%5Bdf%5B%22room_type%22%5D%20%3D%3D%20room_ui.value%5D%0A%0A%20%20%20%20city_counts2%20%3D%20(%0A%20%20%20%20%20%20%20%20room_df.groupby(%22city%22)%0A%20%20%20%20%20%20%20%20.size()%0A%20%20%20%20%20%20%20%20.reset_index(name%3D%22listings%22)%0A%20%20%20%20%20%20%20%20.sort_values(%22listings%22%2C%20ascending%3DFalse)%0A%20%20%20%20)%0A%0A%20%20%20%20top_city%20%3D%20city_counts2.iloc%5B0%5D%5B%22city%22%5D%0A%20%20%20%20top_count%20%3D%20int(city_counts2.iloc%5B0%5D%5B%22listings%22%5D)%0A%0A%20%20%20%20mo.hstack(%5B%0A%20%20%20%20%20%20%20%20mo.stat(value%3Droom_ui.value%2C%20label%3D%22Room%20type%22)%2C%0A%20%20%20%20%20%20%20%20mo.stat(value%3Dtop_city%2C%20label%3D%22Top%20city%22)%2C%0A%20%20%20%20%20%20%20%20mo.stat(value%3Dtop_count%2C%20label%3D%22Listings%22)%2C%0A%20%20%20%20%5D)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(city_counts%2C%20px%2C%20room_ui%2C%20topn_ui)%3A%0A%20%20%20%20plot_df%20%3D%20city_counts.head(topn_ui.value)%0A%0A%20%20%20%20px.bar(%0A%20%20%20%20%20%20%20%20plot_df%2C%0A%20%20%20%20%20%20%20%20x%3D%22city%22%2C%0A%20%20%20%20%20%20%20%20y%3D%22listings%22%2C%0A%20%20%20%20%20%20%20%20title%3Df%22Top%20%7Btopn_ui.value%7D%20cities%20by%20%7Broom_ui.value%7D%20listings%22%2C%0A%20%20%20%20%20%20%20%20text%3D%22listings%22%2C%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20%23%23%20**Visualizing%20Ratings**%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(df%2C%20mo)%3A%0A%20%20%20%20rating_ui%20%3D%20mo.ui.dropdown(%0A%20%20%20%20%20%20%20%20options%3D%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22guest_satisfaction_overall%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22cleanliness_rating%22%2C%0A%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%20%20value%3D%22guest_satisfaction_overall%22%2C%0A%20%20%20%20%20%20%20%20label%3D%22Rating%20metric%22%0A%20%20%20%20)%0A%0A%20%20%20%20city_ui_r%20%3D%20mo.ui.dropdown(%0A%20%20%20%20%20%20%20%20options%3D%5B%22All%22%5D%20%2B%20sorted(df%5B%22city%22%5D.dropna().unique().tolist())%2C%0A%20%20%20%20%20%20%20%20value%3D%22All%22%2C%0A%20%20%20%20%20%20%20%20label%3D%22City%22%0A%20%20%20%20)%0A%0A%20%20%20%20bins_ui%20%3D%20mo.ui.slider(%0A%20%20%20%20%20%20%20%20start%3D10%2C%0A%20%20%20%20%20%20%20%20stop%3D60%2C%0A%20%20%20%20%20%20%20%20step%3D5%2C%0A%20%20%20%20%20%20%20%20value%3D30%2C%0A%20%20%20%20%20%20%20%20label%3D%22Histogram%20bins%22%0A%20%20%20%20)%0A%0A%20%20%20%20mo.hstack(%5Brating_ui%2C%20city_ui_r%2C%20bins_ui%5D)%0A%20%20%20%20return%20bins_ui%2C%20city_ui_r%2C%20rating_ui%0A%0A%0A%40app.cell%0Adef%20_(col%2C%20df_view%2C%20mo)%3A%0A%20%20%20%20series%20%3D%20df_view%5Bcol%5D.dropna()%0A%0A%20%20%20%20mo.hstack(%5B%0A%20%20%20%20%20%20%20%20mo.stat(value%3Df%22%7Bseries.mean()%3A.2f%7D%22%2C%20label%3D%22Mean%22)%2C%0A%20%20%20%20%20%20%20%20mo.stat(value%3Df%22%7Bseries.std()%3A.2f%7D%22%2C%20label%3D%22Std%20dev%22)%2C%0A%20%20%20%20%20%20%20%20mo.stat(value%3Df%22%7Bseries.quantile(0.25)%3A.2f%7D%22%2C%20label%3D%2225th%20percentile%22)%2C%0A%20%20%20%20%20%20%20%20mo.stat(value%3Df%22%7Bseries.quantile(0.75)%3A.2f%7D%22%2C%20label%3D%2275th%20percentile%22)%2C%0A%20%20%20%20%5D)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(bins_ui%2C%20city_ui_r%2C%20df%2C%20mo%2C%20px%2C%20rating_ui)%3A%0A%20%20%20%20df_view2%20%3D%20df%20if%20city_ui_r.value%20%3D%3D%20%22All%22%20else%20df%5Bdf%5B%22city%22%5D%20%3D%3D%20city_ui_r.value%5D%0A%20%20%20%20col%20%3D%20rating_ui.value%0A%0A%20%20%20%20fig_hist%20%3D%20px.histogram(%0A%20%20%20%20%20%20%20%20df_view2%2C%0A%20%20%20%20%20%20%20%20x%3Dcol%2C%0A%20%20%20%20%20%20%20%20nbins%3Dbins_ui.value%2C%0A%20%20%20%20%20%20%20%20title%3Df%22Distribution%3A%20%7Bcol%7D%22%2C%0A%20%20%20%20)%0A%0A%20%20%20%20fig_hist.update_layout(%0A%20%20%20%20%20%20%20%20title%3D%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22text%22%3A%20%22Distribution%3A%20guest_satisfaction_overall%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22x%22%3A%200.5%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22xanchor%22%3A%20%22center%22%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20)%0A%0A%20%20%20%20fig_box%20%3D%20px.box(%0A%20%20%20%20%20%20%20%20df_view2%2C%0A%20%20%20%20%20%20%20%20y%3Dcol%2C%0A%20%20%20%20%20%20%20%20title%3D%22Variation%20(box%20plot)%22%2C%0A%20%20%20%20%20%20%20%20points%3D%22outliers%22%2C%0A%20%20%20%20)%0A%0A%20%20%20%20fig_box.update_layout(%0A%20%20%20%20%20%20%20%20title%3D%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22text%22%3A%20%22Variation%20(box%20plot)%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22x%22%3A%200.5%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22xanchor%22%3A%20%22center%22%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20)%0A%0A%0A%20%20%20%20mo.hstack(%0A%20%20%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20mo.vstack(%5Bfig_hist%5D)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20mo.vstack(%5Bfig_box%5D)%2C%0A%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%20%20justify%3D%22space-between%22%0A%20%20%20%20)%0A%20%20%20%20return%20(col%2C)%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20clean_min%20%3D%20mo.ui.slider(%0A%20%20%20%20%20%20%20%20start%3D1%2C%20stop%3D10%2C%20step%3D1%2C%20value%3D7%2C%0A%20%20%20%20%20%20%20%20label%3D%22Minimum%20cleanliness%20rating%20(1%E2%80%9310)%22%0A%20%20%20%20)%0A%0A%20%20%20%20guest_min%20%3D%20mo.ui.slider(%0A%20%20%20%20%20%20%20%20start%3D0%2C%20stop%3D100%2C%20step%3D1%2C%20value%3D90%2C%0A%20%20%20%20%20%20%20%20label%3D%22Minimum%20guest%20satisfaction%20(0%E2%80%93100)%22%0A%20%20%20%20)%0A%0A%20%20%20%20mode%20%3D%20mo.ui.radio(%0A%20%20%20%20%20%20%20%20options%3D%5B%22Counts%22%2C%20%22Percent%22%5D%2C%0A%20%20%20%20%20%20%20%20value%3D%22Counts%22%2C%0A%20%20%20%20%20%20%20%20label%3D%22Display%20mode%22%0A%20%20%20%20)%0A%0A%20%20%20%20mo.hstack(%5Bclean_min%2C%20guest_min%2C%20mode%5D)%0A%20%20%20%20return%20clean_min%2C%20guest_min%2C%20mode%0A%0A%0A%40app.cell%0Adef%20_(clean_min%2C%20df%2C%20guest_min%2C%20mode%2C%20pd)%3A%0A%20%20%20%20%23%20Apply%20slider%20filters%0A%20%20%20%20passed%20%3D%20df%5B%0A%20%20%20%20%20%20%20%20(df%5B%22cleanliness_rating%22%5D%20%3E%3D%20clean_min.value)%20%26%0A%20%20%20%20%20%20%20%20(df%5B%22guest_satisfaction_overall%22%5D%20%3E%3D%20guest_min.value)%0A%20%20%20%20%5D%0A%0A%20%20%20%20%23%20Total%20listings%20per%20city%0A%20%20%20%20total_city%20%3D%20df.groupby(%22city%22).size().rename(%22Total%22)%0A%0A%20%20%20%20%23%20Listings%20passing%20filters%20per%20city%0A%20%20%20%20pass_city%20%3D%20passed.groupby(%22city%22).size().rename(%22Passing%22)%0A%0A%20%20%20%20%23%20Combine%0A%20%20%20%20out%20%3D%20(%0A%20%20%20%20%20%20%20%20pd.concat(%5Btotal_city%2C%20pass_city%5D%2C%20axis%3D1)%0A%20%20%20%20%20%20%20%20.fillna(0)%0A%20%20%20%20%20%20%20%20.reset_index()%0A%20%20%20%20)%0A%0A%20%20%20%20out%5B%22Total%22%5D%20%3D%20out%5B%22Total%22%5D.astype(int)%0A%20%20%20%20out%5B%22Passing%22%5D%20%3D%20out%5B%22Passing%22%5D.astype(int)%0A%0A%20%20%20%20%23%20Choose%20metric%0A%20%20%20%20if%20mode.value%20%3D%3D%20%22Counts%22%3A%0A%20%20%20%20%20%20%20%20out%5B%22Value%22%5D%20%3D%20out%5B%22Passing%22%5D%0A%20%20%20%20%20%20%20%20y_label%20%3D%20%22Number%20of%20listings%22%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20out%5B%22Value%22%5D%20%3D%20(out%5B%22Passing%22%5D%20%2F%20out%5B%22Total%22%5D)%20*%20100%0A%20%20%20%20%20%20%20%20y_label%20%3D%20%22%25%20of%20city%20listings%22%0A%20%20%20%20return%20out%2C%20y_label%0A%0A%0A%40app.cell%0Adef%20_(clean_min%2C%20guest_min%2C%20mo%2C%20out%2C%20px%2C%20y_label)%3A%0A%20%20%20%20plot_df5%20%3D%20out.sort_values(%22Value%22%2C%20ascending%3DFalse)%0A%0A%20%20%20%20fig5%20%3D%20px.bar(%0A%20%20%20%20%20%20%20%20plot_df5%2C%0A%20%20%20%20%20%20%20%20x%3D%22city%22%2C%0A%20%20%20%20%20%20%20%20y%3D%22Value%22%2C%0A%20%20%20%20%20%20%20%20title%3D(%0A%20%20%20%20%20%20%20%20%20%20%20%20f%22Listings%20by%20city%20%22%0A%20%20%20%20%20%20%20%20%20%20%20%20f%22(cleanliness%20%E2%89%A5%20%7Bclean_min.value%7D%2C%20%22%0A%20%20%20%20%20%20%20%20%20%20%20%20f%22guest%20satisfaction%20%E2%89%A5%20%7Bguest_min.value%7D)%22%0A%20%20%20%20%20%20%20%20)%2C%0A%20%20%20%20%20%20%20%20hover_data%3D%5B%22Passing%22%2C%20%22Total%22%5D%2C%0A%20%20%20%20%20%20%20%20labels%3D%7B%22city%22%3A%20%22City%22%2C%20%22Value%22%3A%20y_label%7D%2C%0A%20%20%20%20)%0A%0A%20%20%20%20fig5.update_layout(title%3D%7B%22x%22%3A%200.5%2C%20%22xanchor%22%3A%20%22center%22%7D)%0A%20%20%20%20fig5.update_xaxes(tickangle%3D45)%0A%0A%20%20%20%20mo.ui.plotly(fig5)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20%23%23%20**Person%20Capacity%20across%20listings**%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(df%2C%20mo)%3A%0A%20%20%20%20city%20%3D%20mo.ui.dropdown(%0A%20%20%20%20%20%20%20%20options%3D%5B%22All%22%5D%20%2B%20sorted(df%5B%22city%22%5D.unique().tolist())%2C%0A%20%20%20%20%20%20%20%20value%3D%22All%22%2C%0A%20%20%20%20%20%20%20%20label%3D%22City%22%0A%20%20%20%20)%0A%0A%20%20%20%20cap_max%20%3D%20mo.ui.slider(%0A%20%20%20%20%20%20%20%20start%3Dint(df%5B%22person_capacity%22%5D.min())%2C%0A%20%20%20%20%20%20%20%20stop%3Dint(df%5B%22person_capacity%22%5D.max())%2C%0A%20%20%20%20%20%20%20%20step%3D1%2C%0A%20%20%20%20%20%20%20%20value%3Dmin(10%2C%20int(df%5B%22person_capacity%22%5D.max()))%2C%0A%20%20%20%20%20%20%20%20label%3D%22Show%20capacities%20up%20to%22%0A%20%20%20%20)%0A%0A%20%20%20%20mo.hstack(%5Bcity%2C%20cap_max%5D)%0A%20%20%20%20return%20cap_max%2C%20city%0A%0A%0A%40app.cell%0Adef%20_(cap_max%2C%20city%2C%20df%2C%20mo%2C%20px)%3A%0A%20%20%20%20df2%20%3D%20df%20if%20city.value%20%3D%3D%20%22All%22%20else%20df%5Bdf%5B%22city%22%5D%20%3D%3D%20city.value%5D%0A%20%20%20%20df2%20%3D%20df2%5Bdf2%5B%22person_capacity%22%5D%20%3C%3D%20cap_max.value%5D%0A%0A%20%20%20%20counts6%20%3D%20(%0A%20%20%20%20%20%20%20%20df2.groupby(%22person_capacity%22)%0A%20%20%20%20%20%20%20%20.size()%0A%20%20%20%20%20%20%20%20.reset_index(name%3D%22Listings%22)%0A%20%20%20%20%20%20%20%20.sort_values(%22person_capacity%22)%0A%20%20%20%20)%0A%0A%20%20%20%20fig6%20%3D%20px.bar(%0A%20%20%20%20%20%20%20%20counts6%2C%0A%20%20%20%20%20%20%20%20x%3D%22person_capacity%22%2C%0A%20%20%20%20%20%20%20%20y%3D%22Listings%22%2C%0A%20%20%20%20%20%20%20%20labels%3D%7B%22person_capacity%22%3A%20%22Person%20capacity%22%2C%20%22Listings%22%3A%20%22Number%20of%20listings%22%7D%2C%0A%20%20%20%20)%0A%0A%20%20%20%20fig6.update_layout(%0A%20%20%20%20%20%20%20%20title%3Ddict(%0A%20%20%20%20%20%20%20%20%20%20%20%20text%3Df%22Person%20capacity%20distribution%20(%7Bcity.value%7D)%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3D0.5%2C%20xanchor%3D%22center%22%0A%20%20%20%20%20%20%20%20)%0A%20%20%20%20)%0A%0A%20%20%20%20mo.ui.plotly(fig6)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20%23%23%20**Visualizing%20Price%20Trends**%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(df%2C%20mo)%3A%0A%20%20%20%20city_ui%20%3D%20mo.ui.dropdown(%0A%20%20%20%20%20%20%20%20options%3D%5B%22All%22%5D%20%2B%20sorted(df%5B%22city%22%5D.dropna().unique().tolist())%2C%0A%20%20%20%20%20%20%20%20value%3D%22All%22%2C%0A%20%20%20%20%20%20%20%20label%3D%22City%22%2C%0A%20%20%20%20)%0A%0A%20%20%20%20day_ui%20%3D%20mo.ui.dropdown(%0A%20%20%20%20%20%20%20%20options%3D%5B%22All%22%5D%20%2B%20sorted(df%5B%22day_type%22%5D.dropna().unique().tolist())%2C%0A%20%20%20%20%20%20%20%20value%3D%22All%22%2C%0A%20%20%20%20%20%20%20%20label%3D%22Day%20type%22%2C%0A%20%20%20%20)%0A%0A%20%20%20%20dist_ui%20%3D%20mo.ui.range_slider(%0A%20%20%20%20%20%20%20%20start%3Dfloat(df%5B%22citycenter_dist%22%5D.min())%2C%0A%20%20%20%20%20%20%20%20stop%3Dfloat(df%5B%22citycenter_dist%22%5D.max())%2C%0A%20%20%20%20%20%20%20%20value%3D(%0A%20%20%20%20%20%20%20%20%20%20%20%20float(df%5B%22citycenter_dist%22%5D.quantile(0.05))%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20float(df%5B%22citycenter_dist%22%5D.quantile(0.95))%2C%0A%20%20%20%20%20%20%20%20)%2C%0A%20%20%20%20%20%20%20%20step%3D0.1%2C%0A%20%20%20%20%20%20%20%20label%3D%22City%20center%20distance%20(km)%22%2C%0A%20%20%20%20)%0A%0A%20%20%20%20mo.hstack(%5Bcity_ui%2C%20day_ui%2C%20dist_ui%5D)%0A%20%20%20%20return%20city_ui%2C%20day_ui%2C%20dist_ui%0A%0A%0A%40app.cell%0Adef%20_(city_ui%2C%20day_ui%2C%20df%2C%20dist_ui)%3A%0A%20%20%20%20df_f%20%3D%20df.copy()%0A%0A%20%20%20%20if%20city_ui.value%20!%3D%20%22All%22%3A%0A%20%20%20%20%20%20%20%20df_f%20%3D%20df_f%5Bdf_f%5B%22city%22%5D%20%3D%3D%20city_ui.value%5D%0A%0A%20%20%20%20if%20day_ui.value%20!%3D%20%22All%22%3A%0A%20%20%20%20%20%20%20%20df_f%20%3D%20df_f%5Bdf_f%5B%22day_type%22%5D%20%3D%3D%20day_ui.value%5D%0A%0A%20%20%20%20dmin%2C%20dmax%20%3D%20dist_ui.value%0A%20%20%20%20df_f%20%3D%20df_f%5B(df_f%5B%22citycenter_dist%22%5D%20%3E%3D%20dmin)%20%26%20(df_f%5B%22citycenter_dist%22%5D%20%3C%3D%20dmax)%5D%0A%20%20%20%20return%20(df_f%2C)%0A%0A%0A%40app.cell%0Adef%20_(df_f%2C%20mo)%3A%0A%20%20%20%20prices%20%3D%20df_f%5B%22price%22%5D.dropna()%0A%0A%20%20%20%20stat%20%3D%20getattr(mo%2C%20%22stat%22%2C%20None)%20or%20mo.ui.stat%0A%0A%20%20%20%20if%20prices.empty%3A%0A%20%20%20%20%20%20%20%20cards%20%3D%20mo.md(%22%23%23%23%20No%20listings%20match%20these%20filters.%22)%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20median_price%20%3D%20max(0.0%2C%20float(prices.median()))%0A%20%20%20%20%20%20%20%20q25%20%3D%20max(0.0%2C%20float(prices.quantile(0.25)))%0A%20%20%20%20%20%20%20%20q75%20%3D%20max(0.0%2C%20float(prices.quantile(0.75)))%0A%20%20%20%20%20%20%20%20q90%20%3D%20max(0.0%2C%20float(prices.quantile(0.90)))%0A%0A%20%20%20%20%20%20%20%20cards%20%3D%20mo.hstack(%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20stat(value%3Dlen(prices)%2C%20label%3D%22Listings%22)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20stat(value%3Df%22%E2%82%AC%7Bmedian_price%3A.0f%7D%22%2C%20label%3D%22Median%20price%22)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20stat(value%3Df%22%E2%82%AC%7Bq25%3A.0f%7D%20%E2%80%93%20%E2%82%AC%7Bq75%3A.0f%7D%22%2C%20label%3D%22Typical%20range%22)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20stat(value%3Df%22%E2%82%AC%7Bq90%3A.0f%7D%22%2C%20label%3D%22Premium%20price%20(90th)%22)%2C%0A%20%20%20%20%20%20%20%20%5D)%0A%0A%20%20%20%20cards%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(df_f%2C%20px)%3A%0A%0A%20%20%20%20room_counts%20%3D%20(%0A%20%20%20%20%20%20%20%20df_f.groupby(%22room_type%22)%0A%20%20%20%20%20%20%20%20.size()%0A%20%20%20%20%20%20%20%20.reset_index(name%3D%22listings%22)%0A%20%20%20%20%20%20%20%20.sort_values(%22listings%22%2C%20ascending%3DFalse)%0A%20%20%20%20)%0A%0A%20%20%20%20fig7%20%3D%20px.bar(%0A%20%20%20%20%20%20%20%20room_counts%2C%0A%20%20%20%20%20%20%20%20x%3D%22room_type%22%2C%0A%20%20%20%20%20%20%20%20y%3D%22listings%22%2C%0A%20%20%20%20%20%20%20%20title%3D%22Listings%20per%20room%20type%20(filtered)%22%2C%0A%20%20%20%20%20%20%20%20text%3D%22listings%22%2C%0A%20%20%20%20)%0A%20%20%20%20fig7.update_layout(title_x%3D0.5)%0A%20%20%20%20fig7%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20%23%23%20**Visualizing%20Geographically**%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20zoom_ui%20%3D%20mo.ui.slider(%0A%20%20%20%20%20%20%20%20start%3D3%2C%0A%20%20%20%20%20%20%20%20stop%3D10%2C%0A%20%20%20%20%20%20%20%20step%3D1%2C%0A%20%20%20%20%20%20%20%20value%3D3%2C%0A%20%20%20%20%20%20%20%20label%3D%22Map%20zoom%22%0A%20%20%20%20)%0A%0A%20%20%20%20zoom_ui%0A%20%20%20%20return%20(zoom_ui%2C)%0A%0A%0A%40app.cell%0Adef%20_(df%2C%20px%2C%20zoom_ui)%3A%0A%20%20%20%20%23%20Aggregate%20at%20city%20level%20(clean%20%26%20fast)%0A%20%20%20%20map_df%20%3D%20(%0A%20%20%20%20%20%20%20%20df.groupby(%5B%22city%22%2C%20%22country%22%5D)%0A%20%20%20%20%20%20%20%20.agg(%0A%20%20%20%20%20%20%20%20%20%20%20%20listings%3D(%22city%22%2C%20%22size%22)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20lat%3D(%22lat%22%2C%20%22mean%22)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20lon%3D(%22lng%22%2C%20%22mean%22)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20median_price%3D(%22price%22%2C%20%22median%22)%2C%0A%20%20%20%20%20%20%20%20)%0A%20%20%20%20%20%20%20%20.reset_index()%0A%20%20%20%20)%0A%0A%20%20%20%20%23%20Europe%20center%20(approximate%2C%20works%20well%20visually)%0A%20%20%20%20EUROPE_CENTER%20%3D%20%7B%22lat%22%3A%2045.0%2C%20%22lon%22%3A%2018.0%7D%0A%0A%20%20%20%20fig10%20%3D%20px.scatter_mapbox(%0A%20%20%20%20%20%20%20%20map_df%2C%0A%20%20%20%20%20%20%20%20lat%3D%22lat%22%2C%0A%20%20%20%20%20%20%20%20lon%3D%22lon%22%2C%0A%20%20%20%20%20%20%20%20size%3D%22listings%22%2C%0A%20%20%20%20%20%20%20%20color%3D%22median_price%22%2C%0A%20%20%20%20%20%20%20%20hover_name%3D%22city%22%2C%0A%20%20%20%20%20%20%20%20hover_data%3D%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22country%22%3A%20True%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22listings%22%3A%20True%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22median_price%22%3A%20%22%3A.0f%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22lat%22%3A%20False%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22lon%22%3A%20False%2C%0A%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20size_max%3D45%2C%0A%20%20%20%20%20%20%20%20zoom%3Dzoom_ui.value%2C%0A%20%20%20%20%20%20%20%20center%3DEUROPE_CENTER%2C%0A%20%20%20%20%20%20%20%20title%3D%22Airbnb%20listings%20across%20European%20cities%3Cbr%3E%3Csup%3ESize%20%3D%20number%20of%20listings%20%C2%B7%20Color%20%3D%20median%20price%3C%2Fsup%3E%22%2C%0A%20%20%20%20)%0A%0A%20%20%20%20fig10.update_layout(%0A%20%20%20%20%20%20%20%20mapbox_style%3D%22open-street-map%22%2C%0A%20%20%20%20%20%20%20%20margin%3Ddict(l%3D0%2C%20r%3D0%2C%20t%3D70%2C%20b%3D0)%2C%0A%20%20%20%20%20%20%20%20title_x%3D0.5%2C%0A%20%20%20%20)%0A%0A%20%20%20%20fig10%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20return%0A%0A%0Aif%20__name__%20%3D%3D%20%22__main__%22%3A%0A%20%20%20%20app.run()%0A</marimo-code></head>
+  <body>
+    <div id="root"></div>
+    <!-- This is a portal for the data editor to render in -->
+    <div id="portal" data-testid="glide-portal" style="position: fixed; left: 0; top: 0; z-index: 9999"></div>
+    <script data-marimo="true">
+      window.__MARIMO_MOUNT_CONFIG__ = {
+            "filename": "notebook.py",
+            "mode": "read",
+            "version": "0.19.6",
+            "serverToken": "unused",
+            "config": {"ai": {"custom_providers": {}, "models": {"custom_models": [], "displayed_models": []}}, "completion": {"activate_on_typing": true, "copilot": false, "signature_hint_on_typing": false}, "diagnostics": {"sql_linter": true}, "display": {"cell_output": "below", "code_editor_font_size": 14, "dataframes": "rich", "default_table_max_columns": 50, "default_table_page_size": 10, "default_width": "medium", "reference_highlighting": true, "theme": "light"}, "formatting": {"line_length": 79}, "keymap": {"overrides": {}, "preset": "default"}, "language_servers": {"pylsp": {"enable_flake8": false, "enable_mypy": true, "enable_pydocstyle": false, "enable_pyflakes": false, "enable_pylint": false, "enable_ruff": true, "enabled": false}}, "mcp": {"mcpServers": {}, "presets": []}, "package_management": {"manager": "uv"}, "runtime": {"auto_instantiate": false, "auto_reload": "off", "default_csv_encoding": "utf-8", "default_sql_output": "auto", "on_cell_change": "autorun", "output_max_bytes": 8000000, "reactive_tests": true, "std_stream_max_bytes": 1000000, "watcher_on_save": "lazy"}, "save": {"autosave": "off", "autosave_delay": 1000, "format_on_save": false}, "server": {"browser": "default", "follow_symlink": false}, "snippets": {"custom_paths": [], "include_default_snippets": true}},
+            "configOverrides": {},
+            "appConfig": {"auto_download": ["html"], "sql_output": "auto", "width": "medium"},
+            "view": {"showAppCode": false},
+            "notebook": null,
+            "session": null,
+            "runtimeConfig": null,
+        };
+    </script>
+  </body>
+</html>
