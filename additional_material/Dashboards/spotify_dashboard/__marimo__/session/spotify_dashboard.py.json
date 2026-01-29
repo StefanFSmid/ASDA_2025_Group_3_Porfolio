@@ -16,6 +16,26 @@
         }
       ],
       "console": []
+    },
+    {
+      "id": "NLIb",
+      "code_hash": "afdb94dd1bd1d8070e84c05491c150c7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "4\n",
+          "mimetype": "text/plain"
+        }
+      ]
     }
   ]
 }

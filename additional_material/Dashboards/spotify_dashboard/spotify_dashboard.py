@@ -10,5 +10,12 @@ def _():
     return
 
 
+@app.cell
+def _():
+    calc = 1 + 3
+    print(calc)
+    return
+
+
 if __name__ == "__main__":
     app.run()
