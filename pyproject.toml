@@ -21,4 +21,6 @@ dependencies = [
 members = [
     "uvprojects/myproject",
     "additional_material/Dashboards/airbnbdashboard",
+    "additional_material/Dashboards/spotify_dashboard",
+    "additional_material/Dashboards/spotify_dashboard/spotify_dashboard",
 ]
