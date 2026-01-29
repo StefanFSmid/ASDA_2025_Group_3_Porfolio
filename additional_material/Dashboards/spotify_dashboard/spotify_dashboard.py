@@ -17,5 +17,12 @@ def _():
     return
 
 
+@app.cell
+def _():
+    markdown = 'text'
+    markdown
+    return
+
+
 if __name__ == "__main__":
     app.run()

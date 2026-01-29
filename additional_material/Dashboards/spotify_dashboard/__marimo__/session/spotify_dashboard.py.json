@@ -18,7 +18,7 @@
       "console": []
     },
     {
-      "id": "NLIb",
+      "id": "MJUe",
       "code_hash": "afdb94dd1bd1d8070e84c05491c150c7",
       "outputs": [
         {
@@ -36,6 +36,19 @@
           "mimetype": "text/plain"
         }
       ]
+    },
+    {
+      "id": "CXCh",
+      "code_hash": "36f81af5cd35852eb5776d77438c06ae",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&#x27;text&#x27;</pre>"
+          }
+        }
+      ],
+      "console": []
     }
   ]
 }
