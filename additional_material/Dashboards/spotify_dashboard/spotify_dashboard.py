@@ -14,13 +14,19 @@ def _():
 def _():
     calc = 1 + 3
     print(calc)
-    return
+    return (calc,)
 
 
 @app.cell
 def _():
     markdown = 'text'
     markdown
+    return
+
+
+@app.cell
+def _(calc):
+    test3 = calc
     return
 
 
