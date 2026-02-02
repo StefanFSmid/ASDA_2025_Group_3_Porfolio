@@ -572,11 +572,11 @@ def _(df1, pd, valid_idx):
     pd.set_option("display.max_colwidth", None)
 
     samples_unique
-    return (samples_unique,)
+    return
 
 
 @app.cell
-def _(mo, df, pd):
+def _(df, mo, pd):
     # Interactive controls: number of clusters, artist and song filters
     k_slider = mo.ui.slider(
         start=2,
@@ -599,18 +599,29 @@ def _(mo, df, pd):
         value="All",
         label="Song",
     )
-
-    return k_slider, artist_dropdown, song_dropdown
+    return artist_dropdown, k_slider, song_dropdown
 
 
 @app.cell
-def _(k_slider, artist_dropdown, song_dropdown, X_scaled, df, KMeans, PCA, alt, pd, np, pairwise_distances):
+def _(
+    KMeans,
+    PCA,
+    X_scaled,
+    alt,
+    artist_dropdown,
+    df,
+    k_slider,
+    np,
+    pairwise_distances,
+    pd,
+    song_dropdown,
+):
     # Recompute k-means with selected k and build PCA scatterplot for filtered selection
     k_1 = int(k_slider.value)
 
     # Fit KMeans on the scaled features (full dataset) for the requested k
-    kmeans_1 = KMeans(n_clusters=k_1, random_state=42, n_init=10)
-    labels_k1 = kmeans_1.fit_predict(X_scaled)
+    kmeans_3 = KMeans(n_clusters=k_1, random_state=42, n_init=10)
+    labels_k1 = kmeans_3.fit_predict(X_scaled)
 
     df_local_1 = df.copy()
     df_local_1.loc[X_scaled.index, "cluster"] = labels_k1
@@ -641,7 +652,7 @@ def _(k_slider, artist_dropdown, song_dropdown, X_scaled, df, KMeans, PCA, alt, 
         tooltip=['PC1:Q', 'PC2:Q', 'cluster:N']
     )
 
-    centroids_1 = kmeans_1.cluster_centers_
+    centroids_1 = kmeans_3.cluster_centers_
     centroids_pca_1 = pca_1.transform(centroids_1)
     centroids_df_int = pd.DataFrame(centroids_pca_1, columns=["PC1", "PC2"]) 
     centroids_df_int["cluster"] = centroids_df_int.index.astype(str)
@@ -680,26 +691,13 @@ def _(k_slider, artist_dropdown, song_dropdown, X_scaled, df, KMeans, PCA, alt, 
         )
     else:
         top_examples_int = pd.DataFrame(columns=["cluster", "name", "artist", "html"])
-
-    return chart_int, top_examples_int
+    return
 
 
 @app.cell
-def _(mo, top_examples):
-    # Display top examples with Spotify embeds when available
-    if top_examples is None or top_examples.shape[0] == 0:
-        mo.md("No examples for current filters.")
-        return
-
-    for _, row in top_examples.iterrows():
-        html = None
-        if "html" in row and pd.notna(row["html"]):
-            # the dataset often contains an 'html' column with embed iframe; prefer that
-            html = row["html"]
-        else:
-            # fallback: try to build an embed from a spotify url if present in 'url' or 'track_uri'
-            # otherwise show title/artist
-            html = f"<div><strong>{row.get('name','')}</strong> — {row.get('artist','')}</div>"
-
-        mo.Html(html)
+def _():
     return
+
+
+if __name__ == "__main__":
+    app.run()
