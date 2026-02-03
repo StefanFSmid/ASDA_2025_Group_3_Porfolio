@@ -1,7 +1,7 @@
 import marimo
 
-__generated_with = "0.19.6"
-app = marimo.App(width="medium")
+__generated_with = "0.19.7"
+app = marimo.App(width="medium", auto_download=["html"])
 
 
 @app.cell
@@ -50,8 +50,21 @@ def _(pd):
 
 
 @app.cell
-def _(df):
-    df.head()
+def _(mo):
+    mo.md("""
+    # 🎵 Spotify Song Analysis Dashboard
+
+    **Contributors:** Stefan
+
+    ### Project Objective
+    This dashboard demonstrates how data-driven methods can support playlist curation. By grouping songs based on audio features (like **energy**, **valence**, and **danceability**) rather than genre, we can identify distinct musical moods automatically. While you can explore any number of clusters below, our analysis suggests that **k=4** provides the most distinct musical moods.
+
+    **How to use:**
+    1. Adjust **k** to change the number of clusters.
+    2. Use the **filters** to find specific artists or songs.
+    3. Explore the **Audio Profile Heatmap** to interpret what each cluster represents.
+    4. Listen to the **Spotify Previews** to validate the grouping.
+    """)
     return
 
 
@@ -230,10 +243,10 @@ def _(pd):
     def get_spotify_iframe(track_id):
         if pd.isna(track_id):
             return "<div>No ID available</div>"
-    
+
         # Convert to string just in case
         track_str = str(track_id).strip()
-    
+
         # Logic to extract the ID if the input is a full URL
         # Example Input: https://open.spotify.com/track/6rqhFgbbKwnb9MLmUQDhG6
         if "track/" in track_str:
@@ -242,10 +255,10 @@ def _(pd):
         else:
             # Assume it's already just the ID
             clean_id = track_str
-    
+
         # Spotify Embed URL structure
         embed_url = f"https://open.spotify.com/embed/track/{clean_id}?utm_source=generator"
-    
+
         return f"""
         <iframe style="border-radius:12px" 
                 src="{embed_url}" 
@@ -274,45 +287,45 @@ def _(
     if len(filtered_plot_data) > 0:
         # 1. Get subset of data
         X_subset = X_scaled.loc[filtered_plot_data.index]
-    
+
         # 2. Identify assigned clusters and centroids
         assigned_clusters = filtered_plot_data["cluster"].astype(int).values
         assigned_centroids = kmeans_interactive.cluster_centers_[assigned_clusters]
-    
+
         # 3. Calculate distances
         dists = np.sqrt(np.sum((X_subset.values - assigned_centroids)**2, axis=1))
-    
+
         # 4. Create ranking dataframe
         preview_df = df.loc[filtered_plot_data.index].copy()
         preview_df["cluster"] = assigned_clusters
         preview_df["dist_to_centroid"] = dists
-    
+
         # 5. Get Top 3 per cluster
         top_picks = preview_df.sort_values("dist_to_centroid").groupby("cluster").head(3)
-    
+
         cluster_sections = []
-    
+
         # 6. Build UI
         for c in sorted(top_picks["cluster"].unique()):
             songs_in_cluster = top_picks[top_picks["cluster"] == c]
-        
+
             # Header
             header = mo.md(f"### 🎵 Cluster {c} (Top Matches)")
-        
+
             song_cards = []
             for _, row in songs_in_cluster.iterrows():
                 # Use the 'html' column with our helper function
                 iframe_code = get_spotify_iframe(row['html'])
-            
+
                 # Use mo.Html with explicit HTML tags for styling
                 card = mo.vstack([
                     mo.Html(f"<b>{row['name']}</b>"),
                     mo.Html(f"<i>{row['artist']}</i>"),
                     mo.Html(iframe_code)
                 ], align="center")
-            
+
                 song_cards.append(card)
-        
+
             # Stack horizontal cards for this cluster
             cluster_sections.append(
                 mo.vstack([
@@ -320,7 +333,7 @@ def _(
                     mo.hstack(song_cards, gap=2, wrap=True)
                 ])
             )
-        
+
         display_output = mo.vstack(cluster_sections, gap=2)
     else:
         display_output = mo.md("⚠️ No songs match your current filter.")
@@ -330,7 +343,15 @@ def _(
 
 
 @app.cell
-def _():
+def _(mo):
+    mo.md("""
+    ### ✂️ Hierarchical Validation
+
+    This section uses **Hierarchical Clustering (Ward's Method)**. Unlike K-Means, this builds a tree structure (dendrogram) of the data.
+
+    *   **Adjust the Cut Height** to slice the tree at different levels.
+    *   Cutting the tree at a height of **~72** typically yields the same 4 main clusters found in K-Means, validating the structure of the data.
+    """)
     return
 
 
