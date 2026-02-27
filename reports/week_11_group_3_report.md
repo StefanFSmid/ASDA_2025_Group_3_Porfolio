@@ -5,7 +5,7 @@
 |Assad      | Analysis, Report & Spotify Setup |
 |Stefan     | Analysis                |
 |Zeyad     | Analysis with 3 clusters as a comparison     |
-|Shiva      |
+|Raghavendra      | Analysis                |
 |Sumeet     | Analysis and Report              |
 
 ---
